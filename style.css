@@ -38,6 +38,10 @@ table img {
 	color: red;
 }
 
+.footer_span {
+	margin: 10%;
+}
+
 div[disabled] {
 	pointer-events: none;
 	opacity: 0.5;
