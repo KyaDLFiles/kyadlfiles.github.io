@@ -1,9 +1,9 @@
 """
 To save time, I made this script that allows to do this in the HTML files:
-Write #@ follower by the button as it is called in /common/btn/, without the .png
+Write #@ followed by the button as it is called in /common/btn/, without the .png
 Eg: #@o for circle
 Then, run this script and supply it the html file path, and it will replace all of the patterns with the corresponding img element for that button
-Bc I'm lazy, this will not alter the original filename, so replace it with the new one
+Bc I'm lazy, this will not alter the original file and will instead create a new one, so remember that!
 """
 
 from sys import argv
