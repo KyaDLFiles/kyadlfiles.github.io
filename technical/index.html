@@ -13,7 +13,7 @@
 			<h2>A note about PCSX2</h2>
 			<p>Me and other members who are investigating the inner workings of Kya DL use <a href="https://www.cheatengine.org/" target="_blank" rel="noopener noreferrer">Cheat engine <i class="fas fa-external-link-alt"></i></a> to find variables and save the findings in a cheat table file, because it's a very powerful and flexible program.<br>
 			However, the latest betas (1.7.0-dev-*) of the <a href="https://www.pcsx2.net/" target="_blank" rel="noopener noreferrer">PCSX2 <i class="fas fa-external-link-alt"></i></a> emulator, as well as any future stable release after 1.6.0, don't always map the PS2 RAM (or at least the EE RAM) at the same location (older versions seem to always map the RAM starting at address 0x20000000).</p>
-			<br><br>
+			<br>
 			<p>The addresses and pointer values are provided here as they are mapped on a real console. To get the PCSX2 1.6.0 equivalent, it's sufficient to add 20000000 to the address/base address/offset.</p>
 		</div>
 		<div id="controller_readings">
@@ -368,8 +368,8 @@
 				<p>When multiple buttons are pressed, the value gets set to [Button 1] AND [Button 2] AND ... [Button N]; for example when pressing R2 + Triangle + Circle the value gets set to <code>FDFF</code> AND <code>EFFF</code> AND <code>DFFF</code> == <code>CDFF (1100 1101 1111 1111)</code></p>
 				<p>Other PS1/PS2 games may store the value in a different way. <a href="https://www.cheatcc.com/psx/codes/jokercom.html" target="_blank" rel="noopener noreferrer">More info here <i class="fas fa-external-link-alt"></i></a></p>
 			</div>
+			<h4>Joker command calculator:</h4>
 			<div id="jokercalc" style="display:flex;align-items:center;" disabled>
-				<h4>Joker command calculator:</h4><br>
 				<noscript><div class="red">The calculator requires JavaScript to be enabled to work!</div></noscript>
 				<table style="float: left;">
 					<tr>
@@ -456,7 +456,7 @@
 				This is usually a sign the game requires the pressure sensitive buttons, tho it's unknown in which way the pressure info is used (if at all).<br>
 				Regardless, this means that we have another way to check for button presses (apart from Select, Start, L3 and R3), which depending on the situation might be easier or better to use.</p>
 				<p>These readings are stored alongside all three joker commands values, so addressess will be given relative to those locations.
-				They're stored as a byte (so <code>00</code>-<code>FF</code>).</p>
+				They're stored as a byte (so <code>00</code>-<code>FF</code>), <code>00</code> being not being pressed at all, <code>01</code> barely pressed and <code>FF</code> fully pressed.</p>
 				<table>
 					<tr>
 						<th>Address</th>
@@ -553,7 +553,8 @@
 				if ( ($('#cc_dd').prop("checked") & $('#cc_du').prop("checked")) |
 				($('#cc_dl').prop("checked") & $('#cc_dr').prop("checked")) )
 					$("#calc_warn").removeClass("hidden");
-				else $("#calc_warn").addClass("hidden");
+				else
+					$("#calc_warn").addClass("hidden");
 			}
 			$(el).on("click", calc);
 		</script>
