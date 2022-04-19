@@ -369,7 +369,7 @@
 				<p>Other PS1/PS2 games may store the value in a different way. <a href="https://www.cheatcc.com/psx/codes/jokercom.html" target="_blank" rel="noopener noreferrer">More info here <i class="fas fa-external-link-alt"></i></a></p>
 			</div>
 			<div id="jokercalc" style="display:flex;align-items:center;" disabled>
-				<h4>Joker command calculator:<br></h4>
+				<h4>Joker command calculator:</h4><br>
 				<noscript><div class="red">The calculator requires JavaScript to be enabled to work!</div></noscript>
 				<table style="float: left;">
 					<tr>
@@ -417,14 +417,37 @@
 			<div id="stick_readings">
 				<h3>Stick readings</h3>
 				<p>Analog stick readings are stored alongside all three joker commands values, so addressess will be given relative to those locations.
-				They're stored as a byte (so 0-FF).</p>
-				<p><code>+02</code> - Right analog stick X axis<br>
-				<code>+03</code> - Right analog stick Y axis<br>
-				<code>+04</code> - Left analog stick X axis<br>
-				<code>+05</code> - Left analog stick Y axis</p>
-				<p>On the X axis, 0 is left and FF is right<br>
-				On the Y axis, 0 is up and FF is down<br>
-				A stick resting in the neutral position has both set to 7F (127)</p>
+				They're stored as a byte (so <code>00</code>-<code>FF</code>).</p>
+				<table>
+					<tr>
+						<th>Address</th>
+						<th>Analog stick</th>
+						<th>Axis</th>
+					</tr>
+					<tr>
+						<td><code>+02</code></td>
+						<td>Right</td>
+						<td>X</td>
+					</tr>
+					<tr>
+						<td><code>+03</code></td>
+						<td>Right</td>
+						<td>Y</td>
+					</tr>
+					<tr>
+						<td><code>+04</code></td>
+						<td>Left</td>
+						<td>X</td>
+					</tr>
+					<tr>
+						<td><code>+05</code></td>
+						<td>Left</td>
+						<td>Y</td>
+					</tr>
+				</table>
+				<p>On the X axis, <code>00</code> is left and <code>FF</code> is right<br>
+				On the Y axis, <code>00</code> is up and <code>FF</code> is down<br>
+				A stick resting in the neutral position has both set to <code>7F</code> (127)</p>
 			</div>
 			<div id="pressure">
 				<h3>Button pressure</h3>
@@ -433,21 +456,61 @@
 				This is usually a sign the game requires the pressure sensitive buttons, tho it's unknown in which way the pressure info is used (if at all).<br>
 				Regardless, this means that we have another way to check for button presses (apart from Select, Start, L3 and R3), which depending on the situation might be easier or better to use.</p>
 				<p>These readings are stored alongside all three joker commands values, so addressess will be given relative to those locations.
-				They're stored as a byte (so 0-FF).</p>
-				<p>
-					<code>+06</code> - <img src="/common/btn/dr.png" alt="D-pad right"> D-pad right<br>
-					<code>+07</code> - <img src="/common/btn/dl.png" alt="D-pad left"> D-pad left<br>
-					<code>+08</code> - <img src="/common/btn/du.png" alt="D-pad up"> D-pad up<br>
-					<code>+09</code> - <img src="/common/btn/dd.png" alt="D-pad down"> D-pad down<br>
-					<code>+0A</code> - <img src="/common/btn/t.png" alt="Triangle"> Triangle<br>
-					<code>+0B</code> - <img src="/common/btn/o.png" alt="Circle"> Circle<br>
-					<code>+0C</code> - <img src="/common/btn/x.png" alt="X"> X<br>
-					<code>+0D</code> - <img src="/common/btn/s.png" alt="Square"> Square<br>
-					<code>+0E</code> - <img src="/common/btn/l1.png" alt="L1"> L1<br>
-					<code>+0F</code> - <img src="/common/btn/r1.png" alt="R1"> R1<br>
-					<code>+10</code> - <img src="/common/btn/l2.png" alt="L2"> L2<br>
-					<code>+11</code> - <img src="/common/btn/r2.png" alt="R2"> R2<br>
-				</p>
+				They're stored as a byte (so <code>00</code>-<code>FF</code>).</p>
+				<table>
+					<tr>
+						<th>Address</th>
+						<th>Button</th>
+					</tr>
+					<tr>
+						<td><code>+06</code></td>
+						<td><img src="/common/btn/dr.png" alt="D-pad right"></td>
+					</tr>
+					<tr>
+						<td><code>+07</code></td>
+						<td><img src="/common/btn/dl.png" alt="D-pad left"></td>
+					</tr>
+					<tr>
+						<td><code>+08</code></td>
+						<td><img src="/common/btn/du.png" alt="D-pad up"></td>
+					</tr>
+					<tr>
+						<td><code>+09</code></td>
+						<td><img src="/common/btn/dd.png" alt="D-pad down"></td>
+					</tr>
+					<tr>
+						<td><code>+0A</code></td>
+						<td><img src="/common/btn/t.png" alt="Triangle"></td>
+					</tr>
+					<tr>
+						<td><code>+0B</code></td>
+						<td><img src="/common/btn/o.png" alt="Circle"></td>
+					</tr>
+					<tr>
+						<td><code>+0C</code></td>
+						<td><img src="/common/btn/x.png" alt="X"></td>
+					</tr>
+					<tr>
+						<td><code>+0D</code></td>
+						<td><img src="/common/btn/s.png" alt="Square"></td>
+					</tr>
+					<tr>
+						<td><code>+0E</code></td>
+						<td><img src="/common/btn/l1.png" alt="L1"></td>
+					</tr>
+					<tr>
+						<td><code>+0F</code></td>
+						<td><img src="/common/btn/r1.png" alt="R1"></td>
+					</tr>
+					<tr>
+						<td><code>+10</code></td>
+						<td><img src="/common/btn/l2.png" alt="L2"></td>
+					</tr>
+					<tr>
+						<td><code>+11</code></td>
+						<td><img src="/common/btn/r2.png" alt="R2"></td>
+					</tr>
+				</table>
 			</div>
 		</div>
 		<div id="kya_pos_mov">
