@@ -13,8 +13,8 @@ if (len(argv) < 2):
 else:
     fp = argv[1]
 
-fin = open(fp, "r")
-fout = open(fp + "2.html", "w")
+fin = open(fp, "r", encoding="utf-8")
+fout = open(fp + "2.html", "w", encoding="utf-8")
 btns = {
     "st": "Start",
     "se": "Select",
