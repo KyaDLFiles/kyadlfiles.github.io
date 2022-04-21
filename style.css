@@ -42,6 +42,11 @@ table img {
 	margin: 10%;
 }
 
+.sts {
+	display: flex;
+    align-items: center;
+}
+
 div[disabled] {
 	pointer-events: none;
 	opacity: 0.5;
