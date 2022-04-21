@@ -5,9 +5,13 @@
 		<script src="https://kit.fontawesome.com/66a22e00de.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="/style.css">
 		<title>Info about the secret KDL level</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
 	</head>
 	<body>
+		<a href=".."><i class="fa-solid fa-house"></i> Back to home</a><br>
+		<iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/secret_level/497a2aec0590d0ad988ad06c1adef09bd1de3ab6?r=EJrDeDHHyYNCBRxFV11Dzu3UrRjvDaoe" allowfullscreen></iframe>
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-o-kU-VEZGI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
 		<a href="https://tcrf.net/Kya:_Dark_Lineage#Hidden_level_.28.22Level_Test.22_or_LEVEL_13.29" target="_blank" rel="noopener noreferrer">Info about the level on TCRF <i class="fas fa-external-link-alt"></i></a>
 		<ul>
 			<li><a href="#attacks">Fight attacks</a></li>
@@ -401,9 +405,9 @@
 				<h4>Stick spell position</h4>
 				This is how the stick position for using spell attacks works:<br>
 				Imagine a circle having Brazul at the centre, with Kya on the circumference representing 0°<br>
-				To perform a spell attack, you have to place the stick at ±45é°<br>
+				To perform a spell attack, you have to place the stick at ±45°<br>
 				However, the angle is so precise you might as well rotate the stick blindly and hope you get it<br>
-				<a href="./spell.png" target="_blank" rel="noopener noreferrer"><img class="smallimg" src="./spell.png" alt="Spell diagram"></a>
+				<a href="./imgs/spell.png" target="_blank" rel="noopener noreferrer"><img class="smallimg" src="./imgs/spell.png" alt="Spell diagram"></a> <!-- I made this in GeoGebra lol -->
 				<table>
 					<tr>
 						<th>Combo</th>
@@ -569,10 +573,10 @@
 					</li>
 					<li>Open the copy you just created with your hex editor of choice</li>
 					<li>Open the string search function (on HxD, press Ctrl+F), and search for <em>AddLevel</em><br>
-					<a href="./hex1.jpg" target="_blank"><img class="smallimg" src="./hex1.jpg" alt="Screenshot"></a></li>
+					<a href="./imgs/hex1.jpg" target="_blank"><img class="smallimg" src="./imgs/hex1.jpg" alt="Screenshot"></a></li>
 					<li>Place the cursor right after the <em>1</em> of <em>LEVEL_1</em>, and making sure the hex editor is set to overwrite text mode (HxD should be in that by default, otherwise press the <em>Ins</em> key), type <em>3"</em>, followed by a space <br>
-					<a href="./hex2.jpg" target="_blank"><img class="smallimg" src="./hex2.jpg" alt="Screenshot"></a>
-					<a href="./hex3.jpg" target="_blank"><img class="smallimg" src="./hex3.jpg" alt="Screenshot"></a></li>
+					<a href="./imgs/hex2.jpg" target="_blank"><img class="smallimg" src="./imgs/hex2.jpg" alt="Screenshot"></a>
+					<a href="./imgs/hex3.jpg" target="_blank"><img class="smallimg" src="./imgs/hex3.jpg" alt="Screenshot"></a></li>
 					<li>Save the file. If you're using HxD and it starts to make a backup, you can cancel it since you've already made a copy</li>
 					<li>Open PCSX2, select the modified iso, and start the emulator
 						<ul>
