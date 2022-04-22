@@ -15,8 +15,6 @@
 			<h2>A note about PCSX2</h2>
 			<p>Me and other members who are investigating the inner workings of Kya DL use <a href="https://www.cheatengine.org/" target="_blank" rel="noopener noreferrer">Cheat engine <i class="fas fa-external-link-alt"></i></a> to find variables and save the findings in a cheat table file, because it's a very powerful and flexible program.<br>
 			However, the latest betas (1.7.0-dev-*) of the <a href="https://www.pcsx2.net/" target="_blank" rel="noopener noreferrer">PCSX2 <i class="fas fa-external-link-alt"></i></a> emulator, as well as any future stable release after 1.6.0, don't always map the PS2 RAM (or at least the EE RAM) at the same location (older versions seem to always map the RAM starting at address 0x20000000).</p>
-			<br>
-			<p>The addresses and pointer values are provided here as they are mapped on a real console. To get the PCSX2 1.6.0 equivalent, it's sufficient to add 20000000 to the address/base address/offset.</p>
 		</div>
 		<div id="index">
 			<h1>Index</h1>
@@ -28,6 +26,7 @@
 						<li><a href="#joker_commands">Joker commands</a></li>
 						<li><a href="#stick_readings">Stick readings</a></li>
 						<li><a href="#button_pressure">Button pressure</a></li>
+						<li><a href="#controller_recap">Recap</a></li>
 					</ul>
 				</li>
 				<li><a href="#controller_readings_p2">Controller readings (P2)</a></li>
@@ -38,8 +37,13 @@
 			<ul>
 				<li><a href="#level_folders">Level folders</a></li>
 			</ul>
+			<p>Save files</p>
+			<ul>
+				<li><a href="#save_header">Save header</a></li>
+			</ul>
 		</div>
 		<h1>Variables and RAM</h1>
+		<p>The addresses and pointer values are provided here as they are mapped on a real console. To get the PCSX2 1.6.0 equivalent, it's sufficient to add 20000000 to the address/base address/offset.</p>
 		<p class="red">Important! The addresses refer to the final NTSC build of the game.<br>
 			The PAL version has different values, which will eventually be documented.</p>
 		<div id="controller_readings_p1">
@@ -541,6 +545,107 @@
 					</tr>
 				</table>
 			</div>
+			<div id="controller_recap">
+				<h3>To recap</h3>
+				<table>
+					<tr>
+						<th colspan="3">Controller readings</th>
+					</tr>
+					<tr>
+						<td colspan="3">Size: <code>12</code> (currently known!)</td>
+					</tr>
+					<tr>
+						<th>Offset</th>
+						<th>Length (bytes)</th>
+						<th>Content</th>
+					</tr>
+					<tr>
+						<td><code>+00</code></td>
+						<td><code>02</code></td>
+						<td>Joker command</td>
+					</tr>
+					<tr>
+						<td><code>+02</code></td>
+						<td><code>01</code></td>
+						<td>Right analog X axis</td>
+					</tr>
+					<tr>
+						<td><code>+03</code></td>
+						<td><code>01</code></td>
+						<td>Right analog Y axis</td>
+					</tr>
+					<tr>
+						<td><code>+04</code></td>
+						<td><code>01</code></td>
+						<td>Left analog X axis</td>
+					</tr>
+					<tr>
+						<td><code>+05</code></td>
+						<td><code>01</code></td>
+						<td>Left analog Y axis</td>
+					</tr>
+					<tr>
+						<td><code>+06</code></td>
+						<td><code>01</code></td>
+						<td><img src="/common/btn/dr.png" alt="D-pad right"> pressure</td>
+					</tr>
+					<tr>
+						<td><code>+07</code></td>
+						<td><code>01</code></td>
+						<td><img src="/common/btn/dl.png" alt="D-pad left"> pressure</td>
+					</tr>
+					<tr>
+						<td><code>+08</code></td>
+						<td><code>01</code></td>
+						<td><img src="/common/btn/du.png" alt="D-pad up"> pressure</td>
+					</tr>
+					<tr>
+						<td><code>+09</code></td>
+						<td><code>01</code></td>
+						<td><img src="/common/btn/dd.png" alt="D-pad down"> pressure</td>
+					</tr>
+					<tr>
+						<td><code>+0A</code></td>
+						<td><code>01</code></td>
+						<td><img src="/common/btn/t.png" alt="Triangle"> pressure</td>
+					</tr>
+					<tr>
+						<td><code>+0B</code></td>
+						<td><code>01</code></td>
+						<td><img src="/common/btn/o.png" alt="Circle"> pressure</td>
+					</tr>
+					<tr>
+						<td><code>+0C</code></td>
+						<td><code>01</code></td>
+						<td><img src="/common/btn/x.png" alt="X"> pressure</td>
+					</tr>
+					<tr>
+						<td><code>+0D</code></td>
+						<td><code>01</code></td>
+						<td><img src="/common/btn/s.png" alt="Square"> pressure</td>
+					</tr>
+					<tr>
+						<td><code>+0E</code></td>
+						<td><code>01</code></td>
+						<td><img src="/common/btn/l1.png" alt="L1"> pressure</td>
+					</tr>
+					<tr>
+						<td><code>+0F</code></td>
+						<td><code>01</code></td>
+						<td><img src="/common/btn/r1.png" alt="R1"> pressure</td>
+					</tr>
+					<tr>
+						<td><code>+10</code></td>
+						<td><code>01</code></td>
+						<td><img src="/common/btn/l2.png" alt="L2"> pressure</td>
+					</tr>
+					<tr>
+						<td><code>+11</code></td>
+						<td><code>01</code></td>
+						<td><img src="/common/btn/r2.png" alt="R2"> pressure</td>
+					</tr>
+				</table>
+			</div>
 			<div id="controller_readings_p2">
 				<h2>Controller readings (player 2)</h2>
 				<p>Controller readings for player two are stored at <code>0495CB0</code>, <code>0495D1C</code> and <code>0495D9C</code>.<br>
@@ -828,6 +933,66 @@
 					<td></td>
 				</tr>
 			</table>
+		</div>
+		<h1>Save files</h1>
+		<p><span class="red">Important!</span> Data (numerical values, checksums etc) is saved as little endian (LE).<br>
+		 	So for example an integer value of 9 will be saved as <code>09 00 00 00</code> inside the file.<br></p>
+		<p>Note: files that are standard for all PS2 saves (icon.sys, *.ico) won't be discussed</p>
+		<div id="save_header">
+			<h2>Save header</h2>
+			<p>All KDL .dat save files start with a header containing at least two checksums. <br>
+				Even though the header has a size field inside it, due to the fact that the number of data sections it can contain info for is hardcoded to two in the game code, it's believed to have a fixed size in practice</p>
+			<table>
+				<tr>
+					<th colspan="3">Save file header</th>
+				</tr>
+				<tr>
+					<td colspan="3"><em>In theory</em> variable size<br>
+						<em>In practice</em> always <code>1C</code> bytes</td>
+				</tr>
+				<tr>
+					<th>Offset</th>
+					<th>Size (bytes)</th>
+					<th>Content</th>
+				</tr>
+				<tr>
+					<td><code>+00</code></td>
+					<td><code>04</code></td>
+					<td>"NEDE" ("EDEN" in LE)</code></td>
+				</tr>
+				<tr>
+					<td><code>+04</code></td>
+					<td><code>04</code></td>
+					<td>Header checksum (Starting from <code>08</code>, next <code>14</code> bytes)</td>
+				</tr>
+				<tr>
+					<td><code>+08</code></td>
+					<td><code>04</code></td>
+					<td>Header size (in practice always <code>1C</code>)</td>
+				</tr>
+				<tr>
+					<td><code>+0C</code></td>
+					<td><code>04</code></td>
+					<td>First data block checksum</td>
+				</tr>
+				<tr>
+					<td><code>+10</code></td>
+					<td><code>04</code></td>
+					<td>First data block size</td>
+				</tr>
+				<tr>
+					<td><code>+14</code></td>
+					<td><code>04</code></td>
+					<td>Second data block checksum<br>
+						All zeroes if there's no second data block</td>
+				</tr>
+				<tr>
+					<td><code>+18</code></td>
+					<td><code>04</code></td>
+					<td>Second data block size</td>
+				</tr>
+			</table>	
+			<p>Reverse engineered checksum code can be found at </p>
 		</div>
 		<hr>
 		<div id="footer">
