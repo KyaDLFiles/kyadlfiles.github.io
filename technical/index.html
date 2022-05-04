@@ -968,7 +968,7 @@
 					<td><code>+04</code></td>
 					<td><code>04</code></td>
 					<td>Unsigned int32</td>
-					<td>Header checksum (Starting from <code>08</code>, next <code>14</code> bytes)</td>
+					<td>Header checksum (Starting from <code>08</code>, as to exclude NEDE and the checksum itself, to the address stored in the header size)</td>
 				</tr>
 				<tr>
 					<td><code>+08</code></td>
@@ -1068,7 +1068,7 @@
 					<td><code>04</code></td>
 					<td>Signed int32</td>
 					<td>Y axis screen adjust <br>
-					Stored in negative - in-game negative values stored as positive int and vice versa</td>
+					Stored in negative - in-game negative values stored as positive value and vice versa</td>
 				</tr>
 				<tr>
 					<td><code>+24</code></td>
@@ -1107,7 +1107,7 @@
 					<td><code>1C</code></td>
 					<td></td>
 					<td>Unknown<br>
-						Outside the data block range set in the header, thus doens't even affect checksum<br>
+						Outside the data block size set in the header, thus doesn't affect checksum<br>
 						Won't affect game if filled with garbage or even completely removed</td>
 				</tr>
 			</table>
