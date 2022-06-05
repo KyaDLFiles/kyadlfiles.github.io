@@ -55,3 +55,7 @@ div[disabled] {
 #calc_warn {
 	color: red;
 }
+
+#footer_obj {
+	width: 100%;
+}
