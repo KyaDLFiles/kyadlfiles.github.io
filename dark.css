@@ -1,0 +1,16 @@
+body {
+	background-color: #202124;
+	color: white;
+}
+
+table, th, td {
+	border-color: white;
+}
+
+a {
+	color: lightskyblue;
+}
+
+.lblue_bg {
+	background-color: #4b8b87;
+}
