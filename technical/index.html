@@ -33,6 +33,7 @@
 				<li><a href="#controller_readings_p2">Controller readings (P2)</a></li>
 				<li><a href="#kya_pos_mov">Kya's position and movement</a></li>
 				<li><a href="#bwitch_ini">Settings read from BWITCH.ini</a></li>
+				<li><a href="#dormant_debug">Dormant debug features/cheats</a></li>
 			</ul>
 			<p>Game disc files</p>
 			<ul>
@@ -805,6 +806,19 @@
 				</tr>
 			</table>
 			<a href="./imgs/weirdlvls.png"><img class="smallimg" src="./imgs/weirdlvls.png" alt="Screenshot of weird levels"></a>
+		</div>
+		<div id="dormant_debug">
+			<h2>Dormant debug features/cheats</h2>
+			There are dormant debug features/cheats left over from when the game was in development; they can most prominently be see in the <a href="https://hiddenpalace.org/Kya:_Dark_Lineage_(Sep_29,_2003_prototype)">September 29 prototype</a> <br>
+			<p>String pertaining to the <i>cheat options</i> menu have been found in the final game, but it's yet to be seen if and how that can be accessed in the final build <br>
+			But as of now we do know it's possible to enable the <i>flying</i> cheat and the <i>invincibility</i> cheat by manually changing two variables in RAM (note - the Septemper 29 prototype contains two separate variables for those two: the first pair just toggle the menu option, and when the <i>cheat options</i> menu is viewed, those are copied to the actual variables that control the behaviour; the cheats can be enabled in the final game by toggling the latter) (Keep in mind that the locations in RAM vary from build to build and version to version, so the values in this page won't work for the September 29 prototype either)<br>
+			These are stored next to each other and are accessed via a pointer</p>
+			<p>
+				<b>Pointer base address: </b><code>00448AA0</code> <br>
+				<b>Offset (flying): </b><code>00000AA0</code> <br>
+				<b>Offset (invincibility): </b><code>00000AA4</code>
+			</p>
+			<p>Once flying is enabled, it can be activated by pressing <img src="/common/btn/r2.png" alt="R2">+<img src="/common/btn/r3.png" alt="R3"></p>
 		</div>
 		<h1>Game disc files</h1>
 		<div id="level_folders">
