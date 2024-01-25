@@ -53,8 +53,8 @@
 			<h2>Controller readings (player 1)</h2>
 			<div id="joker_commands">
 				<h3>Joker commands</h3>
-				Type: 2 byte "integer"<br>
-				Offset: <code>+00</code><br>
+				<p><strong>Type:</strong> 2 byte "integer"<br>
+				<strong>Offset:</strong> <code>+00</code></p>
 				<p>Joker commands are addresses that contain the button reading from the controller, stored with 2 bytes.<br>
 					In Kya DL, the buttons have these base values:</p>
 				<table>
@@ -454,8 +454,8 @@
 			</div>
 			<div id="stick_readings">
 				<h3>Stick readings</h3>
-				Type: 1 byte unsigned integers<br>
-				Size: 4 * 1 byte = 4 bytes total <br>
+				<p><strong>Type:</strong> 1 byte unsigned integers<br>
+				<strong>Length:</strong> 4 * 1 byte = 4 bytes total</p>
 				<table>
 					<tr>
 						<th>Address</th>
@@ -493,9 +493,9 @@
 				Kya: Dark Lineage requires a DualShock 2 and won't work with an original PS1 DualShock.<br>
 				This is usually a sign the game requires the pressure sensitive buttons, tho it's unknown in which way the pressure info is used (if at all).<br>
 				Regardless, this means that we have another way to check for button presses (apart from Select, Start, L3 and R3), which depending on the situation might be easier or better to use.</p>
-				<p>Type: 1 byte unsigned integers<br>
-				Size: 12 * 1 byte = 12 bytes total <br>
-				<code>00</code> equals not being pressed at all, <code>01</code> barely pressed and <code>FF</code> fully pressed.</p>
+				<p><strong>Type:</strong> 1 byte unsigned integers<br>
+				<strong>Size:</strong> 12 * 1 byte = 12 bytes total <br></p>
+				<p><code>00</code> equals not being pressed at all, <code>01</code> barely pressed and <code>FF</code> fully pressed.</p>
 				<table>
 					<tr>
 						<th>Address</th>
@@ -558,10 +558,10 @@
 						<th colspan="3">Controller readings</th>
 					</tr>
 					<tr>
-						<td colspan="3">Address: <code>0495B30</code>/<code>0495B9C</code>/<code>0495C1C</code><br></td>
+						<td colspan="3"><strong>Address:</strong> <code>0495B30</code>/<code>0495B9C</code>/<code>0495C1C</code><br></td>
 					</tr>
 					<tr>
-						<td colspan="3">Size: <code>12</code> (currently known!)</td>
+						<td colspan="3"><strong>Size:</strong> <code>12</code> (currently known!)</td>
 					</tr>
 					<tr>
 						<th>Offset</th>
