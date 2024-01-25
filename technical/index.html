@@ -49,11 +49,14 @@
 		<p class="red">Important! The addresses refer to the final NTSC build of the game.<br>
 			The PAL version has different values, which will eventually be documented.</p>
 		<div id="controller_readings_p1">
+			Beginning address: <code>0495B30</code>/<code>0495B9C</code>/<code>0495C1C</code><br>
 			<h2>Controller readings (player 1)</h2>
 			<div id="joker_commands">
 				<h3>Joker commands</h3>
+				Type: 2 byte "integers"<br>
+				Offset: <code>+00</code><br>
 				<p>Joker commands are addresses that contain the button reading from the controller, stored with 2 bytes.<br>
-					In Kya DL, for player one, they're stored at <code>0495B30, 0495B9C</code> and <code>0495C1C</code> and have these base values:</p>
+					In Kya DL, the buttons have these base values:</p>
 				<table>
 					<tr>
 						<th>Button</th>
@@ -451,8 +454,8 @@
 			</div>
 			<div id="stick_readings">
 				<h3>Stick readings</h3>
-				<p>Analog stick readings are stored alongside all three joker commands values, so addressess will be given relative to those locations.
-				They're stored as a byte (so <code>00</code>-<code>FF</code>).</p>
+				Type: 1 byte unsigned integers<br>
+				Size: 4 * 1 byte = 4 bytes total <br>
 				<table>
 					<tr>
 						<th>Address</th>
@@ -490,8 +493,9 @@
 				Kya: Dark Lineage requires a DualShock 2 and won't work with an original PS1 DualShock.<br>
 				This is usually a sign the game requires the pressure sensitive buttons, tho it's unknown in which way the pressure info is used (if at all).<br>
 				Regardless, this means that we have another way to check for button presses (apart from Select, Start, L3 and R3), which depending on the situation might be easier or better to use.</p>
-				<p>These readings are stored alongside all three joker commands values, so addressess will be given relative to those locations.
-				They're stored as a byte (so <code>00</code>-<code>FF</code>), <code>00</code> being not being pressed at all, <code>01</code> barely pressed and <code>FF</code> fully pressed.</p>
+				<p>Type: 1 byte unsigned integers<br>
+				Size: 12 * 1 byte = 12 bytes total <br>
+				<code>00</code> equals not being pressed at all, <code>01</code> barely pressed and <code>FF</code> fully pressed.</p>
 				<table>
 					<tr>
 						<th>Address</th>
@@ -552,6 +556,9 @@
 				<table>
 					<tr>
 						<th colspan="3">Controller readings</th>
+					</tr>
+					<tr>
+						<td colspan="3">Address: <code>0495B30</code>/<code>0495B9C</code>/<code>0495C1C</code><br></td>
 					</tr>
 					<tr>
 						<td colspan="3">Size: <code>12</code> (currently known!)</td>
@@ -650,8 +657,8 @@
 			</div>
 			<div id="controller_readings_p2">
 				<h2>Controller readings (player 2)</h2>
-				<p>Controller readings for player two are stored at <code>0495CB0</code>, <code>0495D1C</code> and <code>0495D9C</code>.<br>
-					The order and way in which things are stored are the same as for player one.<br>
+				<p>Address: <code>0495CB0</code>/<code>0495D1C</code>/<code>0495D9C</code></p>
+				<p>The order and way in which things are stored are the same as for player one.<br>
 					Note that the game also requires a DualShock 2 for player two, if you try plugging in an original DualShock in port 2 and try to control P2 in the secret level nothing will happen.</p>
 			</div>
 		</div>
@@ -676,9 +683,9 @@
 				Removing the setting completely from the ini file causes it to default to NATIV (even though the ini file itself states otherwise).
 				The folder is set by <em>SetPath</em>, which is set to "CdEuro/Level/" in the final game (on both the NTSC and PAL releases).<br>
 				<em>Level folder</em> in the table below omits the above mentioned root directory.<br>
-				If set to a value different from the default value of The Roots, when starting a new game, the intro movie will be skipped, the lines "Hey, look at this"..."Is it dead=" will be played, and then the player will be immediately thrown in the level.<br>
+				If set to a value different from the default value of The Roots, when starting a new game, the intro movie will be skipped, the lines "Hey, look at this"..."Is it dead?" will be played, and then the player will be immediately thrown in the level.<br>
 				<!--More info about the weird or unexpected levels can be found in the section below.--></p>
-			<strong>Type:</strong> 4 bytes integer (only last byte shown in table)
+			<strong>Type:</strong> 4 bytes integer (only last byte shown in table)<br>
 			<strong>Address: </strong><code>06DA5B4</code>
 			<table>
 				<tr>
@@ -809,9 +816,11 @@
 		</div>
 		<div id="dormant_debug">
 			<h2>Dormant debug features/cheats</h2>
-			There are dormant debug features/cheats left over from when the game was in development; they can most prominently be seen in the <a href="https://hiddenpalace.org/Kya:_Dark_Lineage_(Sep_29,_2003_prototype)">September 29 prototype</a> <br>
-			<p>Strings pertaining to the <i>cheat options</i> menu have been found in the final game, but it's yet to be seen if and how that can be accessed in the final build <br>
-			But as of now we do know it's possible to enable the <i>flying</i> cheat and the <i>invincibility</i> cheat by manually changing two variables in RAM (note - the Septemper 29 prototype contains two separate variables for those two: the first pair just toggle the menu option, and when the <i>cheat options</i> menu is viewed, those are copied to the actual variables that control the behaviour; the cheats can be enabled in the final game by toggling the latter) (Keep in mind that the locations in RAM vary from build to build and version to version, so the values in this page won't work for the September 29 prototype either)<br>
+			There are dormant debug features/cheats left over from when the game was in development; a working implementation of the _cheat options_ menu can most prominently be seen in the <a href="https://hiddenpalace.org/Kya:_Dark_Lineage_(Sep_29,_2003_prototype)">September 29 prototype</a> <br>
+			<p>Strings pertaining to this menu have been found in the final game, but it's currently unknown if and how that can be accessed in the final build <br>
+			However, it is known that it's possible to enable the <i>flying</i> cheat and the <i>invincibility</i> cheat by manually writing to the variables pertaining to them in RAM (the _cheat options_ menu is coded weirdly, as there are two separate variables for these two cheats: the first technically only controls if the cheat is displayed as enabled or disabled in the menu, and the second (the "enable" variable) is what the code actually checks to see if the cheat effect should apply (for example, checking the value of the flying cheat enable when <img src="/common/btn/r2.png" alt="R2">+<img src="/common/btn/r3.png" alt="R3"> is pressed), and the former gets copied to the latter any moment the _cheat options_ menu is being viewed)<br>
+			With the aid of the PCSX2 debugger and the September 29 prototype, the code that handles checking the enable variables was found in the final game, and it was confirmed that changing those is enough to restore the functionality<br>
+			(Keep in mind that the locations in RAM vary from build to build and version to version, so the values in this page won't work for the September 29 prototype)<br>
 			These are stored next to each other and are accessed via a pointer</p>
 			<p>
 				<b>Pointer base address: </b><code>00448AA0</code> <br>
@@ -978,7 +987,7 @@
 					<td><code>+00</code></td>
 					<td><code>04</code></td>
 					<td>String</td>
-					<td>"NEDE" ("EDEN" in LE)</code></td>
+					<td>"NEDE" ("EDEN" in reverse(?))</code></td>
 				</tr>
 				<tr>
 					<td><code>+04</code></td>
