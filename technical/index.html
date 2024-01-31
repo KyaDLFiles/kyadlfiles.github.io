@@ -49,8 +49,8 @@
 		<p class="red">Important! The addresses refer to the final NTSC build of the game.<br>
 			The PAL version has different values, which will eventually be documented.</p>
 		<div id="controller_readings_p1">
-			Beginning address: <code>0495B30</code>/<code>0495B9C</code>/<code>0495C1C</code><br>
 			<h2>Controller readings (player 1)</h2>
+			<b>Beginning address:</b> <code>0495B30</code>/<code>0495B9C</code>/<code>0495C1C</code><br>
 			<div id="joker_commands">
 				<h3>Joker commands</h3>
 				<p><strong>Type:</strong> 2 byte "integer"<br>
@@ -458,7 +458,7 @@
 				<strong>Length:</strong> 4 * 1 byte = 4 bytes total</p>
 				<table>
 					<tr>
-						<th>Address</th>
+						<th>Offset</th>
 						<th>Analog stick</th>
 						<th>Axis</th>
 					</tr>
@@ -498,7 +498,7 @@
 				<p><code>00</code> equals not being pressed at all, <code>01</code> barely pressed and <code>FF</code> fully pressed.</p>
 				<table>
 					<tr>
-						<th>Address</th>
+						<th>Offset</th>
 						<th>Button</th>
 					</tr>
 					<tr>
@@ -816,16 +816,16 @@
 		</div>
 		<div id="dormant_debug">
 			<h2>Dormant debug features/cheats</h2>
-			There are dormant debug features/cheats left over from when the game was in development; a working implementation of the _cheat options_ menu can most prominently be seen in the <a href="https://hiddenpalace.org/Kya:_Dark_Lineage_(Sep_29,_2003_prototype)">September 29 prototype</a> <br>
+			There are dormant debug features/cheats left over from when the game was in development; a working implementation of the <i>cheat options</i> menu can most prominently be seen in the <a href="https://hiddenpalace.org/Kya:_Dark_Lineage_(Sep_29,_2003_prototype)">September 29 prototype</a> <br>
 			<p>Strings pertaining to this menu have been found in the final game, but it's currently unknown if and how that can be accessed in the final build <br>
-			However, it is known that it's possible to enable the <i>flying</i> cheat and the <i>invincibility</i> cheat by manually writing to the variables pertaining to them in RAM (the _cheat options_ menu is coded weirdly, as there are two separate variables for these two cheats: the first technically only controls if the cheat is displayed as enabled or disabled in the menu, and the second (the "enable" variable) is what the code actually checks to see if the cheat effect should apply (for example, checking the value of the flying cheat enable when <img src="/common/btn/r2.png" alt="R2">+<img src="/common/btn/r3.png" alt="R3"> is pressed), and the former gets copied to the latter any moment the _cheat options_ menu is being viewed)<br>
+			However, it is known that it's possible to enable the <i>flying</i> cheat and the <i>invincibility</i> cheat by manually writing to the variables pertaining to them in RAM (the <i>cheat options</i> menu is coded weirdly, as there are two separate variables for these two cheats: the first technically only controls if the cheat is displayed as enabled or disabled in the menu, and the second (the "enable" variable) is what the code actually checks to see if the cheat effect should apply (for example, checking the value of the flying cheat enable when <img src="/common/btn/r2.png" alt="R2">+<img src="/common/btn/r3.png" alt="R3"> is pressed), and the former gets copied to the latter any moment the <i>cheat options</i> menu is being viewed)<br>
 			With the aid of the PCSX2 debugger and the September 29 prototype, the code that handles checking the enable variables was found in the final game, and it was confirmed that changing those is enough to restore the functionality<br>
 			(Keep in mind that the locations in RAM vary from build to build and version to version, so the values in this page won't work for the September 29 prototype)<br>
 			These are stored next to each other and are accessed via a pointer</p>
 			<p>
 				<b>Pointer base address: </b><code>00448AA0</code> <br>
-				<b>Offset (flying): </b><code>00000AA0</code> <br>
-				<b>Offset (invincibility): </b><code>00000AA4</code>
+				<b>Offset (flying): </b><code>0000AA0</code> <br>
+				<b>Offset (invincibility): </b><code>0000AA4</code>
 			</p>
 			<p>Once flying is enabled, it can be activated by pressing <img src="/common/btn/r2.png" alt="R2">+<img src="/common/btn/r3.png" alt="R3"></p>
 
