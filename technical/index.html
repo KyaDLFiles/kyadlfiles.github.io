@@ -17,6 +17,14 @@
 			<p>Me and other members who are investigating the inner workings of Kya DL (mainly in the KDL speedrunning Discord server) use <a href="https://www.cheatengine.org/" target="_blank" rel="noopener noreferrer">Cheat engine <i class="fas fa-external-link-alt"></i></a> to find variables and save the findings in a cheat table file, because it's a very powerful and flexible program.<br>
 			I'll be uploading my cheat tables (which also include contributions from other members of the server) in <a href="https://github.com/KyaDLFiles/Kya_DL_cheat_tables">a separate repo</a>, which includes instructions on how to use CE with PCSX2 1.7 .</p>
 		</div>
+		<div id="wording">
+			<h2>Wording regarding pointers, addresses and offsets</h2>
+			<p>All addresses and offsets are always hexadecimal.</p>
+			<p>When talking about a pointer address, this page uses a terminology similar to CE: to get to the desired address, take the 4-byte number stored at the <b>pointer base address</b>, add the <b>offset</b> to that number, and the result is the actual memory address storing that particular variable.<br>
+			(eg: pointer base address <code>10</code> & offset <code>+2</code> = take value stored at <code>10</code> (X), add <code>+2</code> to it, actual address is <code>X+2</code>)<br>
+			When talking about a "normal" address (like with the controller readings), you simply take the <b>beginning address</b> and add the <b>offset</b> to it to get the actual address.<br>
+			(eg: base address <code>20</code> & offset <code>6</code> = actual address <code>26</code> )</p>
+		</div>
 		<div id="index">
 			<h1>Index</h1>
 			<p>Variables and RAM</p>
@@ -816,18 +824,18 @@
 		</div>
 		<div id="dormant_debug">
 			<h2>Dormant debug features/cheats</h2>
-			There are dormant debug features/cheats left over from when the game was in development; a working implementation of the <i>cheat options</i> menu can most prominently be seen in the <a href="https://hiddenpalace.org/Kya:_Dark_Lineage_(Sep_29,_2003_prototype)">September 29 prototype</a> <br>
-			<p>Strings pertaining to this menu have been found in the final game, but it's currently unknown if and how that can be accessed in the final build <br>
-			However, it is known that it's possible to enable the <i>flying</i> cheat and the <i>invincibility</i> cheat by manually writing to the variables pertaining to them in RAM (the <i>cheat options</i> menu is coded weirdly, as there are two separate variables for these two cheats: the first technically only controls if the cheat is displayed as enabled or disabled in the menu, and the second (the "enable" variable) is what the code actually checks to see if the cheat effect should apply (for example, checking the value of the flying cheat enable when <img src="/common/btn/r2.png" alt="R2">+<img src="/common/btn/r3.png" alt="R3"> is pressed), and the former gets copied to the latter any moment the <i>cheat options</i> menu is being viewed)<br>
-			With the aid of the PCSX2 debugger and the September 29 prototype, the code that handles checking the enable variables was found in the final game, and it was confirmed that changing those is enough to restore the functionality<br>
-			(Keep in mind that the locations in RAM vary from build to build and version to version, so the values in this page won't work for the September 29 prototype)<br>
-			These are stored next to each other and are accessed via a pointer</p>
+			There are dormant debug features/cheats left over from when the game was in development; a working implementation of the <i>cheat options</i> menu can most prominently be seen in the <a href="https://hiddenpalace.org/Kya:_Dark_Lineage_(Sep_29,_2003_prototype)">September 29 prototype</a>. <br>
+			<p>Strings pertaining to this menu have been found in the final game, but it's currently unknown if and how that can be accessed in the final build.<br>
+			However, it is known that it's possible to enable the <i>flying</i> cheat and the <i>invincibility</i> cheat by manually writing to the variables pertaining to them in RAM (the <i>cheat options</i> menu is coded weirdly, as there are two separate variables for these two cheats: the first technically only controls if the cheat is displayed as enabled or disabled in the menu, and the second (the "enable" variable) is what the code actually checks to see if the cheat effect should apply (for example, checking the value of the flying cheat enable when <img src="/common/btn/r2.png" alt="R2">+<img src="/common/btn/r3.png" alt="R3"> is pressed), and the former gets copied to the latter any moment the <i>cheat options</i> menu is being viewed).<br>
+			With the aid of the PCSX2 debugger and the September 29 prototype, the code that handles checking the enable variables was found in the final game, and it was confirmed that changing those is enough to restore the functionality.<br>
+			(Keep in mind that the locations in RAM vary from build to build and version to version, so the values in this page won't work for the September 29 prototype).<br></p>
+			<p>These are stored next to each other and are accessed via a pointer.</p>
 			<p>
 				<b>Pointer base address: </b><code>00448AA0</code> <br>
 				<b>Offset (flying): </b><code>0000AA0</code> <br>
 				<b>Offset (invincibility): </b><code>0000AA4</code>
 			</p>
-			<p>Once flying is enabled, it can be activated by pressing <img src="/common/btn/r2.png" alt="R2">+<img src="/common/btn/r3.png" alt="R3"></p>
+			<p>Once flying is enabled, it can be toggled by pressing <img src="/common/btn/r2.png" alt="R2">+<img src="/common/btn/r3.png" alt="R3"></p>
 
 			Another dormant debug menu is documented at <a href="https://tcrf.net/Kya:_Dark_Lineage#Debug_Menu">tcrf</a>
 		</div>
