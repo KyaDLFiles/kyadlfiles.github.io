@@ -14,7 +14,7 @@
 		<a href=".."><i class="fa-solid fa-house"></i> Back to home</a><br>
 		<div id="pcsx2">
 			<h2>Cheat Engine, PCSX2 and cheat tables</h2>
-			<p>Me and other members who are investigating the inner workings of Kya DL (mainly in the KDL speedrunning Discord server) use <a href="https://www.cheatengine.org/" target="_blank" rel="noopener noreferrer">Cheat engine <i class="fas fa-external-link-alt"></i></a> to find variables and save the findings in a cheat table file, because it's a very powerful and flexible program.<br>
+			<p>Me and other members who are investigating the inner workings of Kya DL use <a href="https://www.cheatengine.org/" target="_blank" rel="noopener noreferrer">Cheat engine <i class="fas fa-external-link-alt"></i></a> to find variables and save the findings in a cheat table file, because it's a very powerful and flexible program.<br>
 			I'll be uploading my cheat tables (which also include contributions from other members of the server) in <a href="https://github.com/KyaDLFiles/Kya_DL_cheat_tables">a separate repo</a>, which includes instructions on how to use CE with PCSX2 1.7 .</p>
 		</div>
 		<div id="wording">
@@ -22,12 +22,12 @@
 			<p>All addresses and offsets are always hexadecimal.</p>
 			<p>When talking about a pointer address, this page uses a terminology similar to CE: to get to the desired address, take the 4-byte number stored at the <b>pointer base address</b>, add the <b>offset</b> to that number, and the result is the actual memory address storing that particular variable.<br>
 			(eg: pointer base address <code>10</code> & offset <code>+2</code> = take value stored at <code>10</code> (X), add <code>+2</code> to it, actual address is <code>X+2</code>)<br>
-			When talking about a "normal" address (like with the controller readings), you simply take the <b>beginning address</b> and add the <b>offset</b> to it to get the actual address.<br>
+			When talking about a "normal" address that doesn't use pointers (for example, the controller readings), you simply take the <b>beginning address</b> and add the <b>offset</b> to it to get the actual address.<br>
 			(eg: beginning address <code>20</code> & offset <code>6</code> = actual address <code>26</code> )</p>
 		</div>
 		<div id="index">
 			<h1>Index</h1>
-			<p>Variables and RAM</p>
+			<a href="#variables_and_ram">Variables and RAM</a>
 			<ul>
 				<li><a href="#controller_readings_p1">Controller readings (P1)</a></li>
 				<li>
@@ -43,28 +43,29 @@
 				<li><a href="#bwitch_ini">Settings read from BWITCH.ini</a></li>
 				<li><a href="#dormant_debug">Dormant debug features/cheats</a></li>
 			</ul>
-			<p>Game disc files</p>
+			<a href="#game_disc_files">Game disc files</a>
 			<ul>
 				<li><a href="#level_folders">Level folders</a></li>
 			</ul>
-			<p>Save files</p>
+			<a href="#save_files">Save files</a>
 			<ul>
 				<li><a href="#save_header">Save header</a></li>
 				<li><a href="#settings_file">Settings file (settings.dat)</a></li>
 			</ul>
 		</div>
-		<h1>Variables and RAM</h1>
+		<h1 id="variables_and_ram">Variables and RAM</h1>
 		<p class="red">Important! The addresses refer to the final NTSC build of the game.<br>
 			The PAL version has different values, which will eventually be documented.</p>
 		<div id="controller_readings_p1">
 			<h2>Controller readings (player 1)</h2>
 			<b>Beginning address:</b> <code>0495B30</code>/<code>0495B9C</code>/<code>0495C1C</code><br>
+			<p>The difference between these three locations needs to be investigated</p>
 			<div id="joker_commands">
 				<h3>Joker commands</h3>
 				<p><strong>Type:</strong> 2 byte "integer"<br>
 				<strong>Offset:</strong> <code>+00</code></p>
-				<p>Joker commands are addresses that contain the button reading from the controller, stored with 2 bytes.<br>
-					In Kya DL, the buttons have these base values:</p>
+				<p>Joker commands are addresses that contain the button readings from one of the controllers, stored in 2 bytes, with each bit corresponding to a button.<br>
+					In Kya DL, each button gives one of these base values when pressed by itself:</p>
 				<table>
 					<tr>
 						<th>Button</th>
@@ -407,8 +408,8 @@
 						<td>FFFE</td>
 					</tr>
 				</table>
-				<p>When multiple buttons are pressed, the value gets set to [Button 1] AND [Button 2] AND ... [Button N]; for example when pressing R2 + Triangle + Circle the value gets set to <code>FDFF</code> AND <code>EFFF</code> AND <code>DFFF</code> == <code>CDFF (1100 1101 1111 1111)</code></p>
-				<p>Other PS1/PS2 games may store the value in a different way. <a href="https://www.cheatcc.com/psx/codes/jokercom.html" target="_blank" rel="noopener noreferrer">More info here <i class="fas fa-external-link-alt"></i></a></p>
+				<p>When multiple buttons are pressed, the value gets set to [Button 1] <i>AND</i> [Button 2] <i>AND</i> ... [Button N]; for example when pressing R2 + Triangle + Circle the value gets set to <code>FDFF</code> <i>AND</i> <code>EFFF</code> <i>AND</i> <code>DFFF</code> == <code>CDFF (1100 1101 1111 1111)</code></p>
+				<p>Other PS1/PS2 games may store these values in a different way. <a href="https://www.cheatcc.com/psx/codes/jokercom.html" target="_blank" rel="noopener noreferrer">More info here <i class="fas fa-external-link-alt"></i></a></p>
 			</div>
 			<div id="jokercalc" disabled>
 			<h4>Joker command calculator:</h4>
@@ -497,10 +498,10 @@
 			</div>
 			<div id="button_pressure">
 				<h3>Button pressure</h3>
-				<p>If you didn't know: the <a href="https://en.wikipedia.org/wiki/DualShock#DualShock_2" target="_blank" rel="noopener noreferrer">DualShock 2 (and DS3) has pressure sensitive buttons <i class="fas fa-external-link-alt"></i></a>, except for Select, Start, L3 and R3, meaning that games can actually tell how hard you're pressing a button.<br>
-				Kya: Dark Lineage requires a DualShock 2 and won't work with an original PS1 DualShock.<br>
-				This is usually a sign the game requires the pressure sensitive buttons, tho it's unknown in which way the pressure info is used (if at all).<br>
-				Regardless, this means that we have another way to check for button presses (apart from Select, Start, L3 and R3), which depending on the situation might be easier or better to use.</p>
+				<p>For those who didn't know: the <a href="https://en.wikipedia.org/wiki/DualShock#DualShock_2" target="_blank" rel="noopener noreferrer">DualShock 2 (and DS3) have pressure sensitive buttons <i class="fas fa-external-link-alt"></i></a> (except for Select, Start, L3 and R3), meaning that games can actually tell how hard you're pressing a button.<br>
+				Kya: DL requires a DualShock 2 and won't work with an original PS1 DualShock.<br>
+				This is usually a sign that a game requires the pressure sensitive buttons, but it's currently unknown in which way the pressure info is used in Kya DL (if at all).<br>
+				Regardless, this means there's another way to check for buttons being pressed (apart from Select, Start, L3 and R3), which, depending on the situation, might be easier or better to use.</p>
 				<p><strong>Type:</strong> 1 byte unsigned integers<br>
 				<strong>Size:</strong> 12 * 1 byte = 12 bytes total <br></p>
 				<p><code>00</code> equals not being pressed at all, <code>01</code> barely pressed and <code>FF</code> fully pressed.</p>
@@ -666,7 +667,7 @@
 			<div id="controller_readings_p2">
 				<h2>Controller readings (player 2)</h2>
 				<p>Address: <code>0495CB0</code>/<code>0495D1C</code>/<code>0495D9C</code></p>
-				<p>The order and way in which things are stored are the same as for player one.<br>
+				<p>The information stored and the order it's stored in is the same as the above.<br>
 					Note that the game also requires a DualShock 2 for player two, if you try plugging in an original DualShock in port 2 and try to control P2 in the secret level nothing will happen.</p>
 			</div>
 		</div>
@@ -676,24 +677,24 @@
 			<h3>Position</h3>
 			<p><strong>Type: </strong> float<br>
 			<strong>Pointer base value: </strong> <code>06F2D90</code><br>
-			<strong>Offset (X): </strong> <code>0000030</code><br>
-			<strong>Offset (Y): </strong> <code>0000034</code><br>
-			<strong>Offset (Z): </strong> <code>0000038</code><br>
+			<strong>Offset (X): </strong> <code>+30</code><br>
+			<strong>Offset (Y): </strong> <code>+34</code><br>
+			<strong>Offset (Z): </strong> <code>+38</code><br>
 			<p>To give a sense of scale, when Kya jumps by pressing <img src="/common/btn/x.png" alt="X"> she peaks at around +1.71 Y.<br>
-				(it's actually currently unknown which value the game considers to be the X and which one to be the Z, the nomenclature has been chosen based on their order in memory).</p>
+				(it's actually currently unknown which value the game considers to be the X and which one to be the Z, the notation has been chosen based on their order in memory).</p>
 		</div>
 		<div id="bwitch_ini">
 			<h2>Settings read from BWITCH.ini</h2>
 			<p>Some settings are stored in the file BWITCH.ini in the root of the game DVD.<br>
-				It's possible (and easier) to change these by editing the variables where they're stored after being read from the disc.</p>
+				It's possible (and easier) to change these by editing the variables used for storing them after being read from the disc.</p>
 			<h3>Starting level (AddLevel)</h3>
-			<p>The level the game should load when starting a new game (no idea why it's called <em>AddLevel</em>).<br>
-				Removing the setting completely from the ini file causes it to default to NATIV (even though the ini file itself states otherwise).
-				The folder is set by <em>SetPath</em>, which is set to "CdEuro/Level/" in the final game (on both the NTSC and PAL releases).<br>
+			<p>This controls the level the game should load when starting a new game.<br>
+				Removing the setting completely from the config file causes it to default to NATIV (even though a comment inside the file itself states the default level is "LEVEL_T", this is almost definitely a leftover from the development stages of the game).
+				The folder is set by <em>SetPath</em>, which is set to "CdEuro/Level/" in the final game (regardless of the region).<br>
 				<em>Level folder</em> in the table below omits the above mentioned root directory.<br>
 				If set to a value different from the default value of The Roots, when starting a new game, the intro movie will be skipped, the lines "Hey, look at this"..."Is it dead?" will be played, and then the player will be immediately thrown in the level.<br>
 				<!--More info about the weird or unexpected levels can be found in the section below.--></p>
-			<strong>Type:</strong> 4 bytes integer (only last byte shown in table)<br>
+			<strong>Type:</strong> 4 bytes signed(?) integer (only last byte shown in table)<br>
 			<strong>Address: </strong><code>06DA5B4</code>
 			<table>
 				<tr>
@@ -790,7 +791,7 @@
 					<td><code>0E</code></td>
 					<td>PREINTRO</td>
 					<td>Main menu</td>
-					<td>If choosing this, the intro movie will play first, and then the opening lines will play, before kicking back to the main menu</td>
+					<td>If this is chosen, the intro movie will be played, followed by the opening lines, and then the main menu will be reloaded</td>
 				</tr>
 				<tr>
 					<td><code>0F</code></td>
@@ -799,19 +800,19 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td colspan="4">Values after 15 make the game try to load levels that don't exist, causing different sorts of weird behaviours<br>
+					<td colspan="4">Values after 15 make the game try to load levels that don't exist, causing unexpected behaviours<br>
 						Usually the save file gets set to "UNKNOWN LEVEL (number of level as signed integer)"
-						Below are some examples</td>
+						Below are other more unique examples</td>
 				</tr>
 				<tr>
 					<td><code>10</code></td>
 					<td colspan="2"></td>
-					<td>Game returns to the new game save selector and deletes the save that was selected (resetting to EMPTY)</td>
+					<td>The game returns to the save file selector, deleting the save file that was selected (resetting it to EMPTY)</td>
 				</tr>
 				<tr>
 					<td><code>11</code></td>
 					<td colspan="2"></td>
-					<td>Game immediately freezes after starting new game, without playing lines and without showing any signs of trying to actually load anything from the PCSX2 logs<br>
+					<td>The game immediately freezes after starting new game, without playing the intro lines and without showing any signs of trying to load anything from the disc (observed through PCSX2 logs)<br>
 						</td>
 				</tr>
 				<tr>
@@ -825,24 +826,24 @@
 		<div id="dormant_debug">
 			<h2>Dormant debug features/cheats</h2>
 			There are dormant debug features/cheats left over from when the game was in development; a working implementation of the <i>cheat options</i> menu can most prominently be seen in the <a href="https://hiddenpalace.org/Kya:_Dark_Lineage_(Sep_29,_2003_prototype)">September 29 prototype</a>. <br>
-			<p>Strings pertaining to this menu have been found in the final game, but it's currently unknown if and how that can be accessed in the final build.<br>
-			However, it is known that it's possible to enable the <i>flying</i> cheat and the <i>invincibility</i> cheat by manually writing to the variables pertaining to them in RAM (the <i>cheat options</i> menu is coded weirdly, as there are two separate variables for these two cheats: the first technically only controls if the cheat is displayed as enabled or disabled in the menu, and the second (the "enable" variable) is what the code actually checks to see if the cheat effect should apply (for example, checking the value of the flying cheat enable when <img src="/common/btn/r2.png" alt="R2">+<img src="/common/btn/r3.png" alt="R3"> is pressed), and the former gets copied to the latter any moment the <i>cheat options</i> menu is being viewed).<br>
-			With the aid of the PCSX2 debugger and the September 29 prototype, the code that handles checking the enable variables was found in the final game, and it was confirmed that changing those is enough to restore the functionality.<br>
+			<p>Strings pertaining to this menu have been found in the final build, but it's currently unknown if and how the menu can be accessed in the final build.<br>
+			However, it is possible to enable the <i>flying</i> cheat and the <i>invincibility</i> cheat by manually writing to the respective values in RAM (the <i>cheat options</i> menu is coded weirdly, as there are two separate variables for these two cheats: the first one only controls if the cheat is displayed as enabled or disabled in the menu, and the second one (the "enable" variables) is what the code actually checks to see if the cheat effect should apply (for example, the game checks the enable variable for the flying cheat when <img src="/common/btn/r2.png" alt="R2">+<img src="/common/btn/r3.png" alt="R3"> is pressed), and the first variable gets copied to the enable variable any moment the <i>cheat options</i> menu is being viewed).<br>
+			With the aid of the PCSX2 debugger and the September 29 prototype, the code that handles checking the enable variables was found in the final game, and it was confirmed that they work in the final build too.<br>
 			(Keep in mind that the locations in RAM vary from build to build and version to version, so the values in this page won't work for the September 29 prototype).<br></p>
 			<p>These are stored next to each other and are accessed via a pointer.</p>
 			<p>
 				<b>Pointer base address: </b><code>00448AA0</code> <br>
-				<b>Offset (flying): </b><code>0000AA0</code> <br>
-				<b>Offset (invincibility): </b><code>0000AA4</code>
+				<b>Offset (flying): </b><code>+AA0</code> <br>
+				<b>Offset (invincibility): </b><code>+AA4</code>
 			</p>
-			<p>Once flying is enabled, it can be toggled by pressing <img src="/common/btn/r2.png" alt="R2">+<img src="/common/btn/r3.png" alt="R3"></p>
+			<p>Once the flying cheat is enabled, it can be toggled by pressing <img src="/common/btn/r2.png" alt="R2">+<img src="/common/btn/r3.png" alt="R3"></p>
 
 			Another dormant debug menu is documented at <a href="https://tcrf.net/Kya:_Dark_Lineage#Debug_Menu">tcrf</a>
 		</div>
-		<h1>Game disc files</h1>
+		<h1 id="game_disc_files">Game disc files</h1>
 		<div id="level_folders">
 			<h2>Level folders</h2>
-			List of all level folders (found in /CDEURO/LEVEL/)
+			List of all the level folders (found in /CDEURO/LEVEL/)
 			"Name" is the name as it appears in the pause menu/save file menu
 			<table>
 				<tr>
@@ -882,12 +883,12 @@
 				</tr>
 				<tr class="lblue_bg">
 					<td>LEVEL_4</td>
-					<td>"Nativ City" the first time you visit with Aton</td>
+					<td>"Nativ City" the first time it's entered at the start of the game</td>
 					<td>NATIV CITY</td>
 					<td>11</td>
-					<td>SECTs 2-4, 8-12 don't exist (the whole upper Nativ City doesn't exist in this version, along with minigames)<br>
-						Doesn't have any shops, elevators etc shown on the L1 map<br>
-						The game silently loads in the real NATIV map during the cutscene where Atea tells Kya to follow the signs to the Boomy shop</td>
+					<td>SECTs 2-4, 8-12 don't exist (the whole upper level and minigame areas don't exist)<br>
+						The icons for shops, elevators and other things are not shown in the L1 map<br>
+						The game silently loads in the real NATIV level during the cutscene where Atea tells Kya to follow the signs to the Boomy shop</td>
 				</tr>
 				<tr>
 					<td>LEVEL_5</td>
@@ -922,7 +923,7 @@
 					<td>Brazul's laboratory (Frank boss fight)</td>
 					<td>FORGOTTEN ISLAND</td>
 					<td>1</td>
-					<td>Pretends to be LEVEL_8 in the areas preview in the pause menu</td>
+					<td>Pretends to be LEVEL_8 in the areas preview section of the pause menu</td>
 				</tr>
 				<tr>
 					<td>LEVEL_10</td>
@@ -936,7 +937,7 @@
 					<td>Brazul miniboss (The Quarry)</td>
 					<td>THE QUARRY</td>
 					<td>1</td>
-					<td>Pretends to be LEVEL_5 in the areas preview in the pause menu<br>
+					<td>Pretends to be LEVEL_5 in the areas preview section of the pause menu<br>
 						It being so distant from it's parent LEVEL_5 may suggest the decision to separate it was taken late in the development?</td>
 				</tr>
 				<tr>
@@ -969,14 +970,15 @@
 				</tr>
 			</table>
 		</div>
-		<h1>Save files</h1>
+		<h1 id="save_files">Save files</h1>
 		<p><span class="red">Important!</span> Data (numerical values, checksums etc) is saved as little endian (LE).<br>
 		 	So for example an int32 value of 9 will be saved as <code>09 00 00 00</code> inside the file.<br></p>
 		<p>Note: files that are standard for all PS2 saves (icon.sys, *.ico) won't be discussed</p>
 		<div id="save_header">
 			<h2>Save header</h2>
 			<p>All KDL .dat save files start with a header containing at least two checksums. <br>
-				Even though the header has a size field inside it, due to the fact that the number of data sections it can contain info for is hardcoded to two in the game code, it's believed to have a fixed size in practice</p>
+				[?]Even though the header has a size field inside it, due to the fact that the number of data sections it can contain info for is hardcoded to two in the game code, it can be considered as having a fixed size in practice.[?]<br>
+			    ↑↑↑Should be rechecked to be sure it's actually true</p>
 			<table>
 				<tr>
 					<th colspan="4">Save file header</th>
@@ -1039,7 +1041,7 @@
 		</div>
 		<div id="settings_file">
 			<h2>Settings file</h2>
-			<p>Offset starts from after header (so at <code>1C</code>).</p>
+			<p>In the table below, the offset starts from after the header.</p>
 			<table>
 				<tr>
 					<th colspan="4">Settings (settings.dat)</th>
@@ -1061,16 +1063,16 @@
 					<td><code>04</code></td>
 					<td>Unknown</td>
 					<td>Unknown<br>
-						Set to <code>03</code> by game</td>
+						Set to <code>03</code> by the game</td>
 				</tr>
 				<tr>
 					<td><code>+08</code></td>
 					<td><code>04</code></td>
 					<td>Signed? int32</td>
-					<td>Language setting (PAL version)<br>
+					<td>Language setting (PAL release)<br>
 						<code>00</code> - <code>04</code><br>
 						In order: English, French, German, Spanish, Italian<br>
-						NTSC version completely ignores this setting</td>
+						The NTSC-U/C release ignores this setting</td>
 				</tr>
 				<tr>
 					<td><code>+0C</code></td>
@@ -1101,30 +1103,30 @@
 					<td><code>04</code></td>
 					<td>Signed int32</td>
 					<td>Y axis screen adjust <br>
-					Stored in negative - in-game negative values stored as positive value and vice versa</td>
+					Stored in negative - in-game negative values are stored as positive values and vice versa</td>
 				</tr>
 				<tr>
 					<td><code>+24</code></td>
 					<td><code>01</code></td>
-					<td>Boolean</td>
+					<td>Boolean (byte)</td>
 					<td>Enable vibration</td>
 				</tr>
 				<tr>
 					<td><code>+25</code></td>
 					<td><code>01</code></td>
-					<td>Boolean</td>
+					<td>Boolean (byte)</td>
 					<td>Enable subtitles</td>
 				</tr>
 				<tr>
 					<td><code>+26</code></td>
 					<td><code>01</code></td>
-					<td>Boolean?</td>
+					<td>Unknown byte value</td>
 					<td>Unknown</td>
 				</tr>
 				<tr>
 					<td><code>+27</code></td>
 					<td><code>01</code></td>
-					<td>Boolean</td>
+					<td>Boolean (byte)</td>
 					<td>Aspect ratio<br>
 						<code>00</code> = 4:3, <code>01</code> = 16:9</td>
 				</tr>
@@ -1133,15 +1135,15 @@
 					<td><code>D8</code></td>
 					<td></td>
 					<td>Unknown<br>
-						Won't affect game if filled with garbage, won't even get reset to a default value</td>
+						Won't affect the game if filled with garbage, won't even get reset to a default value</td>
 				</tr>
 				<tr>
 					<td><code>+110</code></td>
 					<td><code>1C</code></td>
 					<td></td>
 					<td>Unknown<br>
-						Outside the data block size set in the header, thus doesn't affect checksum<br>
-						Won't affect game if filled with garbage or even completely removed</td>
+						Outside of the data block size set in the header, thus doesn't affect checksum<br>
+						Won't affect the game if filled with garbage or even completely removed</td>
 				</tr>
 			</table>
 		</div>
