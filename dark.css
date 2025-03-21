@@ -1,5 +1,5 @@
-body {
-	background-color: #202124;
+body , .header{
+	background-color: rgb(32, 33, 36);
 	color: white;
 }
 
