@@ -17,11 +17,11 @@
 			<div>
 				<a href=".."><i class="fa-solid fa-house"></i> Back to home</a>
 			</div>
-			<div id="header-right"">
-				<span>
-					<input type="checkbox" name="show-index" id="show-index" checked="false">
+			<div id="header-right">
+				<span id="index-toggle">
+					<input type="checkbox" name="show-index" id="show-index" checked>
 					Index
-			</span>
+				</span>
 			</div>
 		</header>
 		<div id="parent-container">
@@ -442,48 +442,50 @@
 						<p>Other PS1/PS2 games may store these values in a different way. <a href="https://www.cheatcc.com/psx/codes/jokercom.html" target="_blank" rel="noopener noreferrer">More info here <i class="fas fa-external-link-alt"></i></a></p>
 					</div>
 					<div id="jokercalc" disabled>
-					<h4>Joker command calculator:</h4>
-					<noscript><div class="red">The calculator requires JavaScript to be enabled to work!</div></noscript>
+						<h4>Joker command calculator:</h4>
+						<noscript>
+							<div class="red">The calculator requires JavaScript to be enabled to work!</div>
+						</noscript>
 						<div class="sts">
 							<div>
-							<table style="float: left;">
-								<tr>
-									<td><img src="/common/btn/s.png" alt="Square"></td>
-									<td><img src="/common/btn/x.png" alt="X"></td>
-									<td><img src="/common/btn/o.png" alt="Circle"></td>
-									<td><img src="/common/btn/t.png" alt="Triangle"></td>
-									<td><img src="/common/btn/r1.png" alt="R1"></td>
-									<td><img src="/common/btn/l1.png" alt="L1"></td>
-									<td><img src="/common/btn/r2.png" alt="R2"></td>
-									<td><img src="/common/btn/l2.png" alt="L2"></td>
-									<td><img src="/common/btn/dl.png" alt="D-pad left"></td>
-									<td><img src="/common/btn/dd.png" alt="D-pad down"></td>
-									<td><img src="/common/btn/dr.png" alt="D-pad right"></td>
-									<td><img src="/common/btn/du.png" alt="D-pad up"></td>
-									<td><img src="/common/btn/st.png" alt="Start"></td>
-									<td><img src="/common/btn/r3.png" alt="R3"></td>
-									<td><img src="/common/btn/l3.png" alt="L3"></td>
-									<td><img src="/common/btn/se.png" alt="Select"></td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" id="cc_s" value="32767"></td>
-									<td><input type="checkbox" id="cc_x" value="49151"></td>
-									<td><input type="checkbox" id="cc_o" value="57343"></td>
-									<td><input type="checkbox" id="cc_t" value="61439"></td>
-									<td><input type="checkbox" id="cc_r1" value="63487"></td>
-									<td><input type="checkbox" id="cc_l1" value="64511"></td>
-									<td><input type="checkbox" id="cc_r2" value="65023"></td>
-									<td><input type="checkbox" id="cc_l2" value="65279"></td>
-									<td><input type="checkbox" id="cc_dl" value="65407"></td>
-									<td><input type="checkbox" id="cc_dd" value="65471"></td>
-									<td><input type="checkbox" id="cc_dr" value="65503"></td>
-									<td><input type="checkbox" id="cc_du" value="65519"></td>
-									<td><input type="checkbox" id="cc_st" value="65527"></td>
-									<td><input type="checkbox" id="cc_r3" value="65531"></td>
-									<td><input type="checkbox" id="cc_l3" value="65533"></td>
-									<td><input type="checkbox" id="cc_se" value="65534"></td>
-								</tr>
-							</table>
+								<table style="float: left;">
+									<tr>
+										<td><img src="/common/btn/s.png" alt="Square"></td>
+										<td><img src="/common/btn/x.png" alt="X"></td>
+										<td><img src="/common/btn/o.png" alt="Circle"></td>
+										<td><img src="/common/btn/t.png" alt="Triangle"></td>
+										<td><img src="/common/btn/r1.png" alt="R1"></td>
+										<td><img src="/common/btn/l1.png" alt="L1"></td>
+										<td><img src="/common/btn/r2.png" alt="R2"></td>
+										<td><img src="/common/btn/l2.png" alt="L2"></td>
+										<td><img src="/common/btn/dl.png" alt="D-pad left"></td>
+										<td><img src="/common/btn/dd.png" alt="D-pad down"></td>
+										<td><img src="/common/btn/dr.png" alt="D-pad right"></td>
+										<td><img src="/common/btn/du.png" alt="D-pad up"></td>
+										<td><img src="/common/btn/st.png" alt="Start"></td>
+										<td><img src="/common/btn/r3.png" alt="R3"></td>
+										<td><img src="/common/btn/l3.png" alt="L3"></td>
+										<td><img src="/common/btn/se.png" alt="Select"></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="cc_s" value="32767"></td>
+										<td><input type="checkbox" id="cc_x" value="49151"></td>
+										<td><input type="checkbox" id="cc_o" value="57343"></td>
+										<td><input type="checkbox" id="cc_t" value="61439"></td>
+										<td><input type="checkbox" id="cc_r1" value="63487"></td>
+										<td><input type="checkbox" id="cc_l1" value="64511"></td>
+										<td><input type="checkbox" id="cc_r2" value="65023"></td>
+										<td><input type="checkbox" id="cc_l2" value="65279"></td>
+										<td><input type="checkbox" id="cc_dl" value="65407"></td>
+										<td><input type="checkbox" id="cc_dd" value="65471"></td>
+										<td><input type="checkbox" id="cc_dr" value="65503"></td>
+										<td><input type="checkbox" id="cc_du" value="65519"></td>
+										<td><input type="checkbox" id="cc_st" value="65527"></td>
+										<td><input type="checkbox" id="cc_r3" value="65531"></td>
+										<td><input type="checkbox" id="cc_l3" value="65533"></td>
+										<td><input type="checkbox" id="cc_se" value="65534"></td>
+									</tr>
+								</table>
 							</div>
 							<span style="vertical-align: middle; margin-left: 3px;">
 								<code id="calc_res">FFFF (NOT = 0000)</code><br>
@@ -1026,7 +1028,7 @@
 							<td><code>+00</code></td>
 							<td><code>04</code></td>
 							<td>String</td>
-							<td>"NEDE" ("EDEN" in reverse(?))</code></td>
+							<td><code>"NEDE"</code> ("EDEN" in reverse)</td>
 						</tr>
 						<tr>
 							<td><code>+04</code></td>
@@ -1208,9 +1210,9 @@
 			function toggleIndex() {
 				indexEl = $("#index");
 				if ($(el2).prop('checked')) {
-					$(indexEl).show();
+					$(indexEl).removeClass("hidden");
 				} else {
-					$(indexEl).hide();
+					$(indexEl).addClass("hidden");
 				}
 			}
 			$(el2).on("click", toggleIndex);
