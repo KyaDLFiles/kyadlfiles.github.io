@@ -7,15 +7,39 @@
 		<script src="/dark.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
+		<style>
+			body {
+				margin-left: 5px;
+				margin-right: 5px;
+			}
+			#text-container {
+				margin: 0;
+			}
+			#main-container {
+				margin-top: calc(var(--header-height) + 2 * var(--header-vertical-padding));
+			}
+			header {
+				justify-content: center !important;
+			}
+		</style>
 	</head>
 	
 	<body>
-		<h2>The Kya: Dark Lineage Files</h2>
-		<h4>A collection of info about the PS2 game Kya: Dark Lineage</h4>
-		<hr>
-		<a href="./technical">Technical information (very incomplete)</a><br>
-		<a href="./secrlvl">Info about the secret level (LEVEL_13)</a>
-		<hr>
-		<object id="footer-obj" type="text/html" data="/footer.html"></object>
+		<header id="header">
+			<div id="header-title">
+				kyadlfiles.github.io
+			</div>
+		</header>
+		<div id="main-container">
+			<section id="text-container">
+				<h1>The Kya: Dark Lineage Files</h1>
+				<h4>A collection of info about the PS2 game Kya: Dark Lineage</h4>
+				<hr>
+				<a href="./technical">Technical information (very incomplete)</a><br>
+				<a href="./secrlvl">Info about the secret level (LEVEL_13)</a>
+				<hr>
+				<object id="footer-obj" type="text/html" data="/footer.html"></object>
+			</section>
+		</div>
 	</body>
 </html>

@@ -4,10 +4,11 @@
 	--header-height: 1.5em;
 	--side-index-width: 18em;
 	--side-index-margin: 1em;
+	--main-container-extra-spacing: 1.5em;
 }
 
 :target {
-	scroll-margin-top: calc(var(--header-height) + 2 * var(--header-vertical-padding));
+	scroll-margin-top: calc(var(--header-height) + 2 * var(--header-vertical-padding) + var(--main-container-extra-spacing));
 }
 
 body {
@@ -84,7 +85,7 @@ div[disabled] {
 #main-container {
 	display: flex;
 	flex-direction: row;
-	margin-top: calc(var(--header-height) + 2 * var(--header-vertical-padding) + 1.5em)
+	margin-top: calc(var(--header-height) + 2 * var(--header-vertical-padding) + var(--main-container-extra-spacing))
 }
 
 #header {
@@ -141,16 +142,28 @@ li > ul {
 #text-container {
 	margin-right: 1em;
 	margin-left: calc(var(--side-index-width) + 2 * var(--side-index-margin));
+	width: 100%;
 }
 
-#text-container h2:first-of-type {
+#text-container > article:first-of-type > h1 {
 	margin-top: 0;
+}
+
+h1 {
+	font-size: 28px;
+	text-decoration: underline;
 }
 
 #footer-links {
 	width: calc(100% - 2em);
 	display: flex;
 	justify-content: space-between;
+}
+
+.external-video {
+	max-width: 560px;
+	width: 100%;
+	aspect-ratio: 16/9;
 }
 
 @media (max-width: 820px) {
@@ -174,6 +187,9 @@ li > ul {
 		width: 100%;
 		background-blend-mode: color;
 		background-color: rgba(135, 253, 255, 0.9);
+		margin: 0;
+		padding: var(--side-index-margin);
+		box-sizing: border-box;
 	}
 
 	.hidden {
@@ -182,7 +198,7 @@ li > ul {
 }
 
 @media (max-width: 520px) {
-	.hide-narrow-screen {
+	.hide-very-narrow-screen {
 		display: none !important;
 	}
 }
