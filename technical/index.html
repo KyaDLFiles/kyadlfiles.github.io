@@ -2,11 +2,9 @@
 
 <html lang="en">
 	<head>
-		<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 		<script src="https://kit.fontawesome.com/66a22e00de.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="/style.css">
-		<script src="/dark.js"></script>
-		<title>KDL Technical information</title>
+		<title>Technical information</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
 	</head>
@@ -450,12 +448,12 @@
 							<p>When multiple buttons are pressed, the value gets set to [Button 1] <i>AND</i> [Button 2] <i>AND</i> ... [Button N]; for example when pressing R2 + Triangle + Circle the value gets set to <code>FDFF</code> <i>AND</i> <code>EFFF</code> <i>AND</i> <code>DFFF</code> == <code>CDFF (1100 1101 1111 1111)</code></p>
 							<p>Other PS1/PS2 games may store these values in a different way. <a href="https://www.cheatcc.com/psx/codes/jokercom.html" target="_blank" rel="noopener noreferrer">More info here <i class="fas fa-external-link-alt"></i></a></p>
 						</div>
-						<div id="jokercalc" disabled>
+						<div id="jokercalc">
 							<h4>Joker command calculator:</h4>
 							<noscript>
 								<div class="red">The calculator requires JavaScript to be enabled to work!</div>
 							</noscript>
-							<div class="sts">
+							<div id="jokercalc_actual" class="sts disabled">
 								<div>
 									<table style="float: left;">
 										<tr>
@@ -1201,27 +1199,46 @@
 
 		<!--SCRIPTS-->
 		<script>
-			$('#jokercalc').removeAttr("disabled"); //remove the disabled attribute
-			
-			el = $('#jokercalc').find("[id^=cc_]"); //get all checkboxes
-			function calc() {
+			jc = document.getElementById("jokercalc_actual");
+			jc.classList.remove("disabled");
+
+			el = jc.querySelectorAll("[id^=cc_]"); //get all checkboxes
+			el = [...el];
+
+			cc_dd = document.getElementById("cc_dd");
+			cc_du = document.getElementById("cc_du");
+			cc_dl = document.getElementById("cc_dl");
+			cc_dr = document.getElementById("cc_dr");
+			calc_warn = document.getElementById("calc_warn");
+
+			function calculate() {
 				res = 65535; //0xFFFF
-				for (i = 0; i < 16; i++) 
-					if ($(el[i]).prop("checked"))
-						res &= $(el[i]).prop("value");
-						
-				res += 65536; //Hacky way to force the inclusion of leading zeroes
-				str = res.toString(16).toUpperCase().slice(-4) + " (NOT = " + (~res >>> 0).toString(16).toUpperCase().slice(-4) + ")";
-				$("#calc_res").html(str);
+				el.forEach( function(c) {
+						if (c.checked)
+							res &= c.getAttribute("value");
+					}
+				)
 				
-				if ( ($('#cc_dd').prop("checked") & $('#cc_du').prop("checked")) |
-				($('#cc_dl').prop("checked") & $('#cc_dr').prop("checked")) )
-					$("#calc_warn").removeClass("hidden");
+				//Hacky way to force the inclusion of leading zeroes
+				res += 65536; 
+				str = res.toString(16).toUpperCase().slice(-4) + " (NOT = " + (~res >>> 0).toString(16).toUpperCase().slice(-4) + ")";
+				document.getElementById("calc_res").innerHTML = str;
+				
+
+				if ( (cc_dd.checked & cc_du.checked) |
+				(cc_dl.checked & cc_dr.checked) )
+					calc_warn.classList.remove("hidden");
 				else
-					$("#calc_warn").addClass("hidden");
+					calc_warn.classList.add("hidden"); 
 			}
-			$(el).on("click", calc);			
+			
+			el.forEach( function(c) {
+					c.addEventListener("click", calculate);
+				}
+			)	
+
+			calculate()
 		</script>
-		<script src="/index.js"></script>
+		<script src="/index_toggle.js"></script>
 	</body>
 </html>
