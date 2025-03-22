@@ -11,11 +11,16 @@
 		<meta charset="utf-8">
 	</head>
 	<body>
-		
-		<div class="header dummy"></div>
-		<header id="header" class="header">
-			<div>
-				<a href=".."><i class="fa-solid fa-house"></i> Back to home</a>
+		<header id="header">
+			<nav id="header-nav">
+				<a href="..">
+					<i class="fa-solid fa-house"></i> 
+					<span class="hide-narrow-screen">Back to home</span>
+					<span class="show-narrow-screen">Home</span>
+				</a>
+			</nav>
+			<div id="header-title">
+				<span class="hide-narrow-screen">kyadlfiles.github.io - </span>Technical information
 			</div>
 			<div id="header-right">
 				<span id="index-toggle">
@@ -24,9 +29,8 @@
 				</span>
 			</div>
 		</header>
-		<div id="parent-container">
-			<div class="index dummy"></div>
-			<aside id="index" class="index">
+		<div id="main-container">
+			<aside id="index">
 				<br>
 				<ul>	
 					<li>
@@ -68,7 +72,7 @@
 					</li>
 				</ul>
 			</aside>
-			<article class="text-container">
+			<article id="text-container">
 				
 				<div id="pcsx2">
 					<h2>Cheat Engine, PCSX2 and cheat tables</h2>
@@ -1181,7 +1185,7 @@
 			</article>
 		</div>
 		<hr>
-		<object id="footer" type="text/html" data="/footer.html"></object>
+		<object id="footer-obj" type="text/html" data="/footer.html"></object>
 
 		<!--SCRIPTS-->
 		<script>
