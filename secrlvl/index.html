@@ -8,11 +8,7 @@
 		<title>Secret level</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
-		<style>
-			:root {
-				--side-index-width: 8em;
-			}
-		</style>
+		
 	</head>
 	<body>
 		<header id="header">
@@ -41,9 +37,58 @@
 					</li>
 					<li>
 						<a href="#fight-attacks">Fight attacks</a>
+						<ul>
+							<li>
+								<a href="#fight-attacks-scrawny">Scrawny</a>
+							</li>
+							<li>
+								<a href="#fight-attacks-armed-scrawny">Armed Scrawny</a>
+							</li>
+							<li>
+								<a href="#fight-attacks-grunt-black">Grunt with black pants</a>
+							</li>
+							<li>
+								<a href="#fight-attacks-armed-grunt">Armed Grunt</a>
+							</li>
+							<li>
+								<a href="#fight-attacks-armed-scrawny">Armed Scrawny</a>
+							</li>
+							<li>
+								<a href="#fight-attacks-bandaged-kronos">Bandaged Kronos</a>
+							</li>
+							<li>
+								<a href="#fight-attacks-black-kronos">Black Kronos</a>
+							</li>
+							<li>
+								<a href="#fight-attacks-aton-kronos">Aton Kronos</a>
+							</li>
+							<li>
+								<a href="#fight-attacks-brazul">Brazul</a>
+							</li>
+							<li>
+								<a href="#fight-attacks-frank">Frank</a>
+							</li>
+						</ul>
 					</li>
 					<li>
-						<a href="#how-to-access">How to access</a>
+						<a href="#how-to-access">Accessing the level</a>
+						<ul>
+							<li>
+								<a href="#howto-official">Official method</a>
+							</li>
+							<li>
+								<a href="#howto-cheat">Cheat code</a>
+							</li>
+							<li>
+								<a href="#howto-hex">Hex editor</a>
+							</li>
+							<li>
+								<a href="#howto-save">Save file</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#maze">Bypassing maze teleport</a>
 					</li>
 				</ul>
 			</aside>
@@ -56,513 +101,530 @@
 				</article>
 				<article id="fight-attacks">
 					<h1>Fight attacks</h1>
-					Abbreviations:
-					<ul>
-						<li>DP: damage points</li>
-						<li>STK: stick towards Kya</li>
-						<li>SNTK: stick not towards Kya</li>
-						<li>STBP2: stick towards behind player 2</li>
-						<li>STSP: stick towards spell position (Brazul)</li>
-						<li>LTR: left to right</li>
-						<li>RTL: right to left</li>
-					</ul>
-					All enemies except Kya and Frank have a broken <img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/x.png" alt="X"> move that doesn't seem to do anything apart froma  weird animation (or maybe it's a common fake move)
-					<h3>Scrawny</h3>
-					<table>
-						<tr>
-							<th>Combo</th>
-							<th>Move</th>
-							<th>DP</th>
-							<th>Info</th>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/s.png" alt="Square"></td>
-							<td>Punch</td>
-							<td>5</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>STK + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Jump and punch from above</td>
-							<td>5</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"></td>
-							<td>Block</td>
-							<td></td>
-							<td></td>
-						</tr>
-					</table>
-					<h3>Armed Scrawny</h3>
-					<table>
-						<tr>
-							<th>Combo</th>
-							<th>Move</th>
-							<th>DP</th>
-							<th>Info</th>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/s.png" alt="Square"></td>
-							<td>Swing bat LTR</td>
-							<td>5</td>
-							<td>Can be chained with RTL as LTR - RTL - LTR</td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/t.png" alt="Triangle"></td>
-							<td>Swing bat RTL</td>
-							<td>5</td>
-							<td>Read above</td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/t.png" alt="Triangle"></td>
-							<td>Jump forwards and kick</td>
-							<td>8</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"></td>
-							<td>Block</td>
-							<td></td>
-							<td></td>
-						</tr>
-					</table>
-					<h3>Grunt with black pants</h3>
-					<table>
-						<tr>
-							<th>Combo</th>
-							<th>Move</th>
-							<th>DP</th>
-							<th>Info</th>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/s.png" alt="Square"></td>
-							<td>Right punch</td>
-							<td>5</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Left punch</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/o.png" alt="Circle"></td>
-							<td>Grab and punch</td>
-							<td>5</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Side claw hit</td>
-							<td>5</td>
-							<td>Up to three can be chained</td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + STK + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Crushing claws</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"></td>
-							<td>Block</td>
-							<td></td>
-							<td></td>
-						</tr>
-					</table>
-					<h3>Armed Grunt</h3>
-					<table>
-						<tr>
-							<th>Combo</th>
-							<th>Move</th>
-							<th>DP</th>
-							<th>Info</th>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/s.png" alt="Square"></td>
-							<td>Club swing</td>
-							<td>10</td>
-							<td>Up to three can be chained<br>Normally Kya gets thrown too far for the subsequent ones to be effective, but the first one can be dodged by jumping<br>Not sure if the second one can be dodged</td>
-						</tr>
-						<tr>
-							<td>STK + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Punch</td>
-							<td>7</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + STNK + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Swing from above</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + STK + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Club uppercut</td>
-							<td>10</td>
-							<td>Another one can be chained while Kya is in the air to do another 10 damage<br>In both cases she also gets ragdoll damage</td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"></td>
-							<td>Block</td>
-							<td></td>
-							<td></td>
-						</tr>
-					</table>
-					<h3>Bandaged Kronos</h3>
-					<table>
-						<tr>
-							<th>Combo</th>
-							<th>Move</th>
-							<th>DP</th>
-							<th>Info</th>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/s.png" alt="Square"></td>
-							<td>Claws jab</td>
-							<td>7</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/t.png" alt="Triangle"></td>
-							<td>Rotating claws attack (RCA)</td>
-							<td>5</td>
-							<td>Another one can be chained</td>
-						</tr>
-						<tr>
-							<td>One RCA + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Spin and hook</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>Two RCAs + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Hook</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Fake move</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + STK + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Super hook</td>
-							<td>15</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/t.png" alt="Triangle"></td>
-							<td>Rotating back claws (RBC)</td>
-							<td>5</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>RBC + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Hook</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/o.png" alt="Circle"></td>
-							<td>Grab and throw</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/l2.png" alt="L2"> + stick to direction</td>
-							<td>Teleport to direction (dodge)</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"></td>
-							<td>Block</td>
-							<td></td>
-							<td></td>
-						</tr>
-					</table>
-					<h3>Black Kronos</h3>
-					<table>
-						<tr>
-							<th>Combo</th>
-							<th>Move</th>
-							<th>DP</th>
-							<th>Info</th>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/s.png" alt="Square"></td>
-							<td>Claws jab</td>
-							<td>7</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/t.png" alt="Triangle"></td>
-							<td>Rotating claws attack (RCA)</td>
-							<td>5</td>
-							<td>Another one can be chained<br>Second one does 7 DP</td>
-						</tr>
-						<tr>
-							<td>One RCA + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Spin and hook</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>Two RCAs + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Hook</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Fake move</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + STK + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Super hook</td>
-							<td>25</td>
-							<td>With red trail</td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/t.png" alt="Triangle"></td>
-							<td>Rotating back claws (RBC)</td>
-							<td>5</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>RBC + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Hook</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/o.png" alt="Circle"></td>
-							<td>Grab and throw</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/l2.png" alt="L2"> + stick to direction</td>
-							<td>Teleport to direction (dodge)</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"></td>
-							<td>Block</td>
-							<td></td>
-							<td></td>
-						</tr>
-					</table>
-					<h3>Aton Kronos</h3>
-					<table>
-						<tr>
-							<th>Combo</th>
-							<th>Move</th>
-							<th>DP</th>
-							<th>Info</th>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/s.png" alt="Square"></td>
-							<td>Claws jab</td>
-							<td>7</td>
-							<td>Much faster than the other two Kronoses</td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/t.png" alt="Triangle"></td>
-							<td>Rotating claws attack (RCA)</td>
-							<td>10</td>
-							<td>Another one can be chained</td>
-						</tr>
-						<tr>
-							<td>One RCA + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Spin and hook</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>Two RCAs + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Hook</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Fake move</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + STK + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Super hook</td>
-							<td>25</td>
-							<td>With red trail</td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/t.png" alt="Triangle"></td>
-							<td>Rotating back claws (RBC)</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>RBC + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Hook</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/o.png" alt="Circle"></td>
-							<td>Grab and throw</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/l2.png" alt="L2"> + stick to direction</td>
-							<td>Teleport to direction (dodge)</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"></td>
-							<td>Block</td>
-							<td></td>
-							<td></td>
-						</tr>
-					</table>
-					<h3>Brazul</h3>
-					<h4>Stick spell position</h4>
-					This is how the stick position for using spell attacks works:<br>
-					Imagine a circle having Brazul at the centre, with Kya on the circumference representing 0°<br>
-					To perform a spell attack, you have to place the stick at ±45°<br>
-					However, the angle is so precise you might as well rotate the stick blindly and hope you get it<br>
-					<a href="./imgs/spell.png" target="_blank" rel="noopener noreferrer"><img class="smallimg" src="./imgs/spell.png" alt="Spell diagram"></a> <!-- I made this in GeoGebra lol -->
-					<table>
-						<tr>
-							<th>Combo</th>
-							<th>Move</th>
-							<th>DP</th>
-							<th>Info</th>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/s.png" alt="Square"></td>
-							<td>Punch</td>
-							<td>10</td>
-							<td>Up to three can be chained<br>Last one does 15 DP</td>
-						</tr>
-						<tr>
-							<td>STK + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Palm strike</td>
-							<td>15</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>STBP2 + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Spinning back fist</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>STSP + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Ice spell</td>
-							<td>15</td>
-							<td>No animation on the floor</td>
-						</tr>
-						<tr>
-							<td>STSP + <img src="/common/btn/t.png" alt="Triangle"></td>
-							<td>Water spell</td>
-							<td>15</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>STSP + <img src="/common/btn/s.png" alt="Square"> + <img src="/common/btn/t.png" alt="Triangle"></td>
-							<td>Fireball</td>
-							<td>15</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/o.png" alt="Circle"></td>
-							<td>Grab and throw</td>
-							<td>10</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/l2.png" alt="L2"> + stick to direction</td>
-							<td>Teleport to direction (dodge)</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"></td>
-							<td>Block</td>
-							<td></td>
-							<td></td>
-						</tr>
-					</table>
-					<h3>Frank</h3>
-					<table>
-						<tr>
-							<th>Combo</th>
-							<th>Move</th>
-							<th>DP</th>
-							<th>Info</th>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/s.png" alt="Square"></td>
-							<td>LTR side hit</td>
-							<td>10</td>
-							<td>Three can be chained with RTL as LTR - RTL - LTR, but normally Kya gets thrown too far<br>Can be dodged by jumping</td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>RTL side hit</td>
-							<td>10</td>
-							<td>Read above</td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/t.png" alt="Triangle"></td>
-							<td>Kick</td>
-							<td>8</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>STK + <img src="/common/btn/s.png" alt="Square"></td>
-							<td>Hit from above</td>
-							<td>15</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><img src="/common/btn/o.png" alt="Circle"></td>
-							<td>Grab and throw</td>
-							<td>15</td>
-							<td></td>
-						</tr>
-					</table>
+					<section id="fight-attacks-intro">
+						Abbreviations:
+						<ul>
+							<li>DP: damage points</li>
+							<li>STK: stick towards Kya</li>
+							<li>SNTK: stick not towards Kya</li>
+							<li>STBP2: stick towards behind player 2</li>
+							<li>STSP: stick towards spell position (Brazul)</li>
+							<li>LTR: left to right</li>
+							<li>RTL: right to left</li>
+						</ul>
+						All enemies except Kya and Frank have a broken <img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/x.png" alt="X"> move that doesn't seem to do anything apart froma  weird animation (or maybe it's a common fake move)		
+					</section>
+					<section id="fight-attacks-scrawny">
+						<h3>Scrawny</h3>
+						<table>
+							<tr>
+								<th>Combo</th>
+								<th>Move</th>
+								<th>DP</th>
+								<th>Info</th>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/s.png" alt="Square"></td>
+								<td>Punch</td>
+								<td>5</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>STK + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Jump and punch from above</td>
+								<td>5</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"></td>
+								<td>Block</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section id="fight-attacks-armed-scrawny">
+						<h3>Armed Scrawny</h3>
+						<table>
+							<tr>
+								<th>Combo</th>
+								<th>Move</th>
+								<th>DP</th>
+								<th>Info</th>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/s.png" alt="Square"></td>
+								<td>Swing bat LTR</td>
+								<td>5</td>
+								<td>Can be chained with RTL as LTR - RTL - LTR</td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/t.png" alt="Triangle"></td>
+								<td>Swing bat RTL</td>
+								<td>5</td>
+								<td>Read above</td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/t.png" alt="Triangle"></td>
+								<td>Jump forwards and kick</td>
+								<td>8</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"></td>
+								<td>Block</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section id="fight-attacks-grunt-black">
+						<h3>Grunt with black pants</h3>
+						<table>
+							<tr>
+								<th>Combo</th>
+								<th>Move</th>
+								<th>DP</th>
+								<th>Info</th>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/s.png" alt="Square"></td>
+								<td>Right punch</td>
+								<td>5</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Left punch</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/o.png" alt="Circle"></td>
+								<td>Grab and punch</td>
+								<td>5</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Side claw hit</td>
+								<td>5</td>
+								<td>Up to three can be chained</td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + STK + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Crushing claws</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"></td>
+								<td>Block</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section id="fight-attacks-armed-grunt">
+						<h3>Armed Grunt</h3>
+						<table>
+							<tr>
+								<th>Combo</th>
+								<th>Move</th>
+								<th>DP</th>
+								<th>Info</th>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/s.png" alt="Square"></td>
+								<td>Club swing</td>
+								<td>10</td>
+								<td>Up to three can be chained<br>Normally Kya gets thrown too far for the subsequent ones to be effective, but the first one can be dodged by jumping<br>Not sure if the second one can be dodged</td>
+							</tr>
+							<tr>
+								<td>STK + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Punch</td>
+								<td>7</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + STNK + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Swing from above</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + STK + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Club uppercut</td>
+								<td>10</td>
+								<td>Another one can be chained while Kya is in the air to do another 10 damage<br>In both cases she also gets ragdoll damage</td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"></td>
+								<td>Block</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>						
+					</section>
+					<section id="fight-attacks-bandaged-kronos">
+						<h3>Bandaged Kronos</h3>
+						<table>
+							<tr>
+								<th>Combo</th>
+								<th>Move</th>
+								<th>DP</th>
+								<th>Info</th>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/s.png" alt="Square"></td>
+								<td>Claws jab</td>
+								<td>7</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/t.png" alt="Triangle"></td>
+								<td>Rotating claws attack (RCA)</td>
+								<td>5</td>
+								<td>Another one can be chained</td>
+							</tr>
+							<tr>
+								<td>One RCA + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Spin and hook</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Two RCAs + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Hook</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Fake move</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + STK + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Super hook</td>
+								<td>15</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/t.png" alt="Triangle"></td>
+								<td>Rotating back claws (RBC)</td>
+								<td>5</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>RBC + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Hook</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/o.png" alt="Circle"></td>
+								<td>Grab and throw</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/l2.png" alt="L2"> + stick to direction</td>
+								<td>Teleport to direction (dodge)</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"></td>
+								<td>Block</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section id="fight-attacks-black-kronos">
+						<h3>Black Kronos</h3>
+						<table>
+							<tr>
+								<th>Combo</th>
+								<th>Move</th>
+								<th>DP</th>
+								<th>Info</th>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/s.png" alt="Square"></td>
+								<td>Claws jab</td>
+								<td>7</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/t.png" alt="Triangle"></td>
+								<td>Rotating claws attack (RCA)</td>
+								<td>5</td>
+								<td>Another one can be chained<br>Second one does 7 DP</td>
+							</tr>
+							<tr>
+								<td>One RCA + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Spin and hook</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Two RCAs + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Hook</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Fake move</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + STK + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Super hook</td>
+								<td>25</td>
+								<td>With red trail</td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/t.png" alt="Triangle"></td>
+								<td>Rotating back claws (RBC)</td>
+								<td>5</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>RBC + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Hook</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/o.png" alt="Circle"></td>
+								<td>Grab and throw</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/l2.png" alt="L2"> + stick to direction</td>
+								<td>Teleport to direction (dodge)</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"></td>
+								<td>Block</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section id="fight-attacks-aton-kronos">
+						<h3>Aton Kronos</h3>
+						<table>
+							<tr>
+								<th>Combo</th>
+								<th>Move</th>
+								<th>DP</th>
+								<th>Info</th>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/s.png" alt="Square"></td>
+								<td>Claws jab</td>
+								<td>7</td>
+								<td>Much faster than the other two Kronoses</td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/t.png" alt="Triangle"></td>
+								<td>Rotating claws attack (RCA)</td>
+								<td>10</td>
+								<td>Another one can be chained</td>
+							</tr>
+							<tr>
+								<td>One RCA + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Spin and hook</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Two RCAs + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Hook</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Fake move</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + STK + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Super hook</td>
+								<td>25</td>
+								<td>With red trail</td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/t.png" alt="Triangle"></td>
+								<td>Rotating back claws (RBC)</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>RBC + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Hook</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/o.png" alt="Circle"></td>
+								<td>Grab and throw</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/l2.png" alt="L2"> + stick to direction</td>
+								<td>Teleport to direction (dodge)</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"></td>
+								<td>Block</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section id="fight-attacks-brazul">
+						<h3>Brazul</h3>
+						<h4>Stick spell position</h4>
+						This is how the stick position for using spell attacks works:<br>
+						Imagine a circle having Brazul at the centre, with Kya on the circumference representing 0°<br>
+						To perform a spell attack, you have to place the stick at ±45°<br>
+						However, the angle is so precise you might as well rotate the stick blindly and hope you get it<br>
+						<a href="./imgs/spell.png" target="_blank" rel="noopener noreferrer"><img class="smallimg" src="./imgs/spell.png" alt="Spell diagram"></a> <!-- I made this in GeoGebra lol -->
+						<table>
+							<tr>
+								<th>Combo</th>
+								<th>Move</th>
+								<th>DP</th>
+								<th>Info</th>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/s.png" alt="Square"></td>
+								<td>Punch</td>
+								<td>10</td>
+								<td>Up to three can be chained<br>Last one does 15 DP</td>
+							</tr>
+							<tr>
+								<td>STK + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Palm strike</td>
+								<td>15</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>STBP2 + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Spinning back fist</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>STSP + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Ice spell</td>
+								<td>15</td>
+								<td>No animation on the floor</td>
+							</tr>
+							<tr>
+								<td>STSP + <img src="/common/btn/t.png" alt="Triangle"></td>
+								<td>Water spell</td>
+								<td>15</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>STSP + <img src="/common/btn/s.png" alt="Square"> + <img src="/common/btn/t.png" alt="Triangle"></td>
+								<td>Fireball</td>
+								<td>15</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/o.png" alt="Circle"></td>
+								<td>Grab and throw</td>
+								<td>10</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/l2.png" alt="L2"> + stick to direction</td>
+								<td>Teleport to direction (dodge)</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"></td>
+								<td>Block</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+					<section id="fight-attacks-frank">
+						<h3>Frank</h3>
+						<table>
+							<tr>
+								<th>Combo</th>
+								<th>Move</th>
+								<th>DP</th>
+								<th>Info</th>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/s.png" alt="Square"></td>
+								<td>LTR side hit</td>
+								<td>10</td>
+								<td>Three can be chained with RTL as LTR - RTL - LTR, but normally Kya gets thrown too far<br>Can be dodged by jumping</td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/r2.png" alt="R2"> + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>RTL side hit</td>
+								<td>10</td>
+								<td>Read above</td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/t.png" alt="Triangle"></td>
+								<td>Kick</td>
+								<td>8</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>STK + <img src="/common/btn/s.png" alt="Square"></td>
+								<td>Hit from above</td>
+								<td>15</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="/common/btn/o.png" alt="Circle"></td>
+								<td>Grab and throw</td>
+								<td>15</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
 				</article>
 				<article id="how-to-access">
-				<h1>Accessing the level</h1>
-					<div id="howto_official">
-						<h2>
-							How to - Official method
-						</h2>
+					<h1>Accessing the level</h1>
+					<section id="howto-official">
+						<h2>Official method</h2>
 						On the main menu, enter the button combo <img src="/common/btn/r1.png" alt="R1"> <img src="/common/btn/r2.png" alt="R2"> <img src="/common/btn/r1.png" alt="R1"> <img src="/common/btn/r1.png" alt="R1"> <img src="/common/btn/t.png" alt="Triangle"> <img src="/common/btn/l1.png" alt="L1"> <img src="/common/btn/l2.png" alt="L2"> <img src="/common/btn/l1.png" alt="L1"> <img src="/common/btn/l1.png" alt="L1"> <img src="/common/btn/du.png" alt="D-pad up"> (press and release each button individually)<br>
 						When done correctly, the <i>New game</i> text will turn red <br>
 						Start a new game, select a save you don't care about, or just unplug the memory card, and the level will load <br>
 						Perform the button combo again to undo
-					</div>
-					<br><br><br>
+					</section>
+					<br><br>
 					The methods below were created before the above button combo was revealed <br>
 					I'm leaving them for historical reasons, and because the cheat codes also contain a bypass for the broken maze warp
 					<br>
-					<div id="howto_cheat">
-				
-						<h2>How to - Cheat code method</h2>
+					<section id="howto-cheat">
+						<h2>Cheat code</h2>
 						Requirements for console: <a href="https://github.com/root670/CheatDevicePS2" rel="noopener noreferrer">Cheat Device for PS2 (recommended) <i class="fas fa-external-link-alt"></i></a>, Codebreakers or Action Replay MAX
 						<h3>PCSX2</h3>
 						<ol>
@@ -606,9 +668,9 @@
 							<li>After the first few lines of the intro dialog, you'll load into the secret level</li>
 							<li>At this point I recommend you unplug the memory card to avoid the game autosaving when going to a different area</li>
 						</ol>
-					</div>
-					<div id="howto_hex">
-						<h2>How to - Hex editor method</h2>
+					</section>
+					<section id="howto-hex">
+						<h2>Hex editor</h2>
 						Requirements: a hex editor (for Windows users, I recommend <a href="https://mh-nexus.de/en/hxd/" target="_blank" rel="noopener noreferrer">HxD <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>) and a KDL iso or bin/cue file (or a disc to create one)<br>
 						For console: a modchipped console or one modded with <a href="https://github.com/MechaResearch/MechaPwn" target="_blank" rel="noopener noreferrer">MechaPwn <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>, a DVD burner and a blank DVD±R
 						<h3>PCSX2</h3>
@@ -638,9 +700,9 @@
 						<p>Create a modified ISO following the instructions above, then burn it on a blank DVD±R, and boot it according to how your console is modded.<br>
 						Once you load the level, I recommend you unplug the memory card to avoid the game autosaving when going to a different area.
 					</p>
-					</div>
-					<div id="howto_save">
-						<h2>How to - Save file method</h2>
+					</section>
+					<section id="howto-save">
+						<h2>Save file</h2>
 						Requirements: the <a href="./ntsc/level_13_NTSC.psu">NTSC save file</a> or the <a href="./pal/level_13_PAL.psu">PAL save file</a><br>
 						For PCSX2: <a href="http://www.csclub.uwaterloo.ca:11068/mymc/" target="_blank" rel="noopener noreferrer">MyMC <i class="fas fa-external-link-alt"></i></a> (for Linux users, I haven't tried if it works with Wine)<br>
 						For console: homebrew access (FMCB, modchip, HDDOSD, exploit, whatever), <a href="https://github.com/ps2homebrew/wLaunchELF/releases/latest" rel="noopener noreferrer">wLaunchElf <i class="fas fa-external-link-alt"></i></a>, and a USB stick supported by wLaunchElf
@@ -683,10 +745,12 @@
 							Note that the game is set to 16:9</li>
 							<li>At this point I recommend you unplug the memory card to avoid the game autosaving when going to a different area</li>
 						</ol>
-					</div>
-					<div id="maze">
-						<h2>Bypassing the teleport in the maze game</h2>
-						<p>When going to the maze game, there's a teleport that's normally inevitable that I assume is supposed to take you to the maze and set your magika limit to 100, but doesn't work properly. Here I explain how to skip it</p>
+					</section>
+				</article>
+				<article id="maze">
+					<section>
+						<h1>Bypassing the teleport in the maze game</h1>
+						<p>When going to the maze game, there's a normally unavoidable trigger that is very likely supposed to take you to the maze and set your mana limit to 100, but doesn't work properly. Here I explain how to skip it</p>
 						<p>If you used the cheat code method to access the secret level in the first place, you don't need to redownload the cheat file</p>
 						<h3>PCSX2</h3>
 						<ul>
@@ -701,7 +765,7 @@
 							<li>On PCSX2, go to System &gt; Enable Cheats</li>
 							<li>When you're in the level, first take the elevator to the <em>Kya Maze</em>, then, without activating the glitchy teleport, press Triangle + Circle + Left to teleport inside the maze
 								<ul>
-									<li>The magika counter will remain frozen to "0/50" even if you start collecting orbs, but in the background it is indeed set to a maximum of 100 and it does count up
+									<li>The mana counter will remain frozen to "0/50" even if you start collecting orbs, but in the background it is set to a maximum of 100 and it does count up
 									<li>Note that the warps <em>inside</em> the maze are still broken, so avoid them
 								</ul>
 							</li>
@@ -713,14 +777,14 @@
 							<li>Use the cheat device to enter the cheat code</li>
 							<li>When you're in the level, first take the elevator to the <em>Kya Maze</em>, then, without activating the glitchy teleport, press Triangle + Circle + Left to teleport inside the maze
 								<ul>
-									<li>The magika counter will remain frozen to "0/50" even if you start collecting orbs, but in the background it is indeed set to a maximum of 100 and it does count up
+									<li>The mana counter will remain frozen to "0/50" even if you start collecting orbs, but in the background it is set to a maximum of 100 and it does count up
 									<li>Note that the warps <em>inside</em> the maze are still broken, so avoid them
 								</ul>
 							</li>
 						</ul>
-					</div>
-				</div>
-			</div>
+					</section>
+				</article>
+			</section>
 		</div>
 		<hr>
 		<object id="footer-obj" type="text/html" data="/footer.html"></object>
