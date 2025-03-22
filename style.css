@@ -2,7 +2,8 @@
 	--body-margin: 0px;
 	--header-vertical-padding: 5px;
 	--header-height: 1.5em;
-	--side-index-width: 20em;
+	--side-index-width: 18em;
+	--side-index-margin: 1em;
 }
 
 :target {
@@ -83,7 +84,7 @@ div[disabled] {
 #main-container {
 	display: flex;
 	flex-direction: row;
-	margin-top: calc(var(--header-height) + 2 * var(--header-vertical-padding))
+	margin-top: calc(var(--header-height) + 2 * var(--header-vertical-padding) + 1.5em)
 }
 
 #header {
@@ -103,7 +104,10 @@ div[disabled] {
 	position: fixed;
 	display: flex;
 	justify-content: center;
-	width: var(--side-index-width);
+	width: var(--side-index-width); 
+	word-wrap: break-word;
+	margin-left: var(--side-index-margin); 
+	margin-right: var(--side-index-margin); 
 }
 
 .dummy {
@@ -117,6 +121,8 @@ div[disabled] {
 
 #index > ul {
 	padding-left: 0;
+	list-style: none;
+	margin: 0;
 }
 
 li:has(> ul) {
@@ -134,7 +140,11 @@ li > ul {
 
 #text-container {
 	margin-right: 1em;
-	margin-left: var(--side-index-width);
+	margin-left: calc(var(--side-index-width) + 2 * var(--side-index-margin));
+}
+
+#text-container h2:first-of-type {
+	margin-top: 0;
 }
 
 #footer-links {
