@@ -79,6 +79,7 @@ div[disabled] {
 }
 
 #footer-obj {
+	height: 15em;
 	width: 100%;
 }
 
@@ -205,6 +206,9 @@ h1 {
 @media (max-width: 520px) {
 	.hide-very-narrow-screen {
 		display: none !important;
+	}
+	#footer-obj {
+		height: 30em;
 	}
 }
 
