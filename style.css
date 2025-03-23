@@ -5,6 +5,7 @@
 	--side-index-width: 18em;
 	--side-index-margin: 1em;
 	--main-container-extra-spacing: 1.5em;
+	--small-index-padding: 1em;
 }
 
 :target {
@@ -106,12 +107,14 @@ div[disabled] {
 	position: fixed;
 	display: flex;
 	justify-content: center;
+	align-content: top;
 	width: var(--side-index-width); 
 	word-wrap: break-word;
 	margin-left: var(--side-index-margin); 
 	margin-right: var(--side-index-margin); 
 	overflow-y: auto;
-	max-height: 100%;
+	max-height: calc(100% - var(--header-height) + 2 * var(--header-vertical-padding));
+	box-sizing: content-box;
 }
 
 .dummy {
@@ -194,21 +197,25 @@ h1 {
 	}
 
 	#index {
-		position: fixed;
 		top: calc(var(--header-height) + 2 * var(--header-vertical-padding));
-		display: flex;
-		align-items: center;
+		max-height: calc(100% - var(--header-height) - 2 * var(--header-vertical-padding));
 		width: 100%;
-		background-blend-mode: color;
 		background-color: rgba(135, 253, 255, 0.9);
 		margin: 0;
-		padding: var(--side-index-margin);
 		box-sizing: border-box;
+		padding: var(--small-index-padding);
 	}
 
 	.hidden {
 		display: none !important;
 	}
+
+	/* #index > ul {
+		 margin: var(--small-index-padding);
+		 overflow-y: auto;
+		 width: 100%;
+		 text-align: center;
+	} */
 }
 
 @media (max-width: 520px) {
