@@ -110,6 +110,8 @@ div[disabled] {
 	word-wrap: break-word;
 	margin-left: var(--side-index-margin); 
 	margin-right: var(--side-index-margin); 
+	overflow-y: auto;
+	max-height: 100%;
 }
 
 .dummy {
@@ -174,7 +176,7 @@ h1 {
 	filter: grayscale(100%);
 }
 
-#header-right {
+#header-right, #header-nav {
 	user-select: none;
 }
 
