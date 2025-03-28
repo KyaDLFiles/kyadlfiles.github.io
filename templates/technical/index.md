@@ -16,7 +16,7 @@ When talking about a "normal" address that doesn't use pointers (for example, th
 (eg: beginning address `20` & offset `6` = actual address `26`)
 
 # Variables and RAM
-*!**Important!** The addresses refer to the final NTSC build of the game.  
+*!Important! The addresses refer to the final NTSC build of the game.  
 The PAL version has different values, which will eventually be documented.!*
 
 ## Controller readings (player 1)
