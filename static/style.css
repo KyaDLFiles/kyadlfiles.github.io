@@ -1,5 +1,8 @@
 :root {
-    --toc-width: 65em;
+    --toc-width: 20em;
+    --margin-height: 2em;
+    --margin-v-padding: 0.3em;
+    --margin-h-padding: 0.6em;
 }
 
 body {
@@ -13,7 +16,7 @@ body {
 header {
     box-sizing: content-box;
     height: 2em;
-    padding: 0.3em 0.6em;
+    padding: var(--margin-v-padding) var(--margin-h-padding);
     background-color: turquoise;
     display: flex;
     align-items: center;
@@ -34,6 +37,7 @@ h1 {
 code {
     font-size: 1rem;
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
 table, th, td {
@@ -42,7 +46,7 @@ table, th, td {
 }
 
 td, th {
-    padding: 0.1em 0.3em;
+    padding: 0.05em 0.3em;
 }
 
 p {
@@ -91,16 +95,17 @@ border-radius: 50%;
 #toc-container {
 position: sticky;
 top: 0;
-width: var(--toc-width);
+width: 200vw;
+max-width: var(--toc-width);
+min-width: 10em;
 overflow: hidden auto;
 height: 100vh;
 background-color: whitesmoke;
 }
 
 .toc {
-    max-width: var(--toc-width);
     margin-top: 1rem;
-    margin-bottom: 2em;
+    margin-bottom: calc(2 * var(--margin-v-padding) + var(--margin-height));
     margin-left: 2em;
     margin-right: 2em;
 }
@@ -114,10 +119,49 @@ padding-left: 0;
 list-style-type: none;
 }
 
+#toc-container li {
+margin-bottom: 0.2em;
+}
+
 #toc-container li > ul {
 padding-left: 1em;
 }
 
 #toc-container ul > li > ul > li:first-child {
 list-style: circle;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: rgb(32, 33, 36);
+        color: whitesmoke;
+    }
+
+    a {
+        color: rgb(87, 171, 255);
+    }
+
+    header {
+        background-color: rgb(0, 106, 108);
+    }
+
+    table, th, td {
+        border: 1px solid whitesmoke;
+    }
+
+    #toc-container {
+    background-color: #282828;
+    }
+
+    .text-warning {
+        color: red;
+    }
+
+    .text-unsure {
+        background-color: rgb(134, 130, 77);
+    }
+
+    .table-highlight-1 {
+        background-color: darkcyan;
+    }
 }
