@@ -1,9 +1,9 @@
 import os
 import shutil
-from pathlib import Path
 import markdown
 import logging
 import staticjinja
+from pathlib import Path
 from staticjinja import Site
 from externals.markdown_extensions import *
 
