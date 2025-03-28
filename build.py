@@ -1,10 +1,15 @@
 import os
+import shutil
 from pathlib import Path
 import markdown
 import logging
 import staticjinja
 from staticjinja import Site
 from externals.markdown_extensions import *
+
+OUTPATH = "./_out"
+SEARCHPATH = "./templates"
+STATICPATH = "./static"
 
 markdowner = markdown.Markdown(
     output_format = "html",
@@ -16,7 +21,7 @@ markdowner = markdown.Markdown(
         header_extensions.SectionsViaHeadersExtension(),
         header_extensions.AddBlanksAroundHeadersExtension(),
         small_image_extension.SmallImageExtension(),
-        ps2_buttons_extension.PS2ButtonsExtension(imgs_path="./", imgs_extension="png")
+        ps2_buttons_extension.PS2ButtonsExtension(imgs_path="/btns/", imgs_extension="png")
     )
 )
 
@@ -36,16 +41,18 @@ def render_md(site, template, **kwargs):
 
     # Compile and stream the result
     os.makedirs(out.parent, exist_ok=True)
-    site.get_template("partials/_wikipage.html").stream(**kwargs).dump(str(out), encoding="utf-8")
+    site.get_template("_partials/_wikipage.html").stream(**kwargs).dump(str(out), encoding="utf-8")
 
 
 site = Site.make_site(
-    searchpath="templates",
-    staticpaths=["style.css"], # Yes, this is deprecated... too bad!
-    outpath="_out",
+    searchpath=SEARCHPATH,
+    outpath=OUTPATH,
     contexts=[(r".*\.md", md_context)],
     rules=[(r".*\.md", render_md)],
 )
 
 staticjinja.logger.setLevel(logging.DEBUG)
+shutil.rmtree(OUTPATH, ignore_errors=True)
+os.makedirs(OUTPATH, exist_ok=True)
+shutil.copytree(STATICPATH, OUTPATH, dirs_exist_ok=True)
 site.render()
