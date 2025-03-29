@@ -168,7 +168,7 @@ If set to a value different from the default value of The Roots, when starting a
 |`11` |||The game immediately freezes after starting new game, without playing the intro lines and without showing any signs of trying to load anything from the disc (observed through PCSX2 logs)
 |`12` |||Causes the selected save file to be set to an empty level name
 
-!![Examples of unusual levels in the file load menu](/img/weirdlvls.jpg)
+!![Examples of unusual levels in the file load menu](./weirdlvls.png)
 
 ## Dormant debug features/cheats
 There are dormant debug features/cheats left over from when the game was in development; a working implementation of the cheat options menu can most prominently be seen in the [September 29 prototype](https://hiddenpalace.org/Kya:_Dark_Lineage_(Sep_29,_2003_prototype)).

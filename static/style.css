@@ -113,6 +113,11 @@ h1, h2, h3 {
     -o-user-select: none;
 }
 
+.small-img {
+    max-width: 15em;
+    border: 1px solid black;
+}
+
 /* Sidebar */
 #toc-container {
     position: sticky;
@@ -190,6 +195,10 @@ h1, h2, h3 {
 
     .table-highlight-1 {
         background-color: rgb(0, 99, 99);
+    }
+
+    .small-img {
+        border-color: white;
     }
 }
 
