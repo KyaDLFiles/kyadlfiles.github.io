@@ -101,6 +101,11 @@ h1, h2, h3 {
     color: rgb(164, 0, 0);
 }
 
+.show-below-700px {
+    display: none;
+}
+
+
 /* Sidebar */
 #toc-container {
     position: sticky;
@@ -209,6 +214,10 @@ h1, h2, h3 {
 
     .hide-below-700px {
         display: none;
+    }
+
+    .show-below-700px {
+        display: unset;
     }
 
     header {
