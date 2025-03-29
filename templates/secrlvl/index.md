@@ -5,14 +5,15 @@ title: Secret level
 # Fight attacks
 
 Abbreviations: 
-- DP: damage points
-- STK: stick towards Kya
-- SNTK: stick not towards Kya
-- STBP2: stick towards behind player 2
-- STSP: stick towards spell position (Brazul)
-- LTR: left to right
+
+- DP: damage points  
+- STK: stick towards Kya  
+- SNTK: stick not towards Kya  
+- STBP2: stick towards behind player 2  
+- STSP: stick towards spell position (Brazul)  
+- LTR: left to right  
 - RTL: right to left
-- 
+ 
 All enemies except Kya and Frank have a broken/fake @!r2 + @!x move that doesn't seem to do anything apart from an animation
 
 ## Scrawny
