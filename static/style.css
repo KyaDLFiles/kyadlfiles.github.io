@@ -105,6 +105,13 @@ h1, h2, h3 {
     display: none;
 }
 
+.unselectable {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
 
 /* Sidebar */
 #toc-container {
