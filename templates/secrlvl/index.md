@@ -1,4 +1,5 @@
 title: Secret level
+template: wikipage.html
 
 # External links
 ???
@@ -34,11 +35,11 @@ All enemies except Kya and Frank have a broken/fake @@r2 + @@x move that doesn't
 ## Grunt with black pants 
 |Combo|Move|DP|Info|
 |-----|----|--|----|
-|@@q|Right punch|5|
-|@@r2 + @@q|Left punch|10|
-|@@o|Grab and punch|5|
+|@@q|Right punch|5||
+|@@r2 + @@q|Left punch|10||
+|@@o|Grab and punch|5||
 |@@r2 + @@q|Side claw hit|5|Up to three can be chained|
-|@@r2 + STK + @@q|Crushing claws|10|
+|@@r2 + STK + @@q|Crushing claws|10||
 |@@r2|Block|||
 
 ## Armed Grunt
@@ -101,7 +102,7 @@ This is how the stick position for using spell attacks works:
 Imagine a @@o having Brazul at the centre, with Kya on the circumference representing 0°.  
 To perform a spell attack, you have to place the stick at ±45°
 However, the angle is so precise you might as well rotate the stick blindly and hope you get it.
-!![](Stick positions)
+!![Stick positions](./img/spell.jpg)
 
 |Combo|Move|DP|Info|
 |-----|----|--|----|
@@ -129,8 +130,8 @@ STK + @@q|Hit from above|15||
 ## Official method
 On the main menu, enter the button combo @@r1 @@r2 @@r1 @@r1 @@r1 @@t @@l1 @@l2 @@l1 @@l1 @@du (press and release each button individually).  
 When done correctly, the *New game* text will turn red
-Start a new game, select a save you don't care about, or just unplug the memory card, and the level will load
-Perform the button combo again to undo
+Start a new game, select a save you don't care about, or just unplug the memory card, and the level will load.  
+Perform the button combo again to undo.  
 
 The methods below were created before the above button combo was revealed.  
 I'm leaving them for historical reasons, and because the cheat codes also contain a bypass for the broken maze warp.  
