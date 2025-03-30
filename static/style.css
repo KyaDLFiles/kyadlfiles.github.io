@@ -41,6 +41,10 @@ code {
     font-weight: bold;
 }
 
+table {
+    max-width: 100%;
+}
+
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -256,11 +260,6 @@ h1, h2, h3 {
 
     th, td {
         padding: 0.05em 0.1em;
-    }
-
-    table {
-        max-width: 100%;
-        width: 100%;
     }
 }
 
