@@ -106,36 +106,36 @@ However, the angle is so precise you might as well rotate the stick blindly and 
 
 |Combo|Move|DP|Info|
 |-----|----|--|----|
-@@q|Punch|10|Up to three can be chained<br>Last one does 15 DP|
-STK + @@q|Palm strike|15||
-STBP2 + @@q|Spinning back fist|10||
-STSP + @@q|Ice spell|15|No animation on the floor|
-STSP + @@t|Water spell|15||
-STSP + @@q + @@t|Fireball|15||
-@@o|Grab and throw|10||
-@@l2 + stick to direction|Teleport to direction (dodge)|||
-@@r2|Block||
+|@@q|Punch|10|Up to three can be chained<br>Last one does 15 DP|
+|STK + @@q|Palm strike|15||
+|STBP2 + @@q|Spinning back fist|10||
+|STSP + @@q|Ice spell|15|No animation on the floor|
+|STSP + @@t|Water spell|15||
+|STSP + @@q + @@t|Fireball|15||
+|@@o|Grab and throw|10||
+|@@l2 + stick to direction|Teleport to direction (dodge)|||
+|@@r2|Block||
 
 ## Wolfun Frank
 |Combo|Move|DP|Info|
 |-----|----|--|----|
-@@q|LTR side hit|10|Three can be chained with RTL as LTR - RTL - LTR, but normally Kya gets thrown too far<br>Can be dodged by jumping|
-@@r2 + @@q|RTL side hit|10|Read above|
-@@t|Kick|8||
-STK + @@q|Hit from above|15||
-@@o|Grab and throw|15||
+|@@q|LTR side hit|10|Three can be chained with RTL as LTR - RTL - LTR, but normally Kya gets thrown too far<br>Can be dodged by jumping|
+|@@r2 + @@q|RTL side hit|10|Read above|
+|@@t|Kick|8||
+|STK + @@q|Hit from above|15||
+|@@o|Grab and throw|15||
 
 # Accessing the level
 
-## Official method
-On the main menu, enter the button combo @@r1 @@r2 @@r1 @@r1 @@r1 @@t @@l1 @@l2 @@l1 @@l1 @@du (press and release each button individually).  
+On the main menu, enter the button combo @@r1 @@r2 @@r1 @@r1 @@t @@l1 @@l2 @@l1 @@l1 @@du (press and release each button individually).  
 When done correctly, the *New game* text will turn red
 Start a new game, select a save you don't care about, or just unplug the memory card, and the level will load.  
 Perform the button combo again to undo.  
 
-The methods below were created before the above button combo was revealed.  
-I'm leaving them for historical reasons, and because the cheat codes also contain a bypass for the broken maze warp.  
+# Maze warp bypass
 
-## Cheat code
+When going to the maze game, there's an unavoidable trigger that is very likely supposed to take you to the maze and set your mana limit to 100, but doesn't work properly.  
 
-dummy or python.markdown errors out
+Cheat codes to skip it are available, among other, [here](https://github.com/KyaDLFiles/Kya_DL_cheats).
+
+Note that while this allows to bypass the first broken warp, the warps on either side of the maze will remain broken and trying to use them will teleport you to Nativ City instead.
