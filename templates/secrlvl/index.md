@@ -128,13 +128,13 @@ However, the angle is so precise you might as well rotate the stick blindly and 
 # Accessing the level
 
 On the main menu, enter the button combo @@r1 @@r2 @@r1 @@r1 @@t @@l1 @@l2 @@l1 @@l1 @@du (press and release each button individually).  
-When done correctly, the *New game* text will turn red
+When done correctly, the *New game* text will turn red.  
 Start a new game, select a save you don't care about, or just unplug the memory card, and the level will load.  
-Perform the button combo again to undo.  
+Perform the button combo again to undo (the cheat persists after returning to the main menu).  
 
 # Maze warp bypass
 
-When going to the maze game, there's an unavoidable trigger that is very likely supposed to take you to the maze and set your mana limit to 100, but doesn't work properly.  
+When going to the maze game, there's an unavoidable trigger that probably supposed to take you to the maze and set your mana limit to 100, but doesn't work properly.  
 
 Cheat codes to skip it are available, among other, [here](https://github.com/KyaDLFiles/Kya_DL_cheats).
 
