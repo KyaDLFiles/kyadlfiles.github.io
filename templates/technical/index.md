@@ -35,25 +35,25 @@ In Kya DL, the codes have the following values:
 
 |Button|7|6|5|4|3|2|1|0|7|6|5|4|3|2|1|0|Hex   |
 |------|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|------|
-|@!!q  |!{!1}0|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|`7FFF`|
-|@!!x  |1|!{!1}0|1|1|1|1|1|1|1|1|1|1|1|1|1|1|`BFFF`|
-|@!!o  |1|1|!{!1}0|1|1|1|1|1|1|1|1|1|1|1|1|1|`DFFF`|
-|@!!t  |1|1|1|!{!1}0|1|1|1|1|1|1|1|1|1|1|1|1|`EFFF`|
-|@!!r1 |1|1|1|1|!{!1}0|1|1|1|1|1|1|1|1|1|1|1|`F7FF`|
-|@!!l1 |1|1|1|1|1|!{!1}0|1|1|1|1|1|1|1|1|1|1|`FBFF`|
-|@!!r2 |1|1|1|1|1|1|!{!1}0|1|1|1|1|1|1|1|1|1|`FDFF`|
-|@!!l2 |1|1|1|1|1|1|1|!{!1}0|1|1|1|1|1|1|1|1|`FEFF`|
-|@!!dl |1|1|1|1|1|1|1|1|!{!1}0|1|1|1|1|1|1|1|`FF7F`|
-|@!!dd |1|1|1|1|1|1|1|1|1|!{!1}0|1|1|1|1|1|1|`FFBF`|
-|@!!dr |1|1|1|1|1|1|1|1|1|1|!{!1}0|1|1|1|1|1|`FFDF`|
-|@!!du |1|1|1|1|1|1|1|1|1|1|1|!{!1}0|1|1|1|1|`FFEF`|
-|@!!st |1|1|1|1|1|1|1|1|1|1|1|1|!{!1}0|1|1|1|`FFF7`|
-|@!!r3 |1|1|1|1|1|1|1|1|1|1|1|1|1|!{!1}0|1|1|`FFFB`|
-|@!!l3 |1|1|1|1|1|1|1|1|1|1|1|1|1|1|!{!1}0|1|`FFFD`|
-|@!!se |1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|!{!1}0|`FFFE`|
+|@@@q  |!{!1}0|1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|`7FFF`|
+|@@@x  |1|!{!1}0|1|1|1|1|1|1|1|1|1|1|1|1|1|1|`BFFF`|
+|@@@o  |1|1|!{!1}0|1|1|1|1|1|1|1|1|1|1|1|1|1|`DFFF`|
+|@@@t  |1|1|1|!{!1}0|1|1|1|1|1|1|1|1|1|1|1|1|`EFFF`|
+|@@@r1 |1|1|1|1|!{!1}0|1|1|1|1|1|1|1|1|1|1|1|`F7FF`|
+|@@@l1 |1|1|1|1|1|!{!1}0|1|1|1|1|1|1|1|1|1|1|`FBFF`|
+|@@@r2 |1|1|1|1|1|1|!{!1}0|1|1|1|1|1|1|1|1|1|`FDFF`|
+|@@@l2 |1|1|1|1|1|1|1|!{!1}0|1|1|1|1|1|1|1|1|`FEFF`|
+|@@@dl |1|1|1|1|1|1|1|1|!{!1}0|1|1|1|1|1|1|1|`FF7F`|
+|@@@dd |1|1|1|1|1|1|1|1|1|!{!1}0|1|1|1|1|1|1|`FFBF`|
+|@@@dr |1|1|1|1|1|1|1|1|1|1|!{!1}0|1|1|1|1|1|`FFDF`|
+|@@@du |1|1|1|1|1|1|1|1|1|1|1|!{!1}0|1|1|1|1|`FFEF`|
+|@@@st |1|1|1|1|1|1|1|1|1|1|1|1|!{!1}0|1|1|1|`FFF7`|
+|@@@r3 |1|1|1|1|1|1|1|1|1|1|1|1|1|!{!1}0|1|1|`FFFB`|
+|@@@l3 |1|1|1|1|1|1|1|1|1|1|1|1|1|1|!{!1}0|1|`FFFD`|
+|@@@se |1|1|1|1|1|1|1|1|1|1|1|1|1|1|1|!{!1}0|`FFFE`|
 
 
-When multiple buttons are pressed, the value gets set to [Button 1] *AND* [Button 2] *AND* ... [Button N]; for example when pressing @!r2 + @!t + @!o the value gets set to `FDFF` *AND* `EFFF` *AND* `DFFF` == `CDFF` (`1100 1101 1111 1111`)
+When multiple buttons are pressed, the value gets set to [Button 1] *AND* [Button 2] *AND* ... [Button N]; for example when pressing @@r2 + @@t + @@o the value gets set to `FDFF` *AND* `EFFF` *AND* `DFFF` == `CDFF` (`1100 1101 1111 1111`)
 
 Other PS1/PS2 games may store these values in a different way. [More info here](https://www.cheatcc.com/psx/codes/jokercom.html)
 #### Joker command calculator
@@ -82,18 +82,18 @@ Regardless, this gives us another way of checking for buttons being pressed (apa
 
 |Offset|Button|
 |------|------|
-|`+06` |@!dr  |
-|`+07` |@!dl  |
-|`+08` |@!du  |
-|`+09` |@!dd  |
-|`+0A` |@!t   |
-|`+0B` |@!o   |
-|`+0C` |@!x   |
-|`+0D` |@!q   |
-|`+0E` |@!l1  |
-|`+0F` |@!r1  |
-|`+10` |@!l2  |
-|`+11` |@!r2  |
+|`+06` |@@dr  |
+|`+07` |@@dl  |
+|`+08` |@@du  |
+|`+09` |@@dd  |
+|`+0A` |@@t   |
+|`+0B` |@@o   |
+|`+0C` |@@x   |
+|`+0D` |@@q   |
+|`+0E` |@@l1  |
+|`+0F` |@@r1  |
+|`+10` |@@l2  |
+|`+11` |@@r2  |
 ### Recap
 |Offset|Length (bytes)|Content|
 |------|--------------|-------|
@@ -128,7 +128,7 @@ Note that the game also requires a DualShock 2 for player two: if you try pluggi
 **Offset (Y)**: `+34`
 **Offset (Z)**: `+38`
 
-To give a sense of scale, when Kya jumps by pressing @!x she peaks at around +1.71 Y.  
+To give a sense of scale, when Kya jumps by pressing @@x she peaks at around +1.71 Y.  
 (it's actually currently unknown which value the game considers to be X and which one to be Z, the notation has been chosen based on their order in memory).
 ## Settings read from BWITCH.ini
 Some "settings" are stored in the file *BWITCH.ini* in the root of the game DVD.  
@@ -175,7 +175,7 @@ There are dormant debug features/cheats left over from when the game was in deve
 
 Strings pertaining to this menu have been found in the final build, but it's currently unknown if and how the menu can be accessed in the final build.
 
-However, it is possible to enable the flying cheat and the invincibility cheat by manually writing to the respective values in RAM (the cheat options menu is coded weirdly, as there are two separate variables for these two cheats: the first one only controls if the cheat is displayed as enabled or disabled in the menu, and the second one (the "enable" variables) is what the code actually checks to see if the cheat effect should apply (for example, the game checks the enable variable for the flying cheat when @!r2+@!r3 is pressed), and the first variable gets copied to the enable variable any moment the cheat options menu is being viewed).
+However, it is possible to enable the flying cheat and the invincibility cheat by manually writing to the respective values in RAM (the cheat options menu is coded weirdly, as there are two separate variables for these two cheats: the first one only controls if the cheat is displayed as enabled or disabled in the menu, and the second one (the "enable" variables) is what the code actually checks to see if the cheat effect should apply (for example, the game checks the enable variable for the flying cheat when @@r2+@@r3 is pressed), and the first variable gets copied to the enable variable any moment the cheat options menu is being viewed).
 
 With the aid of the PCSX2 debugger and the September 29 prototype, the code that handles checking the enable variables was found in the final game, and it was confirmed that they work in the final build too.  
 (Keep in mind that the locations in RAM vary from build to build and version to version, so the values in this page won't work for the September 29 prototype).
@@ -188,7 +188,7 @@ These are stored next to each other and are accessed via a pointer.
 **Offset (flying)**: `+AA0`  
 **Offset (invincibility)**: `+AA4`  
 
-Once the flying cheat is enabled, it can be toggled by pressing @!r2+@!r3
+Once the flying cheat is enabled, it can be toggled by pressing @@r2+@@r3
 
 ## Other
 
