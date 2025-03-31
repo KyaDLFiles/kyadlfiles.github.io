@@ -21,7 +21,8 @@ markdowner = markdown.Markdown(
         header_extensions.SectionsViaHeadersExtension(),
         header_extensions.AddBlanksAroundHeadersExtension(),
         small_image_extension.SmallImageExtension(),
-        ps2_buttons_extension.PS2ButtonsExtension(imgs_path="/btns/", imgs_extension="png")
+        ps2_buttons_extension.PS2ButtonsExtension(imgs_path="/btns/", imgs_extension="png"),
+        inline_extensions.LinkBlankInlineExtension(extra_text='<span class="material-symbols-outlined">open_in_new</span>')
     )
 )
 

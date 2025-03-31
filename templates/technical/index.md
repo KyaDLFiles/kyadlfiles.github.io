@@ -2,11 +2,11 @@ title: Technical information
 
 # Preface
 ## Cheat Engine, cheat tables and PCSX2
-Me and other members who are investigating the inner workings of Kya DL use [Cheat Engine](https://www.cheatengine.org/) to find variables and save the findings in a cheat table file, because it's a very powerful and flexible program.
+Me and other members who are investigating the inner workings of Kya DL use ?[Cheat Engine](https://www.cheatengine.org/) to find variables and save the findings in a cheat table file, because it's a very powerful and flexible program.
 
-I'll be uploading my cheat tables (which also include contributions from other members of the server) in [a separate repository](https://github.com/KyaDLFiles/Kya_DL_cheat_tables), which includes instructions on how to use CE with PCSX2 >1.6
+I'll be uploading my cheat tables (which also include contributions from other members of the server) in ?[a separate repository](https://github.com/KyaDLFiles/Kya_DL_cheat_tables), which includes instructions on how to use CE with PCSX2 >1.6
 
-## Wording regarding pointers, addresses and offsets
+## Pointers, addresses and offsets
 All addresses and offsets are always hexadecimal.
 
 When talking about a pointer address, this page uses a terminology similar to CE: to get to the desired address, take the 4-byte number **stored** at the *pointer base address*, add the *offset* to that number, and the result is the actual memory address storing that particular variable.  
@@ -55,9 +55,55 @@ In Kya DL, the codes have the following values:
 
 When multiple buttons are pressed, the value gets set to [Button 1] *AND* [Button 2] *AND* ... [Button N]; for example when pressing @@r2 + @@t + @@o the value gets set to `FDFF` *AND* `EFFF` *AND* `DFFF` == `CDFF` (`1100 1101 1111 1111`)
 
-Other PS1/PS2 games may store these values in a different way. [More info here](https://www.cheatcc.com/psx/codes/jokercom.html)
+Other PS1/PS2 games may store these values in a different way. ?[More info here](https://www.cheatcc.com/psx/codes/jokercom.html)
 #### Joker command calculator
-????
+<div id="jokercalc" markdown="span">
+    <table>
+        <tbody>
+            <tr>
+                <td>@@q</td>
+                <td>@@x</td>
+                <td>@@o</td>
+                <td>@@t</td>
+                <td>@@r1</td>
+                <td>@@l1</td>
+                <td>@@r2</td>
+                <td>@@l2</td>
+                <td>@@dl</td>
+                <td>@@dd</td>
+                <td>@@dr</td>
+                <td>@@du</td>
+                <td>@@st</td>
+                <td>@@r3</td>
+                <td>@@l3</td>
+                <td>@@se</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="cc_s" value="32767"></td>
+                <td><input type="checkbox" id="cc_x" value="49151"></td>
+                <td><input type="checkbox" id="cc_o" value="57343"></td>
+                <td><input type="checkbox" id="cc_t" value="61439"></td>
+                <td><input type="checkbox" id="cc_r1" value="63487"></td>
+                <td><input type="checkbox" id="cc_l1" value="64511"></td>
+                <td><input type="checkbox" id="cc_r2" value="65023"></td>
+                <td><input type="checkbox" id="cc_l2" value="65279"></td>
+                <td><input type="checkbox" id="cc_dl" value="65407"></td>
+                <td><input type="checkbox" id="cc_dd" value="65471"></td>
+                <td><input type="checkbox" id="cc_dr" value="65503"></td>
+                <td><input type="checkbox" id="cc_du" value="65519"></td>
+                <td><input type="checkbox" id="cc_st" value="65527"></td>
+                <td><input type="checkbox" id="cc_r3" value="65531"></td>
+                <td><input type="checkbox" id="cc_l3" value="65533"></td>
+                <td><input type="checkbox" id="cc_se" value="65534"></td>
+            </tr>
+        </tbody>
+    </table>
+    <span>
+        <code id="jokercalc-result">FFFF (NOT = 0000)</code><br>
+        <span id="jokercalc-warn" class="hidden">Up+Down or Left+Right is impossible on a controller!</span>
+    </span>
+</div>
+
 ### Stick readings
 **Type**: 1 byte unsigned integers  
 **Length:** 4 \* 1 byte = 4 bytes total
@@ -71,7 +117,7 @@ Other PS1/PS2 games may store these values in a different way. [More info here](
 
 
 ### Button pressure
-For those who didn't know: [the DualShock 2 (and DS3) has pressure sensitive buttons](https://en.wikipedia.org/wiki/DualShock#DualShock_2) (except for Select, Start, L3 and R3), meaning that games can tell how hard a button is being pressed.  
+For those who didn't know: ?[the DualShock 2 (and DS3) has pressure sensitive buttons](https://en.wikipedia.org/wiki/DualShock#DualShock_2) (except for Select, Start, L3 and R3), meaning that games can tell how hard a button is being pressed.  
 Kya: DL requires a DualShock 2 and won't work with an original PS1 DualShock.  
 This is usually a sign that a game requires the pressure sensitive buttons, but it's currently unknown in which way the pressure info is used in Kya DL (if at all).  
 Regardless, this gives us another way of checking for buttons being pressed (apart from Select, Start, L3 and R3), which, depending on the situation, might be easier or better to use.
@@ -161,9 +207,9 @@ If set to a value different from the default value of The Roots, when starting a
 |`0B` |LEVEL_11    |The Quarry Brazul miniboss|
 |`0C` |LEVEL_12    |The Fortress|
 |`0D` |LEVEL_13    |Level Test (secret level)|
-|`0E` |PREINTRO|Main menu|If this is chosen, the intro movie will be played, followed by the opening lines, and then the main menu will be reloaded|
+|`0E` |PREINTRO|Main menu|If this is chosen, the intro movie will be played, followed by the opening lines, and then the main menu will be reloaded|2
 |`0F` |CREDITS|Ending credits|
-|!{>4}Values after 15 make the game try to load levels that don't exist, causing unexpected behaviours<br>Usually the save file gets set to "UNKNOWN LEVEL (number of level as signed integer)"<br>Below are other more unique examples||||
+|!{>4}Values after 15 make the game try to load levels that don't exist, causing unexpected behaviours<br>Usually the save file gets set to "UNKNOWN LEVEL (number of level as signed integer)"<br>Below are other more unique examples|
 |`10` |||The game returns to the save file selector, deleting the save file that was selected (resetting it to EMPTY)
 |`11` |||The game immediately freezes after starting new game, without playing the intro lines and without showing any signs of trying to load anything from the disc (observed through PCSX2 logs)
 |`12` |||Causes the selected save file to be set to an empty level name
@@ -171,7 +217,7 @@ If set to a value different from the default value of The Roots, when starting a
 !![Examples of unusual levels in the file load menu](./weirdlvls.png)
 
 ## Dormant debug features/cheats
-There are dormant debug features/cheats left over from when the game was in development; a working implementation of the cheat options menu can most prominently be seen in the [September 29 prototype](https://hiddenpalace.org/Kya:_Dark_Lineage_(Sep_29,_2003_prototype)).
+There are dormant debug features/cheats left over from when the game was in development; a working implementation of the cheat options menu can most prominently be seen in the ?[September 29 prototype](https://hiddenpalace.org/Kya:_Dark_Lineage_(Sep_29,_2003_prototype)).
 
 Strings pertaining to this menu have been found in the final build, but it's currently unknown if and how the menu can be accessed in the final build.
 
@@ -192,7 +238,7 @@ Once the flying cheat is enabled, it can be toggled by pressing @@r2+@@r3
 
 ## Other
 
-Another dormant debug menu is documented at [tcrf](https://tcrf.net/Kya:_Dark_Lineage#Debug_Menu) 
+Another dormant debug menu is documented at ?[tcrf](https://tcrf.net/Kya:_Dark_Lineage#Debug_Menu) 
 
 # Game disc files
 ## Level folders

@@ -2,7 +2,9 @@ title: Secret level
 template: wikipage.html
 
 # External links
-???
+<iframe id="odysee-iframe" style="width:100%; aspect-ratio:16 / 9;" src="https://odysee.com/%24/embed/%40KyaDLFiles%3A4%2Fsecret_level%3A4?r=F9derYvC6Z7F8ovcezzmMq86oUyX3XN9" allowfullscreen></iframe>
+<iframe width="480" height="270" src="https://www.youtube-nocookie.com/embed/-o-kU-VEZGI?si=NBVDz6PKllmUOiz9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 # Fight attacks
 
 Abbreviations: 
@@ -27,8 +29,8 @@ All enemies except Kya and Frank have a broken/fake @@r2 + @@x move that doesn't
 ## Armed Scrawny
 |Combo|Move|DP|Info|
 |-----|----|--|----|
-|@@q|Swing bat LTR|5|Can be chained with RTL as LTR - RTL - LTR|
-|@@t|Swing bat RTL|5|Read above|
+|@@q|Swing bat LTR|5|!{^2}Can be chained as LTR - RTL - LTR|
+|@@t|Swing bat RTL|5|                                      |
 |@@r2 + @@t|Jump forwards and kick|8||
 |@@r2|Block||
 
@@ -119,8 +121,8 @@ However, the angle is so precise you might as well rotate the stick blindly and 
 ## Wolfun Frank
 |Combo|Move|DP|Info|
 |-----|----|--|----|
-|@@q|LTR side hit|10|Three can be chained with RTL as LTR - RTL - LTR, but normally Kya gets thrown too far<br>Can be dodged by jumping|
-|@@r2 + @@q|RTL side hit|10|Read above|
+|@@q|LTR side hit|10|!{^2}Three can be chained as LTR - RTL - LTR, but normally Kya gets thrown too far<br>Can be dodged by jumping|
+|@@r2 + @@q|RTL side hit|10||
 |@@t|Kick|8||
 |STK + @@q|Hit from above|15||
 |@@o|Grab and throw|15||
@@ -136,6 +138,6 @@ Perform the button combo again to undo (the cheat persists after returning to th
 
 When going to the maze game, there's an unavoidable trigger that probably supposed to take you to the maze and set your mana limit to 100, but doesn't work properly.  
 
-Cheat codes to skip it are available, among other, [here](https://github.com/KyaDLFiles/Kya_DL_cheats).
+Cheat codes to skip it are available, among other, ?[here](https://github.com/KyaDLFiles/Kya_DL_cheats).
 
 Note that while this allows to bypass the first broken warp, the warps on either side of the maze will remain broken and trying to use them will teleport you to Nativ City instead.
