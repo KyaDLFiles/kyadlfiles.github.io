@@ -143,23 +143,23 @@ Regardless, this gives us another way of checking for buttons being pressed (apa
 ### Recap
 |Offset|Length (bytes)|Content|
 |------|--------------|-------|
-|`+00` |`02`          |`Joker command`|
-|`+02` |`01`          |`Right analog X axis`|
-|`+03` |`01`          |`Right analog Y axis`|
-|`+04` |`01`          |`Left analog X axis`|
-|`+05` |`01`          |`Left analog Y axis`|
-|`+06` |`01`          |`D-pad right pressure`|
-|`+07` |`01`          |`D-pad left pressure`|
-|`+08` |`01`          |`D-pad up pressure`|
-|`+09` |`01`          |`D-pad down pressure`|
-|`+0A` |`01`          |`Triangle pressure`|
-|`+0B` |`01`          |`Circle pressure`|
-|`+0C` |`01`          |`X pressure`|
-|`+0D` |`01`          |`Square pressure`|
-|`+0E` |`01`          |`L1 pressure`|
-|`+0F` |`01`          |`R1 pressure`|
-|`+10` |`01`          |`L2 pressure`|
-|`+11` |`01`          |`R2 pressure`|
+|`+00` |`02`          |Joker command|
+|`+02` |`01`          |Right analog X axis|
+|`+03` |`01`          |Right analog Y axis|
+|`+04` |`01`          |Left analog X axis|
+|`+05` |`01`          |Left analog Y axis|
+|`+06` |`01`          |D-pad right pressure|
+|`+07` |`01`          |D-pad left pressure|
+|`+08` |`01`          |D-pad up pressure|
+|`+09` |`01`          |D-pad down pressure|
+|`+0A` |`01`          |Triangle pressure|
+|`+0B` |`01`          |Circle pressure|
+|`+0C` |`01`          |X pressure|
+|`+0D` |`01`          |Square pressure|
+|`+0E` |`01`          |L1 pressure|
+|`+0F` |`01`          |R1 pressure|
+|`+10` |`01`          |L2 pressure|
+|`+11` |`01`          |R2 pressure|
 ## Controller readings (player 2)
 
 **Address**: `0495CB0`/`0495D1C`/`0495D9C`
