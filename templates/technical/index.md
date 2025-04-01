@@ -1,4 +1,5 @@
 title: Technical information
+template: _wikipage.html
 
 # Preface
 ## Cheat Engine, cheat tables and PCSX2
@@ -293,10 +294,10 @@ In the table below, the offset starts from after the header.
 |-|-|-|-|
 |`+00`|`04`|String|`STGS`
 |`+04`|`04`|Unknown|Unknown<br>Set to 03 by the game|
-|`+08`|`04`|Signed? int32|Language setting (PAL release) (`00` - `04`)<br>In order: English, French, German, Spanish, Italian<br>The NTSC-U/C release ignores this setting|
+|`+08`|`04`|*?Signed?* int32|Language setting (PAL release) (`00` - `04`)<br>In order: English, French, German, Spanish, Italian<br>The NTSC-U/C release ignores this setting|
 |`+0C`|`04`|*?Signed?* int32|Audio (`00` = mono, `01` = stereo, `02` = surround)|
-|`+10`|`04`|Signed? int32|Music volume (`00` - `0C`)|
-|`+14`|`04`|Signed? int32|SFX volume (`00` - `0C`)|
+|`+10`|`04`|*?Signed?* int32|Music volume (`00` - `0C`)|
+|`+14`|`04`|*?Signed?* int32|SFX volume (`00` - `0C`)|
 |`+1C`|`04`|Signed int32|X axis screen adjust|
 |`+20`|`04`|Signed int32|Y axis screen adjust<br>Stored in negative - in-game negative values are stored as positive values and vice versa|
 |`+24`|`01`|Boolean (byte)|Enable vibration|

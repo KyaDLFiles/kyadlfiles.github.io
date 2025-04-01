@@ -84,6 +84,8 @@ iframe {
 #text-container {
     margin-right: 2em;
     margin-left: 2em;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #header-logo a {
@@ -207,9 +209,9 @@ a > span.material-symbols-outlined {
     padding-left: 1em;
 }
 
-#toc-container ul > li > ul > li:first-child {
+/* #toc-container ul > li > ul > li:first-child {
     list-style: circle;
-}
+} */
 
 @media (prefers-color-scheme: dark) {
     body {
@@ -296,6 +298,7 @@ a > span.material-symbols-outlined {
     #text-container {
         margin-left: 0.5em;
         margin-right: 0.5em;
+        max-width: calc(100% - 2*0.5em);
     }
 
     body {

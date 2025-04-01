@@ -1,5 +1,5 @@
 title: Secret level
-template: wikipage.html
+template: _wikipage.html
 
 # External links
 <iframe id="odysee-iframe" style="width:100%; aspect-ratio:16 / 9;" src="https://odysee.com/%24/embed/%40KyaDLFiles%3A4%2Fsecret_level%3A4?r=F9derYvC6Z7F8ovcezzmMq86oUyX3XN9" allowfullscreen></iframe>

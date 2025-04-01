@@ -7,7 +7,7 @@ from pathlib import Path
 from staticjinja import Site
 from externals.markdown_extensions import *
 
-OUTPATH = "./_out"
+OUTPATH = "./_site"
 SEARCHPATH = "./templates"
 STATICPATH = "./static"
 
@@ -16,7 +16,7 @@ markdowner = markdown.Markdown(
     extensions = (
         "meta", "toc", "md_in_html",
         extended_tables_extension.ExtendedTableExtension(),
-        highlight_extensions.UnsureHighlightExtension(),
+        highlight_extensions.UnsureHighlightExtension(superscript="?", tooltip="This is speculative/unconfirmed"),
         highlight_extensions.WarningHighlightExtension(),
         header_extensions.SectionsViaHeadersExtension(),
         header_extensions.AddBlanksAroundHeadersExtension(),
@@ -32,7 +32,8 @@ def md_context(template):
     return {
         "text": markdowner.convert(markdown_content),
         "title": markdowner.Meta["title"][0],
-        "toc": markdowner.toc
+        "toc": markdowner.toc,
+        "target_template": markdowner.Meta["template"][0]
     }
 
 
@@ -42,7 +43,7 @@ def render_md(site, template, **kwargs):
 
     # Compile and stream the result
     os.makedirs(out.parent, exist_ok=True)
-    site.get_template("_partials/_wikipage.html").stream(**kwargs).dump(str(out), encoding="utf-8")
+    site.get_template(f"_partials/{kwargs['target_template']}").stream(**kwargs).dump(str(out), encoding="utf-8")
 
 
 site = Site.make_site(
