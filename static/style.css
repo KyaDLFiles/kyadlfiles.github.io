@@ -66,8 +66,9 @@ p {
     margin-bottom: 0.5em;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.4rem;
+    margin-top: 1rem;
 }
 
 iframe {
@@ -126,6 +127,19 @@ iframe {
     font-size: var(--toc-toggle-size);
 }
 
+#header-nav {
+    margin-top: 1rem;
+}
+
+#header-nav a {
+    text-decoration: none;
+}
+
+.header-nav-separator {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
 .table-highlight-1 {
     background-color: cyan;
 }
@@ -140,6 +154,11 @@ iframe {
 
 .show-below-700px {
     display: none;
+}
+
+.jokercalc-disable {
+    pointer-events: none;
+    filter: grayscale(100%);
 }
 
 .unselectable {
@@ -164,7 +183,7 @@ iframe {
 }
 
 a > span.material-symbols-outlined {
-    font-size: 0.7em;
+    font-size: 0.9em;
 }
 
 /* Sidebar */

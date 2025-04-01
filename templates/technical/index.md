@@ -58,7 +58,9 @@ When multiple buttons are pressed, the value gets set to [Button 1] *AND* [Butto
 
 Other PS1/PS2 games may store these values in a different way. ?[More info here](https://www.cheatcc.com/psx/codes/jokercom.html)
 #### Joker command calculator
-<div id="jokercalc" markdown="span">
+
+<noscript markdown="span">*!The calculator requires JavaScript!!*</noscript>
+<div id="jokercalc" class="jokercalc-disable" markdown="span">
     <table>
         <tbody>
             <tr>
@@ -101,7 +103,7 @@ Other PS1/PS2 games may store these values in a different way. ?[More info here]
     </table>
     <span>
         <code id="jokercalc-result">FFFF (NOT = 0000)</code><br>
-        <span id="jokercalc-warn" class="hidden">Up+Down or Left+Right is impossible on a controller!</span>
+        <span id="jokercalc-warning" class="nodisplay text-warning">Up+Down or Left+Right is impossible on a controller!</span>
     </span>
 </div>
 
@@ -306,3 +308,48 @@ In the table below, the offset starts from after the header.
 |`+27`|`01`|Boolean (byte)|Aspect ratio<br>`00` = 4:3, `01` = 16:9|
 |`+28`|`D8`|!{>2}Unknown<br>Won't affect the game if filled with garbage, won't even get reset to a default value|
 |`+110`|`1C`|!{>2}Unknown<br>Outside of the data block size set in the header, thus doesn't affect checksum<br>Won't affect the game if filled with garbage or even completely removed|
+
+
+<script>
+
+        jc = document.getElementById("jokercalc");
+        jc.classList.remove("jokercalc-disable");
+
+        el = jc.querySelectorAll("[id^=cc_]"); //get all checkboxes
+        el = [...el];
+
+        cc_dd = document.getElementById("cc_dd");
+        cc_du = document.getElementById("cc_du");
+        cc_dl = document.getElementById("cc_dl");
+        cc_dr = document.getElementById("cc_dr");
+        calc_warn = document.getElementById("jokercalc-warning");
+
+        function calculate() {
+            res = 65535; //0xFFFF
+            el.forEach( function(c) {
+                    if (c.checked)
+                        res &= c.getAttribute("value");
+                }
+            )
+            
+            //Hacky way to force the inclusion of leading zeroes
+            res += 65536; 
+            str = res.toString(16).toUpperCase().slice(-4) + " (NOT = " + (~res >>> 0).toString(16).toUpperCase().slice(-4) + ")";
+            document.getElementById("jokercalc-result").innerHTML = str;
+            
+
+            if ( (cc_dd.checked & cc_du.checked) |
+            (cc_dl.checked & cc_dr.checked) )
+                calc_warn.classList.remove("nodisplay");
+            else
+                calc_warn.classList.add("nodisplay"); 
+        }
+        
+        el.forEach( function(c) {
+                c.addEventListener("click", calculate);
+            }
+        )	
+
+        calculate()
+
+    </script>
