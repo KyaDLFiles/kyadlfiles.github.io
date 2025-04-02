@@ -101,7 +101,7 @@ STK + @@q|Punch|7||
 ## Brazul
 
 This is how the stick position for using spell attacks works:
-Imagine a @@o having Brazul at the centre, with Kya on the circumference representing 0°.  
+Imagine a circle having Brazul at the centre, with Kya on the circumference representing 0°.  
 To perform a spell attack, you have to place the stick at ±45°
 However, the angle is so precise you might as well rotate the stick blindly and hope you get it.  
 !![Stick positions](./spell.jpg)
