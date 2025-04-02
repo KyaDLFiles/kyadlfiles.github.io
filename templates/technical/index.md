@@ -263,7 +263,7 @@ List of all the level folders (found in /CDEURO/LEVEL/)
 |LEVEL_10|Wolfun City|WOLFUN CITY|7|
 |!{+!1}LEVEL_11|Brazul miniboss (The Quarry)|THE QUARRY|1|Pretends to be LEVEL_5 in the areas preview section of the pause menu<br>It being so distant from it's parent LEVEL_5 may suggest the decision to separate it was taken late in the development?
 |LEVEL_12|The Fortress|THE FORTRES|3||
-|!{+!2}LEVEL_13|Secret level|LEVEL TEST|5|More info
+|!{+!2}LEVEL_13|Secret level|LEVEL TEST|5|[More info](/secrlvl)
 |!{+!1}PREINTRO|Main menu|START MENU|1||
 |!{+!1}CREDITS|End game credits|CREDITS|1||
 
