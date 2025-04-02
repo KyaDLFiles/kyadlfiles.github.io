@@ -1,4 +1,4 @@
-# [The Kya: Dark Lineages Files website](kyadlfiles.github.io)
+# [The Kya: Dark Lineages Files website](https://kyadlfiles.github.io)
 
 ## Structure of the repository
 **/externals** contains submodules 
