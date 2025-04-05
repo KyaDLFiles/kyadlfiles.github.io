@@ -7,11 +7,11 @@
 
 **/templates** contains the actual webpages  
 - **/templates/_partials/** contains HTML templates that are used to wrap the content of the documents
-- Other folders contain Markdown (with custom extensions) documents with the actual text content. The content of the /template folder is copied to the root of the website, with every index.md being converted and wrapped in an HTML template as index.html 
+- Other folders contain Markdown (with custom extensions) documents with the actual text content. The content of the /template folder is copied to the root of the website, with every !index.md being converted and wrapped in an HTML template as index.html 
 
-Every page must be created as a new folder with an index.md file inside. Apart from subfolders, the index.md file must be the only content of every folder.
+Every page must be created as a new folder with an !index.md file inside. Apart from subfolders, the !index.md file must be the only content of every folder.
 
-Every index.md must contain two lines of metadata at the very top
+Every !index.md must contain two lines of metadata at the very top
  - **title**, which will be used as the <title> in the HTML, as the title in the header, and will appear in the navigation links at the top of the page
  - **template**, which indicates which file in */templates/_partials* the document will be wrapped in
  

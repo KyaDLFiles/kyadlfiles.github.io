@@ -3,6 +3,7 @@ import shutil
 import markdown
 import logging
 import staticjinja
+import re
 from pathlib import Path
 from staticjinja import Site
 from externals.markdown_extensions import *
@@ -79,8 +80,9 @@ def md_context(template):
 
 
 def render_md(site, template, **kwargs):
-    # i.e. posts/post1.md -> build/posts/post1.html
-    out = site.outpath / Path(template.name).with_suffix(".html")
+    # !index.md is done to make sure the index is the first file rendered by jinja, otherwise it way mess up when generating the nav links
+    # I could've done it in a more elegant way, but I can't be bothered
+    out = site.outpath / Path(re.sub(r"!index", "index", template.name)).with_suffix(".html")
 
     # Compile and stream the result
     os.makedirs(out.parent, exist_ok=True)
