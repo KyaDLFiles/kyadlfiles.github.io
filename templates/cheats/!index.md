@@ -32,7 +32,7 @@ The cheats will also theoretically work on ?[OpenPS2Loader (OPL)](https://github
 ### Note about other (commercial) cheat devices
 Providing support for commercial cheat devices (ARMAX, GameShark, etc.) is extremely annoying.  
 Most of those devices use their own "encrypted" format for cheat codes, which would require manual conversion for each type that exists (some of them even change their cheat code format from one revision to another!).  
-Additionally, I've previously encountered issues with some of these devices not properly supporting all code types, which leads to broken cheats that may even  the game.  
+Additionally, I've previously encountered issues with some of these devices not properly supporting all code types, which leads to broken cheats that may even crash the game.  
 Meanwhile, CDfPS2 uses a plain and easy to write code format and actually supports everything properly.  
 For there reasons, I won't be supporting any of the commercial cheat devices, and instead recommend you mod your PS2 to run CDfPS2 (which cheat devices can help in doing) (resources below).  
 
@@ -41,8 +41,8 @@ For there reasons, I won't be supporting any of the commercial cheat devices, an
 Technically, it's not even required to *install* any mod to run CDfPS2, a temporary exploit can be used too (but you may as well install a more convenient softmod while you're at it, eg FMCB/FHDB or OpenTuna).  
 The easiest way to achieve that would be ?[FreeDVDBoot](https://github.com/CTurt/FreeDVDBoot?tab=readme-ov-file), but it's not compatible with all models.  
 Note that, on the PS2, a softmod by itself does **not** allow to run burned or out-of-region games (more info below).  
-For other methods, check ?[this](https://www.psx-place.com/threads/how-to-hack-playstation-2-in-2025-roadmap.37271/), ?[this](https://consolemods.org/wiki/PS2:PS2_Mods_Wiki) and ?[this](https://www.ps2-home.com/forum/viewtopic.php?p=6434#p6434) (while this one is presented as a guide to install FMCB/FHDB, after you get to the point where you have homebrew running, you can choose to run what you want).  
-The easiest thing to do in case you have a modded PS2, but want to run CDfPS2 on another one that doesn't support FDVDB, would be to use the modded PS2 to install FMCB and run it on the other one.
+For other methods, check ?[this](https://www.psx-place.com/threads/how-to-hack-playstation-2-in-2025-roadmap.37271/), ?[this](https://consolemods.org/wiki/PS2:PS2_Mods_Wiki) and ?[this](https://www.ps2-home.com/forum/viewtopic.php?p=6434#p6434) (while this one is presented as a guide to install FMCB/FHDB, after you get to the point where you have homebrew running, you can adapt it to run whatever you want).  
+The easiest thing to do in case you have a modded PS2, but want to run CDfPS2 on another one that doesn't support FDVDB, would be to use the modded PS2 to install FMCB (or OpenTuna) on a memory card and run it on the other one.
 
 ## Bypassing region lock
 If your console is compatible, you can use ?[MechaPwn](https://github.com/MechaResearch/MechaPwn) to run out-of-region and burned games, or you can use ?[ESR](https://www.psx-place.com/threads/esr.30217/) or OPL (assuming KDL runs on them), or you can ?[hardmod](https://quade.co/ps2-modchip-guide/modbo/) if you dare.
