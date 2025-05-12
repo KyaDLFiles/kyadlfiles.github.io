@@ -8,7 +8,7 @@ Me and other members who are investigating the inner workings of Kya DL use ?[Ch
 I'll be uploading my cheat tables (which also include contributions from other members of the server) in ?[a separate repository](https://github.com/KyaDLFiles/Kya_DL_cheat_tables), which includes instructions on how to use CE with PCSX2 >1.6
 
 ## Pointers, addresses and offsets
-All addresses and offsets are always hexadecimal.
+All addresses and offsets are always hexadecimal unless stated otherwise.
 
 When talking about a pointer address, this page uses a terminology similar to CE: to get to the desired address, take the 4-byte number **stored** at the *pointer base address*, add the *offset* to that number, and the result is the actual memory address storing that particular variable.  
 (eg: *pointer base address* `10` & *offset* `+2` = take value stored at `10` (X), add `+2` to it, actual address is `X+2`)
@@ -172,14 +172,57 @@ Note that the game also requires a DualShock 2 for player two: if you try pluggi
 # Kya's position and movement
 **Pointer base address**: 06F2D90
 ## Position
-**Type**: floats
-**Offset (X)**: `+30`
-**Offset (Y)**: `+34`
-**Offset (Z)**: `+38`
-
+**Type**: floats  
+**Offset (X)**: `+30`  
+**Offset (Y)**: `+34`  
+**Offset (Z)**: `+38`   
 To give a sense of scale, when Kya jumps by pressing @@x she peaks at around +1.71 Y.  
 (it's actually currently unknown which value the game considers to be X and which one to be Z, the notation has been chosen based on their order in memory).
-## Settings read from BWITCH.ini
+
+## Current action
+**Type**: *?4 bytes unsigned?* integer  
+**Offset**: `+104`   
+The action (and consequently animation) that Kya is currently performing (standing still, walking, stopping, falling, freefalling, sliding, beginning throwing the Boomy, throwing the Boomy, recollecting the Boomy, etc.)  
+Table with known values TBA  
+Some notable values are `168` which is the dormant flying cheat and `161` which instantly kills Kya
+
+## Speeds
+**Type**: floats  
+### Forwards speed
+**Offset**: `+1A8`  
+This speed determines the velocity Kya is moving torwards the direction she's facing.  
+This speed automatically decreases *?at a constant rate?* if no  input is done (simulating friction).  
+This speed is capped to a value stored in another address (TBA below), if the value is above the cap it Kya will move at the cap speed (the actual value decreases as usual)
+### Auxiliary speed
+**Offset (sign/multiplier)**: `+224`  
+**Offset (magnitude)**: `+23C`  
+This speed is used for many things depending on the current action (see above): when jumping it acts as the vertical speed, when surfing it acts as the sliding speed, when getting knockback from a  hazard it's the speed at which Kya is moving backwards, etc.  
+*?The game seems to only use the sign value as a sign (only setting it to ±1 and 0)?*, but it can act as a generic multiplier if set to a different value.  
+## Current health
+**Type**: float  
+**Offset**: `+2D8`  
+Kya's current health; each health bar corresponds to 50 HP.  
+!!CHECK AGAIN BEFORE MERGING!! Extra bars will appear if the value is set above the current maximum health, but it can't be regenerated above it.  
+Values ≤0 achieve the *zombie state* glitch, while values >250 will crash everything (including PCSX2).
+## Current mana 
+**Type**: float  
+**Offset**: `+ACC`  
+Current mana, TBA mana cap.  
+Notice how the value is a float: when regenerating, the mana decreases continiously and fractionally and not one at a time.  
+TBA: health to consumed mana ratio when regenerating
+## Fruit timers
+**Type**: floats  
+**Offset (invincibility timer)**:  `+155C`  
+**Offset (strength timer)**: `+1564`  
+These timers are usually kept in sync with the global timer (TBA).  
+When Kya eats a fruit, the corresponding value gets set to (current game timer + (TBA value)), and the effect stays active while the timer is higher than the game timer, at which point the effect expires and the value is again kept in sync.
+## Enable controls
+**Type**: 4 byte integers
+**Offset (camera controls)**: `+1610`  
+**Offset (Kya controls)**: `+18DC`  
+Disable controls if set to 0; used for cutscenes.
+
+# Settings read from BWITCH.ini
 Some "settings" are stored in the file *BWITCH.ini* in the root of the game DVD.  
 It's possible (and easier) to change these by editing the variables used for storing them after being read from the disc.
 ## Starting level (AddLevel)
@@ -219,7 +262,7 @@ If set to a value different from the default value of The Roots, when starting a
 
 !![Examples of unusual levels in the file load menu](./weirdlvls.png)
 
-## Dormant debug features/cheats
+# Dormant debug features/cheats
 There are dormant debug features/cheats left over from when the game was in development; a working implementation of the cheat options menu can most prominently be seen in the ?[September 29 prototype](https://hiddenpalace.org/Kya:_Dark_Lineage_(Sep_29,_2003_prototype)).
 
 Strings pertaining to this menu have been found in the final build, but it's currently unknown if and how the menu can be accessed in the final build.
