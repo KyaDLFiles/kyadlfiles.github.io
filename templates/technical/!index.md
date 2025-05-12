@@ -179,7 +179,7 @@ Note that the game also requires a DualShock 2 for player two: if you try pluggi
 
 To give a sense of scale, when Kya jumps by pressing @@x she peaks at around +1.71 Y.  
 (it's actually currently unknown which value the game considers to be X and which one to be Z, the notation has been chosen based on their order in memory).
-## Settings read from BWITCH.ini
+# Settings read from BWITCH.ini
 Some "settings" are stored in the file *BWITCH.ini* in the root of the game DVD.  
 It's possible (and easier) to change these by editing the variables used for storing them after being read from the disc.
 ## Starting level (AddLevel)
@@ -219,7 +219,7 @@ If set to a value different from the default value of The Roots, when starting a
 
 !![Examples of unusual levels in the file load menu](./weirdlvls.png)
 
-## Dormant debug features/cheats
+# Dormant debug features/cheats
 There are dormant debug features/cheats left over from when the game was in development; a working implementation of the cheat options menu can most prominently be seen in the ?[September 29 prototype](https://hiddenpalace.org/Kya:_Dark_Lineage_(Sep_29,_2003_prototype)).
 
 Strings pertaining to this menu have been found in the final build, but it's currently unknown if and how the menu can be accessed in the final build.
