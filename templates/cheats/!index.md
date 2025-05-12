@@ -22,7 +22,7 @@ I recommend **un**ticking the *All CRCs* setting, otherwise there may be conflic
 ### Note about legacy PCSX2 versions
 Older PCSX2 versions don't have a cheat management system.  
 The cheats can still work on them, but you need to manually edit the .pnach file.   
-All the lines with square brackets and the *author* lines have to be removed, and unwanted cheats have to be removed from the file (cheats have to be manually added and removed when needed) (You can use *//* to mark a line as a comment, so the emulator will ignore it).  
+All the lines with square brackets and the *author* lines have to be removed, and unwanted cheats have to be removed from the file (cheats have to be manually added and removed when needed) (you can use *//* to mark a line as a comment, so the emulator will ignore it).  
 
 ## Console
 The console cheats are designed for ?[Cheat Device for PS2](https://github.com/israpps/CheatDevicePS2), which requires a mod (soft or hard) to run homebrews.  
@@ -44,11 +44,11 @@ Note that, on the PS2, a softmod by itself does **not** allow to run burned or o
 For other methods, check ?[this](https://www.psx-place.com/threads/how-to-hack-playstation-2-in-2025-roadmap.37271/), ?[this](https://consolemods.org/wiki/PS2:PS2_Mods_Wiki) and ?[this](https://www.ps2-home.com/forum/viewtopic.php?p=6434#p6434) (while this one is presented as a guide to install FMCB/FHDB, after you get to the point where you have homebrew running, you can adapt it to run whatever you want).  
 The easiest thing to do in case you have a modded PS2, but want to run CDfPS2 on another one that doesn't support FDVDB, would be to use the modded PS2 to install FMCB (or OpenTuna) on a memory card and run it on the other one.
 
-## Bypassing region lock
+## Bypassing region lock and copy protection
 If your console is compatible, you can use ?[MechaPwn](https://github.com/MechaResearch/MechaPwn) to run out-of-region and burned games, or you can use ?[ESR](https://www.psx-place.com/threads/esr.30217/) or OPL (assuming KDL runs on them), or you can ?[hardmod](https://quade.co/ps2-modchip-guide/modbo/) if you dare.
 
 # Technical resources
 ?[WIP technical information about the game](https://kyadlfiles.github.io/technical/)  
 ?[Cheat code types](https://github.com/mlafeldt/ps2rd/blob/master/Documentation/code_types.txt)  
-How .pnach files work: ?[Part 1](https://forums.pcsx2.net/Thread-How-PNACH-files-work-2-0 ), ?[part 2](https://forums.pcsx2.net/Thread-Sticky-Important-Patching-Notes-1-7-4546-Pnach-2-0)  
+How .pnach files work: ?[part 1](https://forums.pcsx2.net/Thread-How-PNACH-files-work-2-0 ), ?[part 2](https://forums.pcsx2.net/Thread-Sticky-Important-Patching-Notes-1-7-4546-Pnach-2-0)  
 ?[Tool to find *hook codes*/*enable codes*](https://www.psx-place.com/resources/freemastercodefinder.1351/)
