@@ -16,6 +16,16 @@ When talking about a pointer address, this page uses a terminology similar to CE
 When talking about a "normal" address that doesn't use pointers (for example, the controller readings), you simply take the *starting address* and add the *offset* to it to get the actual address.  
 (eg: beginning address `20` & offset `6` = actual address `26`)
 
+## Floats
+The PlayStaion 2 handles floats differently to other architectures (which pretty much all follow the ?[IEEE 754](https://en.wikipedia.org/wiki/IEEE_754-1985) standard).  
+For more information read ?[here](https://wiki.pcsx2.net/PCSX2_Documentation/Nightmare_on_Floating-Point_Street) and ?[here](https://www.gregorygaines.com/blog/emulating-ps2-floating-point-nums-ieee-754-diffs-part-1/), but the gist of it is that the PS2 doesn't support ±infitity, NaN values, and denormalized numbers, and rounding works differently.  
+PCSX2 correctly emulates these behaviours, but programs like Cheat Engine are unaware of it and show floats using the standard IEEE 754 representation, meaning that there may be a discrepancy between what CE is reporting and what the actual value is (for example, if you were to set some float value to ±infinity or NaN and except the game to crash, that will not happen as the PS2 simply doesn't have the concept of those values and treats them as "regular" numbers, even though CE will "erroneously" show them as non-numbers)
+
+## Decompilation
+There's an ongoing decompilation project going on which is spearheaded by Icey1717 and available ?[on their GitHub page](https://github.com/Icey1717/Kya) (note that it uses the executable from the PAL retail release as the base).  
+A big help for the project came from the fact that the ?[May 12 prototype build](https://hiddenpalace.org/Kya:_Dark_Lineage_(May_12,_2003_prototype)) contains debug symbols; nevertheless there are still many variables, classes, functions etc. that have yet to be identified, and the grand scheme of how everything works together still needs a lot of investigation.  
+Analysis of the decompiled code may reveal information useful for this document, and vice-versa information contained on this document may be useful for reverse engineering
+
 # Variables and RAM
 *!Important! The addresses refer to the final NTSC build of the game.  
 The PAL version has different values, which will eventually be documented.!*
