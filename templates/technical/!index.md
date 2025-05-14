@@ -180,11 +180,11 @@ Regardless, this gives us another way of checking for buttons being pressed (apa
 The information stored and the order it's stored in is the same as player one.  
 Note that the game also requires a DualShock 2 for player two: if you try plugging in an original DualShock in port 2 and try to control P2 in the secret level nothing will happen.
 # Kya's position and movement
-**Pointer base address**: 06F2D90
+**Pointer base address**: `06F2D90`
 ## Position
-**Type**: floats
-**Offset (X)**: `+30`
-**Offset (Y)**: `+34`
+**Type**: floats  
+**Offset (X)**: `+30`  
+**Offset (Y)**: `+34`  
 **Offset (Z)**: `+38`
 
 To give a sense of scale, when Kya jumps by pressing @@x she peaks at around +1.71 Y.  
