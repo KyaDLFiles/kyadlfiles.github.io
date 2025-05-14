@@ -17,11 +17,11 @@ When talking about a "normal" address that doesn't use pointers (for example, th
 (eg: beginning address `20` & offset `6` = actual address `26`)
 
 # Variables and RAM
-*!Important! The addresses refer to the final NTSC build of the game.  
-The PAL version has different values, which will eventually be documented.!*
+*!Important! Addresses change between the NTSC and PAL release (offsets are usually the same)!*
 
 ## Controller readings (player 1)
-**Starting address**: `0495B30`/`0495B9C`/`0495C1C`
+**Starting address (NTSC)**: `0495B30`/`0495B9C`/`0495C1C`
+TBA PAL
 
 The difference between these three locations needs to be investigated
 
@@ -166,11 +166,13 @@ Regardless, this gives us another way of checking for buttons being pressed (apa
 ## Controller readings (player 2)
 
 **Address**: `0495CB0`/`0495D1C`/`0495D9C`
+TBA PAL
 
 The information stored and the order it's stored in is the same as player one.  
 Note that the game also requires a DualShock 2 for player two: if you try plugging in an original DualShock in port 2 and try to control P2 in the secret level nothing will happen.
-# Kya's position and movement
-**Pointer base address**: 06F2D90
+# Kya
+**Pointer base address (NTSC)**: `06F2D90`  
+**Pointer base address (PAL)**: `04495A0`
 ## Position
 **Type**: floats  
 **Offset (X)**: `+30`  
@@ -179,8 +181,14 @@ Note that the game also requires a DualShock 2 for player two: if you try pluggi
 To give a sense of scale, when Kya jumps by pressing @@x she peaks at around +1.71 Y.  
 (it's actually currently unknown which value the game considers to be X and which one to be Z, the notation has been chosen based on their order in memory).
 
+## Distance from floor
+**Type**: float  
+**Offset**: `+EC`
+Distance from the floor below Kya.  
+This value is capped at 10.3, and when the value is equal to that, Kya will start freefalling.
+
 ## Current action
-**Type**: *?4 bytes unsigned?* integer  
+**Type**: *?4 bytes signed?* integer  
 **Offset**: `+104`   
 The action (and consequently animation) that Kya is currently performing (standing still, walking, stopping, falling, freefalling, sliding, beginning throwing the Boomy, throwing the Boomy, recollecting the Boomy, etc.)  
 Table with known values TBA  
@@ -217,10 +225,38 @@ TBA: health to consumed mana ratio when regenerating
 These timers are usually kept in sync with the global timer (TBA).  
 When Kya eats a fruit, the corresponding value gets set to (current game timer + (TBA value)), and the effect stays active while the timer is higher than the game timer, at which point the effect expires and the value is again kept in sync.
 ## Enable controls
-**Type**: 4 byte integers
+**Type**: 4 byte integers  
 **Offset (camera controls)**: `+1610`  
 **Offset (Kya controls)**: `+18DC`  
 Disable controls if set to 0; used for cutscenes.
+
+# Abilities and items
+TBA check types
+## Nooties
+**Type**: *?Signed?* 4 byte integer  
+**Address (NTSC)**: `048DABC`  
+**Address (PAL)**: `048EABC`
+
+## Items
+**Starting address (NTSC)**: `042490C`
+**Starting address (NTSC)**: `042540C`
+
+|Item|Offset|Notes|
+|----|------|-----|
+|Magic bouncers|`+00`||
+|Climbing gloves|`+08`||
+|Boomy|`+10`|`0`: no Boomy<br>`1`: normal Boomy<br>`2`: silver Boomy<br>`3`: golden Boomy|
+|Bracelets|`+18`|Read below|
+|Regeneration|`+28`|Automatically given every time Nativ City is entered (LEVEL_4 doesn't count)<br>Used to be an item that had to be purchased in prototype builds |
+|Jamgut birdcall|`+30`||
+|Telescope|`+38`||
+|Board|`+48`|`0`: no board<br>`1`: Magic board<br>`2`: Speed board|
+
+### Bracelets
+Bracelets are stored in a single variable, where every bit corresponds to a single bracelet (`1` if Kya has it).  
+The LSB corresponds to the white bracelet, and every more significant bit corresponds to the next higher level.  
+Normally bracelets are bought incrementally and cannot be individually lost, but the way they're stored in RAM actually allows to have some intermediate levels missing. 
+
 
 # Settings read from BWITCH.ini
 Some "settings" are stored in the file *BWITCH.ini* in the root of the game DVD.  
@@ -235,7 +271,8 @@ The folder is set by SetPath, which is set to *CdEuro/Level/* in the final game 
 If set to a value different from the default value of The Roots, when starting a new game, the intro movie will be skipped, the lines *"Hey, look at this"..."Is it dead?"* will be played, and then the player will be immediately thrown in the level.
 
 **Type**: 4 bytes *?signed?* integer (only last byte shown in table)  
-**Address**: `06DA5B4`
+**Address (NTSC)**: `06DA5B4`  
+**Address (PAL)**: `06DB5B4`
 
 |Value|Level folder|Level|Info|
 |-----|------------|-----|----|
@@ -276,7 +313,8 @@ These are stored next to each other and are accessed via a pointer.
 
 ## Flying and invincibility
 
-**Pointer base address**: `0448AA0`  
+**Pointer base address (NTSC)**: `0448AA0`  
+**Pointer base address (PAL)**: `0448E10`
 **Offset (flying)**: `+AA0`  
 **Offset (invincibility)**: `+AA4`  
 
