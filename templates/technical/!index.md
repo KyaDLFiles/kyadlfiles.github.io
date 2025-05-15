@@ -254,7 +254,7 @@ TBA check types
 
 ### Bracelets
 Bracelets are stored in a single variable, where every bit corresponds to a single bracelet (`1` if Kya has it).  
-The LSB corresponds to the white bracelet, and every more significant bit corresponds to the next higher level.  
+The LSB corresponds to the white bracelet, and everycd  more significant bit corresponds to the next higher level.  
 Normally bracelets are bought incrementally and cannot be individually lost, but the way they're stored in RAM actually allows to have some intermediate levels missing. 
 
 
@@ -371,13 +371,14 @@ All KDL .dat save files start with a header containing at least two checksums.
 
 Reverse engineered checksum code can be found here 
 ## Settings file (settings.dat)
+?[Relevant code](https://github.com/Icey1717/Kya/blob/main/src/Settings.cpp#L14)  
 In the table below, the offset starts from after the header.
 
 |Offset|Size (bytes)|Type|Info|
 |-|-|-|-|
 |`+00`|`04`|String|`STGS`
-|`+04`|`04`|Unknown|Unknown<br>Set to 03 by the game|
-|`+08`|`04`|*?Signed?* int32|Language setting (PAL release) (`00` - `04`)<br>In order: English, French, German, Spanish, Italian<br>The NTSC-U/C release ignores this setting|
+|`+04`|`04`|int32|Seemingly a guard value (albeit the reason for including it is not known)<br>Set to 03 by the game, and it rejects the settings file if the value is different<br>|
+|`+08`|`04`|*?Signed?* int32|Language setting (PAL release) (`00` - `04`)<br>In order: English, French, German, Spanish, Italian<br>The NTSC release ignores this setting|
 |`+0C`|`04`|*?Signed?* int32|Audio (`00` = mono, `01` = stereo, `02` = surround)|
 |`+10`|`04`|*?Signed?* int32|Music volume (`00` - `0C`)|
 |`+14`|`04`|*?Signed?* int32|SFX volume (`00` - `0C`)|
@@ -385,10 +386,10 @@ In the table below, the offset starts from after the header.
 |`+20`|`04`|Signed int32|Y axis screen adjust<br>Stored in negative - in-game negative values are stored as positive values and vice versa|
 |`+24`|`01`|Boolean (byte)|Enable vibration|
 |`+25`|`01`|Boolean (byte)|Enable subtitles|
-|`+26`|`01`|Unknown byte value|Unknown|
+|`+26`|`01`|Unknown byte value|Unknown, seemingly unused|
 |`+27`|`01`|Boolean (byte)|Aspect ratio<br>`00` = 4:3, `01` = 16:9|
-|`+28`|`D8`|!{>2}Unknown<br>Won't affect the game if filled with garbage, won't even get reset to a default value|
-|`+110`|`1C`|!{>2}Unknown<br>Outside of the data block size set in the header, thus doesn't affect checksum<br>Won't affect the game if filled with garbage or even completely removed|
+|`+28`|`D8`|!{>2}Unknown, seemingly unused<br>Won't affect the game if filled with garbage, won't even get reset to a default value|
+|`+110`|`1C`|!{>2}Unknown, seemingly unused<br>Outside of the data block size set in the header, thus doesn't affect checksum<br>Won't affect the game if filled with garbage or even completely removed|
 
 
 <script>
