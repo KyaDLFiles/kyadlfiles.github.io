@@ -6,9 +6,12 @@
     --header-height: 2em;
 
     --light-background: white;
-    --light-sidebar-background: whitesmoke;
+    --light-sidebar-background: rgb(245, 245, 245);
+    --light-floating-toc-background: rgb(245, 245, 245, 0.95);
     --dark-background: rgb(32, 33, 36);
     --dark-sidebar-background: rgb(40, 40, 40);
+    --dark-floating-toc-background: rgb(40, 40, 40, 0.95);
+
 
     --toc-toggle-size: 2.5rem;
 }
@@ -232,10 +235,6 @@ a > span.material-symbols-outlined {
     padding-left: 1em;
 }
 
-/* #toc-container ul > li > ul > li:first-child {
-    list-style: circle;
-} */
-
 @media (prefers-color-scheme: dark) {
     body {
         background: var(--dark-background);
@@ -298,9 +297,15 @@ a > span.material-symbols-outlined {
         position: fixed;
         top: calc(var(--toc-toggle-size) + 4px);
         right: 0;
-        background-color: rgba(40, 40, 40, 0.95);
+        background-color: var(--light-floating-toc-background);
     }
-    
+
+    @media (prefers-color-scheme: dark) {
+        #toc-container {
+            background-color: var(--dark-floating-toc-background);
+        }
+    }
+
 
     .toc {
         margin-bottom: 1rem;
@@ -334,6 +339,7 @@ a > span.material-symbols-outlined {
         padding: 0.05em 0.1em;
     }
 }
+
 
 @media (max-width: 450px) {
     #logo-text {
