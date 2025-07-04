@@ -9,4 +9,5 @@ template: _home.html
 [Info about the secret level](./secrlvl)  
 [Picture gallery](./pictures)  
 [Cheat codes](./cheats)  
+[Save files collection](./save_collection)
 ---
