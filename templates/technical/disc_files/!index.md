@@ -65,7 +65,7 @@ Not all partial sectors are loaded at the same time in sector 1 and 2, since obv
 
 |Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
 |-|-|-|-|-|-|
-|1|Area|Lower level|4, 5, 6, 7, 13, 14, 15, 16, 17, 18|!{^9}N/A||
+|1|Area|Lower level|4, 5, 6, 7, 13, 14, 15, 16, 17, 18|!{^26}N/A||
 |2|Area|Upper level|8, 9, 10, 20|||
 |4|Partial|Open shop with binoculars, magic board, yellow bracelet|!{^7}N/A|||
 |5|Partial|Under construction shop from sector 4||||
