@@ -42,7 +42,7 @@ All enemies except Kya and Frank have a broken/fake @@r2 + @@x move that doesn't
 |@@o|Grab and punch|5|Can break Kya's guard|
 |@@r2 + @@q|Side claw hit|5|Up to three can be chained|
 |@@r2 + STK + @@q|Crushing claws|10|Unblockable (red trail)|
-|@@r2 + SNTK + @@q|Claws uppercut|10|Only after a side claw hit<br>Unblockable (red trail)<br>Kya also gets ragdo|
+|@@r2 + SNTK + @@q|Claws uppercut|10|Only after a side claw hit<br>Unblockable (red trail)<br>Kya also gets ragdoll damage|
 |@@r2|Block|||
 
 ## Armed Grunt
