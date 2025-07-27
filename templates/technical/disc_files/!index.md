@@ -26,33 +26,6 @@ List of all the level folders (found in /CDEURO/LEVEL/)
 
 # Sector files
 TBA
-## LEVEL_1 (The Roots)
-**Total sectors**: 13  
-**Area sectors**:  6 
-**Partial sectors**: 7  
-**Unused**: 1  
-**Always loaded elements**: some obstacles in the square "tunnel" (may be objects instead of level geometry)
-
-The default backdrop (which is used if a partial sector is forcibly loaded, or if an invalid value is specified) is one that's not found in any area sector, and is possibly an older version leftover from earlier builds.  
-It is notably similar to the ones used in area 2 and 4, but not the same.  
-It also has issues with positioning, as moving vertically causes the geometry to move in the opposite direction, and horizontal movement also causes it to move around erratically.
-
-|Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
-|-|-|-|-|-|-|
-|1|Area|Starting area up until the slide|7|1||
-|2|Area|Wolfun camp with map, from the end of the slide up until the tunnel|8, 10|2||
-|3|Area|Wind tunnel and elevator to Nativ City (final area)|11|4||
-|4|Area|Slide|7, 8, 9|-||
-|5|Area|Freefall section and island with rune, up until the wind tunnel|10, 13|3||
-|6|Partial|Unused, leftover from prototype builds<br>The tunnel that was seen in the May 12 prototype in the starting area (position coincides with it)|!{^6}N/A|!{^6}N/A||
-|7|Parital|Initial part of the slide, connecting sectors 1 and 4<br>Some geometry changes based on distance, possibly hinting to earlier geometry that wasn't properly updated for low LOD||||
-|8|Partial|Final part of the slide going to the Wolfun camp, connecting sectors 4 and 2||||
-|9|Partial|Final part of the slide going to the rune island, connecting sectors 4 and 5 ||||
-|10|Partial|Tunnel connecting sectors 2 and 5||||
-|11|Parital|Very end of freefall section, connecting sector 5 and 3|||||
-|12|Area|Middle part of the square "tunnel" in the freefall section<br>Notably uses the default backdrop, with the same issues with positioning, but is also rotated compared to partial sectors|11, 13|-||
-|13|Partial|Initial part of the square "tunnel" in the freefall section|N/A|N/A||
-
 
 ## NATIV (Nativ City)
 **Total sectors**: 26  
@@ -91,6 +64,33 @@ Not all partial sectors are loaded at the same time in sector 1 and 2, since obv
 |25|Area|Freefall 3 minigame|-|||
 |26|Area|Speed racing 3 minigame|-|||
 |27|Area|Speed racing 4 minigame|-|||
+
+## LEVEL_1 (The Roots)
+**Total sectors**: 13  
+**Area sectors**:  6 
+**Partial sectors**: 7  
+**Unused**: 1  
+**Always loaded elements**: some obstacles in the square "tunnel" (may be objects instead of level geometry)
+
+The default backdrop (which is used if a partial sector is forcibly loaded, or if an invalid value is specified) is one that's not found in any area sector, and is possibly an older version leftover from earlier builds.  
+It is notably similar to the ones used in area 2 and 4, but not the same.  
+It also has issues with positioning, as moving vertically causes the geometry to move in the opposite direction, and horizontal movement also causes it to move around erratically.
+
+|Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
+|-|-|-|-|-|-|
+|1|Area|Starting area up until the slide|7|1||
+|2|Area|Wolfun camp with map, from the end of the slide up until the tunnel|8, 10|2||
+|3|Area|Wind tunnel and elevator to Nativ City (final area)|11|4||
+|4|Area|Slide|7, 8, 9|-||
+|5|Area|Freefall section and island with rune, up until the wind tunnel|10, 13|3||
+|6|Partial|Unused, leftover from prototype builds<br>The tunnel that was seen in the May 12 prototype in the starting area (position coincides with it)|!{^6}N/A|!{^6}N/A||
+|7|Parital|Initial part of the slide, connecting sectors 1 and 4<br>Some geometry changes based on distance, possibly hinting to earlier geometry that wasn't properly updated for low LOD||||
+|8|Partial|Final part of the slide going to the Wolfun camp, connecting sectors 4 and 2||||
+|9|Partial|Final part of the slide going to the rune island, connecting sectors 4 and 5 ||||
+|10|Partial|Tunnel connecting sectors 2 and 5||||
+|11|Parital|Very end of freefall section, connecting sector 5 and 3|||||
+|12|Area|Middle part of the square "tunnel" in the freefall section<br>Notably uses the default backdrop, with the same issues with positioning, but is also rotated compared to partial sectors|11, 13|-||
+|13|Partial|Initial part of the square "tunnel" in the freefall section|N/A|N/A||
 
 ## LEVEL_2 (Flying Forest)
 **Total sectors**: 11  
