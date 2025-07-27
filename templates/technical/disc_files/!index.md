@@ -39,7 +39,7 @@ Not all partial sectors are loaded at the same time in sector 1 and 2, since obv
 |Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
 |-|-|-|-|-|-|
 |1|Area|Lower level|4, 5, 6, 7, 13, 14, 15, 16, 17, 18|!{^26}N/A||
-|2|Area|Upper level|8, 9, 10, 20|||
+|2|Area|Upper level|8, 9, 10, 20, 22|||
 |4|Partial|Open shop with binoculars, magic board, yellow bracelet|!{^7}N/A|||
 |5|Partial|Under construction shop from sector 4||||
 |6|Partial|Open shop with golden Boomy, silver bracelet||||
@@ -82,7 +82,7 @@ It also has issues with positioning, as moving vertically causes the geometry to
 |2|Area|Wolfun camp with map, from the end of the slide up until the tunnel|8, 10|2||
 |3|Area|Wind tunnel and elevator to Nativ City (final area)|11|4||
 |4|Area|Slide|7, 8, 9|-||
-|5|Area|Freefall section and island with rune, up until the wind tunnel|10, 13|3||
+|5|Area|Freefall section and island with rune, up until the wind tunnel|9, 10, 13|3||
 |6|Partial|Unused, leftover from prototype builds<br>The tunnel that was seen in the May 12 prototype in the starting area (position coincides with it)|!{^6}N/A|!{^6}N/A||
 |7|Parital|Initial part of the slide, connecting sectors 1 and 4<br>Some geometry changes based on distance, possibly hinting to earlier geometry that wasn't properly updated for low LOD||||
 |8|Partial|Final part of the slide going to the Wolfun camp, connecting sectors 4 and 2||||
