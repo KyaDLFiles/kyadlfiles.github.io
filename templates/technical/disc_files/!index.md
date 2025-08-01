@@ -79,18 +79,18 @@ It also has issues with positioning, as moving vertically causes the geometry to
 
 |Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
 |-|-|-|-|-|-|
-|1|!{!1}Area|Starting area, up until the slide|7|1||
+|1|!{!1}Area|Starting area, up until before the slide|7|1||
 |2|!{!1}Area|Wolfun camp with map, from after the slide up until before the tunnel|8, 10|2||
-|3|!{!1}Area|Wind tunnel and elevator to Nativ City (final area)|11|4||
-|4|!{!1}Area|Slide|7, 8, 9|-||
-|5|!{!1}Area|Freefall section and island with rune, up until the wind tunnel|9, 10, 13|3||
-|!{+!4}6|!{!2}Partial|Unused, leftover from prototype builds<br>The tunnel that was seen in the May 12 prototype in the starting area (purpose unknown)|!{!0^6}N/A|!{!0^6}N/A||
-|7|!{!2}Parital|Initial part of the slide, connecting sectors 1 and 4<br>Some geometry changes based on distance, possibly hinting at earlier geometry that wasn't properly updated for low LOD||||
-|8|!{!2}Partial|Final part of the slide going to the Wolfun camp, connecting sectors 4 and 2||||
-|9|!{!2}Partial|Final part of the slide going to the rune island, connecting sectors 4 and 5 ||||
+|3|!{!1}Area|Wind tunnel and area with elevator to Nativ City|11|4||
+|4|!{!1}Area|Slide (excluding very beginning and very ends)|7, 8, 9|-||
+|5|!{!1}Area|First part of freefall section, including island with rune, up until before enclosed square "tunnel"|9, 10, 13|3||
+|!{+!4}6|!{!2}Partial|Unused, leftover from prototype builds<br>The tunnel that was seen in the May 12 prototype in the starting area (unknown purpose)|!{!0^6}N/A|!{!0^6}N/A||
+|7|!{!2}Parital|Very beginning of the slide, connecting sectors 1 and 4<br>Some geometry changes based on distance, possibly hinting at earlier geometry that wasn't properly updated for low LOD||||
+|8|!{!2}Partial|Very end of the slide going to the Wolfun camp, connecting sectors 4 and 2||||
+|9|!{!2}Partial|Very end of the slide going to the rune island, connecting sectors 4 and 5 ||||
 |10|!{!2}Partial|Tunnel connecting sectors 2 and 5||||
 |11|!{!2}Parital|Very end of freefall section, connecting sector 5 and 3|||||
-|12|!{!1}Area|Square "tunnel" in the freefall section<br>Notably uses a backdrop based on the default one (with the same positioning issues), but rotated|11, 13|-||
+|12|!{!1}Area|Square "tunnel" from the freefall section<br>Notably uses a backdrop based on the default one (with the same positioning issues), but rotated|11, 13|-||
 |13|!{!2}Partial|Initial part of the square "tunnel" in the freefall section|N/A|N/A||
 
 ## LEVEL_2 (Flying Forest)
@@ -102,11 +102,11 @@ It also has issues with positioning, as moving vertically causes the geometry to
 
 |Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
 |-|-|-|-|-|-|
-|1|!{!1}Area|Starting area, up until the slide|6|1||
-|2|!{!1}Area|Second shell elevator area, up until after the wind tunnel|6, 7|2||
-|3|!{!1}Area|Wolfun camp, and area before the camp|7|3, 8, 10||
-|4|!{!1}Area|First part of the slide with the bird, up until the enclosed tunnel|8, 9|-||
-|5|!{!1}Area|Second part of the slide with the bird and ending area|9|4||
+|1|!{!1}Area|Starting area, up until and including the very beginning slide|6|1||
+|2|!{!1}Area|Second shell elevator area, up until after the wind tunnel (including the lever and first small wind cannon)|6, 7|2||
+|3|!{!1}Area|Wolfun camp and surrounding area, and other floating island before the camp|7, 8, 10|3||
+|4|!{!1}Area|First part of the slide with the bird (excluding the very beginning), up until the enclosed tunnel|8, 9|-||
+|5|!{!1}Area|Second part of the slide with the bird and fourth shell elevator area|9|4||
 |6|!{!2}Partial|Slide connecting sectors 1 and 2<br>The beginning of the slide is part of sector 1|!{^5}N/A|!{^5}N/A||
 |7|!{!2}Partial|Section after the sector 2 wind tunnel, connecting sectors 2 and 3, containing the small area with the Wolfun to be launched in the air|||
 |8|!{!2}Partial|Area the bird and beginning of the slide, connecting sectors 3 and 4|||
@@ -120,18 +120,18 @@ It also has issues with positioning, as moving vertically causes the geometry to
 **Partial sectors**: 9  
 **Unused sectors**: 1  
 **Skipped numbers**: 11, 19, 20  
-**Always loaded sections**: None?
+**Always loaded sections**: None
 
 |Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
 |-|-|-|-|-|-|
-|1|!{!1}Area|Starting area, up until the big tunnel|14|1||
+|1|!{!1}Area|Starting area, up until before the big tunnel|14|1||
 |2|!{!1}Area|Wind tower|15|3||
-|3|!{!1}Area|Wolfun camp with safes|12, 18|5||
-|4|!{!1}Area|Area where Atea is found caged and subsequent wind tunnel going to the Hunter, up until before the boss fight area|13, 22|-|
+|3|!{!1}Area|Wolfun camp with safes and room to the slide|12, 18|5||
+|4|!{!1}Area|Big "room" where Atea is found caged and subsequent wind tunnel going to the Hunter, up until before the very end|13, 22|-|
 |5|!{!1}Area|Section where the fourth shell elevator and the rare monsters are (and the path to bypass that part), starting from the shell elevator platform up until before the big tunnel|15, 16|4|
-|6|!{!1}Area|Path going from the rare monsters area to the Wolfun camp with safes, from after the tunnel up until sector 18|16, 18|-|
-|7|!{!1}Area|Section with second shell elevator, Wolfuns guarding Jamgut, Wolfuns with lasers, Woof, up until path that splits going to the fourth shell elevator or the wind tower<br> The low LOD of sector 1 is misaligned|14, 15|2|
-|8|!{!1}Area|First section of the slide going to the Hunter, from the beginning of the slide up until before the section with the Amortos|11, 12|-|
+|6|!{!1}Area|Path going from the rare monsters area to the Wolfun camp with safes, from after the tunnel up until the mini camp with the three gates|16, 18|-|
+|7|!{!1}Area|Section with second shell elevator, Wolfuns guarding Jamgut, Wolfuns with lasers, Woof, up until before the path that splits going to the fourth shell elevator or the wind tower<br> The low LOD of sector 1 is misaligned|14, 15|2|
+|8|!{!1}Area|First section of the slide going to the Hunter, from after the very beginning of the slide up until before the section with the Amortos|11, 12|-|
 |10|!{!1}Area|Second section of the slide going to the Hunter, from after the area with the Amortos and moving obstacles up until before the area where Atea is found caged|11, 13|-|
 |11|!{!2}Partial|Section with Amortos and moving obstacles connecting sectors 8 and 10 (level geometry only, Amortos and moving obstacles are part of sector 10)|!{^8}N/A|!{^8}N/A|||
 |12|!{!2}Partial|Very beginning of the slide going to the Hunter, connecting sectors 3 and 8|||
@@ -175,15 +175,15 @@ Shop sectors work like in NATIV, but with different items and prices (usually lo
 **Area sectors**: 7  
 **Partial sectors**: 7  
 **Unused sectors**: 2   
-**Always loaded sections**: None?
+**Always loaded sections**: None
 
 |Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
 |-|-|-|-|-|-|
-|1|!{!1}Area|Starting area, including the map and rare monster path, up until the path going to the convoy|7, 12|1||
+|1|!{!1}Area|Starting area, including the map and rare monster path, up until before the path going to the convoy|7, 12|1||
 |2|!{!1}Area|Convoy section|7, 8|-||
-|3|!{!1}Area|Outise area where the second shell elevator is|8, 9, 11|2||
+|3|!{!1}Area|Outise area where the second shell elevator is, up until before the slide or cave|8, 9, 11|2||
 |4|!{!1}Area|First part of cave going to Brazul's laboratory, up until the freefall section<br>Has a nodraw backdrop|9, 14|-|
-|5|!{!1}Area|Slide going to the rune and room with rune|11|3||
+|5|!{!1}Area|Slide going to the rune (except very beginning) and room with rune|11|3||
 |!{+!4}6|!{!1}Area|Unused, leftover from prototype builds<br>Brazul's laboratory, which was eventually separated in it's own level (LEVEL_11) for unknown reasons<br>After the separation, this sector was left in an unfinished state, as evident the missing elements (including the shell elevator), some misplaced elements, the nodraw backdrop being visible from inside, and the fact that it doesn't call for sector 10 to be loaded<br>Outside backdrop geometry|!{!0^7}N/A|!{!0^7}N/A|
 |7|!{!2}Partial|Enclosed path connecting sectors 1 and 2|||
 |8|!{!2}Partial|Tunnel connecting sectors 2 and 3 (where the convoy stops)|||
@@ -191,13 +191,14 @@ Shop sectors work like in NATIV, but with different items and prices (usually lo
 |!{+!4}10|!{!2}Partial|Unused, lefover from prototype builds<br>Earlier version of tunnel supposed to connect sectors 13 and 6, but in the final game the tunnel is part of sector 13 (and LEVEL_11) and looks very different||||
 |11|!{!2}Partial|Very beginning of slide connecting sectors 3 and 5|||
 |12|!{!2}Partial|Elevator shaft at the start of the level<br>Notable for not connecting two sectors|||
-|13|!{!1}Area|Second part of cave going to Brazul's laboratory, freefall section<br>Has a nodraw backdrop|14|-||
+|13|!{!1}Area|Second part of cave going to Brazul's laboratory, freefall section (except the very beginning)<br>Has a nodraw backdrop|14|-||
 |14|!{!2}Partial|Very beginning of freefall section connecting sectors 4 and 13<br>Has a nodraw backdrop|N/A|N/A|
 
 ## LEVEL_6 (Destroyed Nativ City)
 **Total sectors**: 3  
 **Area sectors**: 2  
 **Partial sectors**: 1
+**Always loaded sections**: None?
 
 |Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
 |-|-|-|-|-|-|
@@ -215,19 +216,19 @@ Shop sectors work like in NATIV, but with different items and prices (usually lo
 
 |Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
 |-|-|-|-|-|-|
-|1|!{!1}Area|Starting area, including the fan room|X|1||
-|2|!{!1}Area|Second shell elevator area, containing the path to the rune and the train to the extra energy bar section|X|2||
-|3|!{!1}Area|Section after the train in sector 5 with the fourth shell elevator, up until and including the structure with the Woofs and the snipers|X|4||
-|4|!{!1}Area|Section after sector 5, including the cannon to the Forgotten Island|X|-||
-|5|!{!1}Area|Third shell elevator area, up until after the train<br>Many "rooms" have an extremely short draw distance, becoming invisible almost as soon as going outside of them, making it extremely difficult to take good snapshots|X|3||
-|6|!{!1}Area|Extra energy bar section|X|-||
+|1|!{!1}Area|Starting area, including the fan room|10, 11|1||
+|2|!{!1}Area|Second shell elevator area, containing the path to the rune and the train to the extra energy bar section|12, 14|2||
+|3|!{!1}Area|Section after the train in sector 5 with the fourth shell elevator, up until and including the structure with the Woofs and the snipers|13, 15|4||
+|4|!{!1}Area|Section after sector 5, including the cannon to the Forgotten Island|15|-||
+|5|!{!1}Area|Third shell elevator area, up until after the train<br>Many "rooms" have an extremely short draw distance, becoming invisible almost as soon as going outside of them, making it extremely difficult to take good snapshots|11, 13|3||
+|6|!{!1}Area|Extra energy bar section|12|-||
 |!{+!4}7|!{!3}?|Unused, leftover from prototype builds<br>Original purpose unknown, all that remains in the final build is a single rectangular-ish model with a reflection effect|!{!0}N/A|!{!0}N/A|
-|8|!{!1}Area|Wind tunnel going from the starting area to the rune/extra energy bar area|X|-|
+|8|!{!1}Area|Wind tunnel going from the starting area to the second shell elevator section|10, 14|-|
 |!{+!4}9|!{!1}Area|Unused, leftover from prototype builds<br>Path that originally connected the rune island and the "main" island with the shell elevator<br>The edges of the path have broken textures, probably due to the sector no longer being maintained after it was scrapped<br>Notably sector 2 unloads completely in the May 12 prototype when this path is taken, and there's no low LOD of the surrounding islands and no decorative elements, suggesting it was scrapped early as low LOD and decorations would've very likely been added otherwise (the very primitive geometry also hints to it being scrapped early)|!{!0^11}N/A|!{!0^11}N/A|
 |10|!{!2}Partial|Area where you land after taking the air cannon to go to sector 2<br>The amortos and air cannon are part of sector 1||||
 |11|!{!2}Partial|Room with Wolfuns and elevator connecting sectors 1 and 5|||
 |12|!{!2}Partial|Section connecting sectors 2 and 6|||
-|13|!{!2}Partial|Shell elevator connecting sectors 5 and 3|||
+|13|!{!2}Partial|Elevator connecting sectors 3 and 5|||
 |14|!{!2}Partial|Last section of the wind tunnel connecting sectors 8 and 2|||
 |15|!{!2}Partial|Section connecting sectors 3 and 4
 |!{+!4}16|!{!2}Partial|Unused<br>The central rock formation of the level, but with somewhat unpolished lighting<br>It notably contains the whole model of the formation all around, which no other sector does (as polygons not visible from the respective areas are removed in each sector), suggesting it might've been used as a reference for those|||
@@ -247,8 +248,8 @@ Shop sectors work like in NATIV, but with different items and prices (usually lo
 |Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
 |-|-|-|-|-|-|
 |1|!{!1}Area|Starting section, up until the tunnel on the slide|6|1||
-|2|!{!1}Area|Tunnel section of the slide and freefall section, up until the outside area<br>Has a nodraw backdrop|7|-|
-|3|!{!1}Area|Whole outside area of the level<br>Some sections have a relatively short draw distance, while most of the level has no draw distance|7,8,9?|2, 3, 4||
+|2|!{!1}Area|Tunnel section of the slide and freefall section, up until the outside area<br>Has a nodraw backdrop|6, 7|-|
+|3|!{!1}Area|Whole outside area of the level<br>Some sections have a relatively short draw distance, while most of the level has no draw distance|7, 8, 9|2, 3, 4||
 |!{+!4}4|!{!3}?|Unknown, unused<br>A completely empty sector with an unknown purpose                      <br>The texture and model files archived inside (*SECT4.g2d* and *SECT4.g3d*) don't contain anything apart from the standard data structures present for those file types (but with no actual data being present in any segment), and no collision file (*.col*) is present at all<br>The files inside are identical to those found in sector 9 (apart from the filenames that change accordingly                                                                                  <br>Even if the sector is competely empty, it's configured to also load sector 8 (this configuration is done in a separate file))|4|!{^6}N/A||
 |!{+!4}5|!{!1}Area|Unused, leftover from prototype builds<br>Brazul's laboratory with Frank boss fight, which was eventually separated in it's own level (LEVEL_9) for unknown reasons<br>After the separation, this sector was likely left in an unfinished state and was no longer mantained, as evident by all textures being severely broken and that change as you move around the area|!{^5}N/A||
 |6|!{!2}Partial|Section of the slide connecting sectors 1 and 2|||
@@ -288,24 +289,25 @@ Note that both sectors have last modified timestamps in line with other sectors,
 |1|!{!1}Area|The whole level is contained in a single sector|-|5|
 
 ## LEVEL_10 (Wolfun City)
-**Total sectors**: 7 - 
+**Total sectors**: 7  
 **Area sectors**: 4  
 **Partial sectors**: 3  
 **Always loaded sections**: Elevator shaft connecting the assembly line and stealth section, and the other side including the bridge and surrounding level geometry
 
-|Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
-|-|-|-|-|-|-|
-|1|!{!1}Area|Outside section|X|1, 3|
-|2|!{!1}Area|Part of the inside section, up until the stealth section with snipers and alarm bell|X|-|
-|3|!{!1}Area|Part of the inside section, from the assembly line up until the path going to the section with the second shell elevator|X|-|
-|4|!{!2}Partial|Section connecting setors 2 and 3 (in tandem with the always loaded section)<br>Contains the two rooms with the pressure plate and lever|N/A|N/A|
-|5|!{!1}Area|Second shell elevator area|X|2|
+|Number|Type|Description|Loaded partial sectors|Shell elevator|
+|-|-|-|-|-|
+|1|!{!1}Area|Outside section|6|1, 3|
+|2|!{!1}Area|Part of the inside section, up until the stealth section with snipers and alarm bell|4|-|
+|3|!{!1}Area|Part of the inside section, from the assembly line up until the path going to the section with the second shell elevator|4, 7|-|
+|4|!{!2}Partial|Section connecting setors 2 and 3 (in tandem with the always loaded section)<br>Contains the two rooms with the pressure plate and the lever|N/A|N/A|
+|5|!{!1}Area|Second shell elevator area|6, 7|2|
 |6|!{!2}Partial|Room connecting sectors 1 and 5<br> The interactive elements inside the room (and bomb dispenser outside) are always loaded and not part of the sector|!{^2}N/A|!{^2}N/A|
 |7|!{!2}Partial|Room connecting sectors 3 and 5<br>The interactive elements inside the room are always loaded and not part of the sector|||
 
 ## LEVEL_11 (The Quarry Brazul miniboss)
 **Total sectors**: 1  
 **Area sectors**: 1  
+**Always loaded sections**: None
 
 |Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
 |-|-|-|-|-|-|
@@ -315,20 +317,21 @@ Note that both sectors have last modified timestamps in line with other sectors,
 **Total sectors**: 3  
 **Area sectors**: 2  
 **Partial sectors**: 1  
+**Always loaded sections**: Slide and room with crushing walls, connecting sectors 1 and 2
 
-|Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
-|-|-|-|-|-|-|
+|Number|Type|Description|Loaded partial sectors|Shell elevator|
+|-|-|-|-|-|
 |1|!{!1}Area|Outside section|3|1|
-|2|!{!1}Area|Inside section, starting from the tunnel going to Aton|3|-|
-|3|!{!2}Partial|Slide and room with crushing walls, connecting sectors 1 and 2|N/A|N/A|
+|2|!{!1}Area|Inside the fortress|3|-|
+|3|!{!4}?|Unknown, unused<br>A completely empty sector with an unknown purpose                      <br>The texture and model files archived inside (*SECT3.g2d* and *SECT3.g3d*) don't contain anything apart from the standard data structures present for those file types (but with no actual data being present in any segment), and no collision file (*.col*) is present at all|N/A|N/A|
 
 ## LEVEL_13 (Level Test)
 **Total sectors**: 5  
 **Area sectors**: 5  
-**Always loaded sections**: Tube at the end of the maze, and shafts going to the slide and maze
+**Always loaded sections**: Tube at the end of the maze, and "shafts" of elevators going to the slide and maze
 
-|Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
-|-|-|-|-|-|-|
+|Number|Type|Description|Loaded partial sectors|Shell elevator|
+|-|-|-|-|-|
 |1|!{!1}Area|Starting room|-|!{^5}N/A|
 |2|!{!1}Area|Soccer|-||
 |3|!{!1}Area|PVP arena ("fight")|-||
