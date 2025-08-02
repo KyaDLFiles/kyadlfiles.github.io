@@ -2,7 +2,7 @@ title: Game disc files
 template: _wikipage.html
 
 # Level folders
-List of all the level folders (found in /CDEURO/LEVEL/)  
+List of all the level folders (found in */CDEURO/LEVEL/*)  
 *Name* is the name the level shows in the pause menu/save file menu 
 
 |Folder|Level|Name|No. of SECTx.bin files|Info|
@@ -16,16 +16,25 @@ List of all the level folders (found in /CDEURO/LEVEL/)
 |!{+!1}LEVEL_6|Destroyed Nativ City|NATIV CITY|3|
 |LEVEL_7|The Air Post|THE AIR POST|19|
 |LEVEL_8|Forgotten Island|FORGOTTEN ISLAND|9
-|!{+!1}LEVEL_9|Brazul's laboratory (Frank boss fight)|FORGOTTEN ISLAND|1|Pretends to be LEVEL_8 in the areas preview section of the pause menu
+|!{+!1}LEVEL_9|Brazul's laboratory (Frank boss fight)|FORGOTTEN ISLAND|1|Pretends to be LEVEL_8 in the pause menu
 |LEVEL_10|Wolfun City|WOLFUN CITY|7|
-|!{+!1}LEVEL_11|Brazul miniboss (The Quarry)|THE QUARRY|1|Pretends to be LEVEL_5 in the areas preview section of the pause menu<br>It being so distant from it's parent LEVEL_5 may suggest the decision to separate it was taken late in the development?
+|!{+!1}LEVEL_11|Brazul miniboss (The Quarry)|THE QUARRY|1|Pretends to be LEVEL_5 in the pause menu<br>It being so distant from it's parent LEVEL_5 may suggest the decision to separate it was taken late in the development?
 |LEVEL_12|The Fortress|THE FORTRES|3||
 |!{+!1}LEVEL_13|Secret level|LEVEL TEST|5|[More info](/secrlvl)
 |!{+!1}PREINTRO|Main menu|START MENU|1||
 |!{+!1}CREDITS|End game credits|CREDITS|1||
 
 # Sector files
-TBA
+Each level is divided in several *sectors*, each contained in a separate file named *SECT_x.bnk*, where *x* is a number and corresponds to the sector ID (the sector IDs don't have to be continuous, and some levels skip some numbers, indicating scrapped sectors that were deleted).  
+
+Some sectors contain big sections of a level, while other sectors contain smaller elements (tunnels, small portions of paths or enclosed areas, etc) that are used to connect two bigger sections: in this document, the first category is referred to as *area sectors*, while the second category is referred to as *partial sectors*; this distinction is made to aid in discussing the different sectors, but so far **there's no evidence of such a distinction actually existing in the game code or in the sector files**.  
+
+The sectors of a level can be configured, through an external file located at */CDEURO/LEVEL/INFO/<level name>.BIN* (file structure yet to be completely reversed and documented), to load in additional sectors at the same time; this is almost exclusively done to have area sectors load in partial sectors that lead to another area sector (which is also configured to keep the same partial sector loaded) (for example, in the Quarry, the whole section with the first shell elevator is an area sector, the section with the convoy chase is another sector, and the enclosed path connecting the two is a partial sector, which both area sectors call to also have loaded).  
+
+Some levels also contain elements or sections that never ever unload (even when forcing the game to load an empty or non-existing sector): most of these consist of interactive elements (boxes, Wolfuns, doors, buttons, pressure plates, mana orbs, etc), but some are part of the level geometry or sections connecting two area sectors; the latter are listed for each level, while **always loaded interactive elements are not listed**.  
+
+Pictures for all level sectors are available [here](./sector_pictures). 
+
 
 ## NATIV (Nativ City)
 **Total sectors**: 26  
@@ -60,7 +69,7 @@ Items can't be bought by loading partial shop sectors, as shops can only be inte
 |20|!{!2}Partial|Open shop with speed board, black bracelet|N/A||
 |21|!{!1}Area|Dinner's ready minigame|-||
 |22|!{!2}Partial|Under construction shop from sector 20|N/A||
-|23|!{!1}Area|Klaustrophobia minigame<br>Has nodraw backdrop|-||
+|23|!{!1}Area|Klaustrophobia minigame<br>Has a nodraw backdrop|-||
 |24|!{!1}Area|Speed racing 1 minigame|-||
 |25|!{!1}Area|Freefall 3 minigame|-||
 |26|!{!1}Area|Speed racing 3 minigame|-||
@@ -90,8 +99,9 @@ It also has issues with positioning, as moving vertically causes the geometry to
 |9|!{!2}Partial|Very end of the slide going to the rune island, connecting sectors 4 and 5 ||||
 |10|!{!2}Partial|Tunnel connecting sectors 2 and 5||||
 |11|!{!2}Parital|Very end of freefall section, connecting sector 5 and 3|||||
-|12|!{!1}Area|Square "tunnel" from the freefall section<br>Notably uses a backdrop based on the default one (with the same positioning issues), but rotated|11, 13|-||
+|12|!{!1}Area|Square "tunnel" from the freefall section<br>Uses a backdrop based on the default one (with the same positioning issues), but rotated (the section the player is in during normal gameplay is outside the backdrop sphere, so it appears as a solid color)|11, 13|-||
 |13|!{!2}Partial|Initial part of the square "tunnel" in the freefall section|N/A|N/A||
+
 
 ## LEVEL_2 (Flying Forest)
 **Total sectors**: 11  
@@ -184,13 +194,13 @@ Shop sectors work like in NATIV, but with different items and prices (usually lo
 |3|!{!1}Area|Outise area where the second shell elevator is, up until before the slide or cave|8, 9, 11|2||
 |4|!{!1}Area|First part of cave going to Brazul's laboratory, up until the freefall section<br>Has a nodraw backdrop|9, 14|-|
 |5|!{!1}Area|Slide going to the rune (except very beginning) and room with rune|11|3||
-|!{+!4}6|!{!1}Area|Unused, leftover from prototype builds<br>Brazul's laboratory, which was eventually separated in it's own level (LEVEL_11) for unknown reasons<br>After the separation, this sector was left in an unfinished state, as evident the missing elements (including the shell elevator), some misplaced elements, the nodraw backdrop being visible from inside, and the fact that it doesn't call for sector 10 to be loaded<br>Outside backdrop geometry|!{!0^7}N/A|!{!0^7}N/A|
+|!{+!4}6|!{!1}Area|Unused, leftover from prototype builds<br>Brazul's laboratory, which was eventually separated in it's own level (LEVEL_11) for unknown reasons<br>After the separation, this sector was left in an unfinished state, as evident the missing elements (including the shell elevator), some misplaced elements, the nodraw backdrop being visible from inside, and the fact that it doesn't call for sector 10 to be loaded|!{!0^7}N/A|!{!0^7}N/A|
 |7|!{!2}Partial|Enclosed path connecting sectors 1 and 2|||
 |8|!{!2}Partial|Tunnel connecting sectors 2 and 3 (where the convoy stops)|||
 |9|!{!2}Partial|Very beginning of the cave connecting sectors 3 and 4|||
 |!{+!4}10|!{!2}Partial|Unused, lefover from prototype builds<br>Earlier version of tunnel supposed to connect sectors 13 and 6, but in the final game the tunnel is part of sector 13 (and LEVEL_11) and looks very different||||
 |11|!{!2}Partial|Very beginning of slide connecting sectors 3 and 5|||
-|12|!{!2}Partial|Elevator shaft at the start of the level<br>Notable for not connecting two sectors|||
+|12|!{!2}Partial|Elevator shaft at the start of the level<br>Notably not used to connect two different sectors|||
 |13|!{!1}Area|Second part of cave going to Brazul's laboratory, freefall section (except the very beginning)<br>Has a nodraw backdrop|14|-||
 |14|!{!2}Partial|Very beginning of freefall section connecting sectors 4 and 13<br>Has a nodraw backdrop|N/A|N/A|
 
@@ -224,20 +234,20 @@ Shop sectors work like in NATIV, but with different items and prices (usually lo
 |6|!{!1}Area|Extra energy bar section|12|-||
 |!{+!4}7|!{!3}?|Unused, leftover from prototype builds<br>Original purpose unknown, all that remains in the final build is a single rectangular-ish model with a reflection effect|!{!0}N/A|!{!0}N/A|
 |8|!{!1}Area|Wind tunnel going from the starting area to the second shell elevator section|10, 14|-|
-|!{+!4}9|!{!1}Area|Unused, leftover from prototype builds<br>Path that originally connected the rune island and the "main" island with the shell elevator<br>The edges of the path have broken textures, probably due to the sector no longer being maintained after it was scrapped<br>Notably sector 2 unloads completely in the May 12 prototype when this path is taken, and there's no low LOD of the surrounding islands and no decorative elements, suggesting it was scrapped early as low LOD and decorations would've very likely been added otherwise (the very primitive geometry also hints to it being scrapped early)|!{!0^11}N/A|!{!0^11}N/A|
+|!{+!4}9|!{!1}Area|Unused, leftover from prototype builds<br>Path that originally connected the rune island and the "main" island with the shell elevator<br>The edges of the path have broken textures, probably due to the sector no longer being maintained after it was scrapped<br>Notably, in the May 12 prototype, sector 2 unloads completely when this path is taken, and like in the final build there's no low LOD of the surrounding islands and no decorative elements, suggesting it was scrapped soon after that build as low LOD and decorations would've likely been added otherwise (the very primitive and flat geometry, which looks to not have changed since the prototype, also hints to it being scrapped soon after)|!{!0^11}N/A|!{!0^11}N/A|
 |10|!{!2}Partial|Area where you land after taking the air cannon to go to sector 2<br>The amortos and air cannon are part of sector 1||||
 |11|!{!2}Partial|Room with Wolfuns and elevator connecting sectors 1 and 5|||
 |12|!{!2}Partial|Section connecting sectors 2 and 6|||
 |13|!{!2}Partial|Elevator connecting sectors 3 and 5|||
 |14|!{!2}Partial|Last section of the wind tunnel connecting sectors 8 and 2|||
 |15|!{!2}Partial|Section connecting sectors 3 and 4
-|!{+!4}16|!{!2}Partial|Unused<br>Most of the central rock formation of the level, but with somewhat unpolished lighting<br>In the May 12 prototype it's used by some, but not all, area sectors as part of decorative geometry (inlcuding sector 9), but this approach was eventually scrapped in favour of every area sector having it's own simplified decorative geometry (with parts that aren't visible completely removed), leaving this sector abandoned|||
+|!{+!4}16|!{!2}Partial|Unused<br>Most of the central rock formation of the level, but with somewhat unpolished lighting<br>In the May 12 prototype it's used by some, but not all, area sectors as part of decorative geometry, but this approach was eventually scrapped in favour of every area sector having it's own simplified decorative geometry (with parts that aren't visible completely removed), leaving this sector abandoned|||
 |!{+!4}17|!{!2}Partial|Unused, leftover from prototype builds<br>Sections of the path connecting sectors 2 and 9|||
 |!{+!4}18|!{!3}?|Unused, leftover from prototype builds<br>Original purpose unknown, all that remains in the final build is a single rectangular-ish model with plain black color|||
 |!{+!4}19|!{!3}?|Unused, leftover from prototype builds<br>Original purpose unknown, consists of a path with solid geometry (albeit missing some textures) but it's unknown what it was supposed to connect to or be part of|||
 
 ### Known info about sectors 7, 18 and 19
-These three sectors appear in a very similar, if not identical, form in the May 12 prototype, suggesting they were scrapped before that build; it's possible, although unlikely, that sectors 7 and 18 never contained much of anything.
+These three sectors appear in a very similar, if not identical, form in the May 12 prototype, suggesting they were scrapped even before that build; it's possible, although unlikely, that sectors 7 and 18 never contained much of anything.
 
 ## LEVEL_8 (Forgotten Island)
 **Total sectors**: 9  
@@ -248,43 +258,43 @@ These three sectors appear in a very similar, if not identical, form in the May 
 **Always loaded sections**: Some of the lava on the initial slide, and a random nonsolid mesh
 
 
-|Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
-|-|-|-|-|-|-|
+|Number|Type|Description|Loaded partial sectors|Shell elevator|
+|-|-|-|-|-|
 |1|!{!1}Area|Starting section, up until and before the tunnel on the slide and the curve before it|6|1||
 |2|!{!1}Area|Tunnel section of the slide (excluding very beginning) and freefall section, up until the outside area|6, 7|-|
 |3|!{!1}Area|Whole outside area of the level (excluding the area where the second shell elevator is)<br>Some sections have a relatively short draw distance, while most of the level has no draw distance|7, 8, 9|2, 3, 4||
-|!{+!4}4|!{!3}?|Unknown, unused<br>A completely empty sector with an unknown purpose                      <br>The texture and model files archived inside (*SECT4.g2d* and *SECT4.g3d*) don't contain anything apart from the standard data structures present for those file types (but with no actual data being present in any segment), and no collision file (*.col*) is present at all<br>The files inside are identical to those found in sector 9 (apart from the filenames that change accordingly                                                                                  <br>Even if the sector is competely empty, it's configured to also load sector 8 (this configuration is done in a separate file))|4|!{^6}N/A||
+|!{+!4}4|!{!3}?|Unused<br>A completely empty sector<br>The texture and model files archived inside (*SECT4.g2d* and *SECT4.g3d*) don't contain anything apart from the standard data structures present for those file types (but with no actual data being present in any segment), and no collision file (*.col*) is present at all<br>The files inside are identical to those found in sector 9 (apart from the filenames that change accordingly                                                                                  <br>Even if the sector is competely empty, it's configured to also load sector 8)|4|!{^6}N/A||
 |!{+!4}5|!{!1}Area|Unused, leftover from prototype builds<br>Brazul's laboratory with Frank boss fight, which was eventually separated in it's own level (LEVEL_9) for unknown reasons<br>After the separation, this sector was likely left in an unfinished state and was no longer mantained, as evident by all textures being severely broken and that change as you move around the area|!{^5}N/A||
 |6|!{!2}Partial|Section of the slide connecting sectors 1 and 2|||
 |7|!{!2}Partial|Last section of freefall and initial part with shell elevator of the outside section (shell elevator is part of sector 3), connecting sectors 2 and 3|||
-|8|!{!2}Partial|Air cannon going to outside of Brazul's laboratory, and the area where you land before it|||
-|!{+!4}9|!{!3}?|Unknown, unused<br>A completely empty sector with an unknown purpose<br>The texture and model files archived inside (*SECT9.g2d* and *SECT9.g3d*) don't contain anything apart from the standard data structures present for those file types (but with no actual data being present in any segment), and no collision file (*.col*) is present at all<br>The files inside are identical to those found in sector 4 (apart from the filenames that change accordingly)
+|8|!{!2}Partial|Air cannon going to outside of Brazul's laboratory, and the area where you land before it<br>Notably not used to connect two different sectors, as it's used to travel between two different sections of sector 3|||
+|!{+!4}9|!{!3}?|Unused<br>A completely empty sector<br>The texture and model files archived inside (*SECT9.g2d* and *SECT9.g3d*) don't contain anything apart from the standard data structures present for those file types (but with no actual data being present in any segment), and no collision file (*.col*) is present at all<br>The files inside are identical to those found in sector 4 (apart from the filenames that change accordingly)
 
 ### Known info and speculation about sectors 4 and 9
 This part mixes objective facts and subjective speculation, **speculations are not confirmed and should not be taken as facts**.
 
 Sector 4 used to contain the scrapped section that can be seen in the May 12 prototype, while sector 9 was probably a partial sector connecting sector 4 to another zone.
 
-The original purpose of sector 4 can be confirmed by the September 29 prototype: in that build, sector 4 has already been stripped of all models and textures, but still contains collision data, and the location of it perfectly matches with the scrapped section; sector 9 also still contains collision data, but since the coordinates of it are unknown (and there are currently no tools to parse or visualize collision data) it's still unclear what it was for.
+The original purpose of sector 4 can be confirmed by the September 29 prototype: in that build, sector 4 has already been stripped of all models and textures, but still contains collision data, and the location of it perfectly matches with the scrapped section; sector 9 also still contains collision data, but since the coordinates of it are unknown (and there are currently no tools to parse or visualize collision data) it's still unknown what it actually contains.
 
 The theory of sector 9 containing a connection between sector 4 and somewhere else is supported by the fact that sector 3 calls for sector 9 to be loaded, this may seem unusual as sector 4 does not call for sector 9 to be loaded, but that could be explained in several ways: 
 - the reference was never there in the first place due to a mistake
 - the reference might've been removed at one point (although it would be strange to have only one reference removed and keep all others)
 - there might've been even more sectors after 9 that were completely deleted (but it too would be strange to delete some sectors and keep others)
-- sector 9 connected to sector 4 with some sort of one-way path/passage, which means there wouldn't have been a need to keep sector 9 loaded as it was impossible to go back to it or even see it once inside (this is supported by the fact that in the May 12 beta, the entrance to the scrapped section is one-way, and the whole section needs to be traversed to get out of it)  
+- sector 9 connected to sector 4 with some sort of one-way path/passage, which means there wouldn't have been a need to keep sector 9 loaded as it was impossible to go back to it or even see it once inside (this is supported by the fact that in the May 12 beta, the entrance to the scrapped section is one-way, and the whole section needs to be traversed to get out of it).  
 
-(the "strange" possibilities are more likely than one may think, as I have a strong impression supported by multiple fators that the game was rushed at the end of it's development for one reason or another, thus making "mistakes" and "slapdash" decisions more likely; the fact that these two sectors were emptied and not deleted entirely, and that they still contained collision data mere weeks before the final build of the game was compiled, also suggests that the decision to so was taken late in development)  
+(the "strange" possibilities are more likely than one may think, as I have a strong impression supported by multiple fators that the game was rushed at the end of it's development for one reason or another, thus making "mistakes" and "slapdash" decisions more likely; the fact that these two sectors were emptied and not deleted entirely, and that they still contained collision data mere weeks before the final build of the game was compiled, also suggests that the decision to so was taken late in development).  
 
-It is noteworthy that, in the May 12 prototype, the scrapped section is in the same sector as the outside area; however the level overall contains less sectors compared to the final release, point to the fact that some sections, including the scrapped one, were eventually moved to their own separate sectors (the whole level in the May 12 prototype appears to be one of the levels in the earliest phases of development, with plenty of missing or nonfunctional elements, earlier layouts, no Wolfuns in the whole level apart from Wolfun Frank, so it's possible that the split happened as the level continued to grow larger and more resource intensive) (in fact, the scrapped area in particular appears to be in an extremely early phase of development even compared to the rest of the level, with very primitive and placeholder geometry, no interactive elements at all apart from an Amortos and air cannon, which are the strictly required elements to enter and leave the area, and there are a bunch of weird elements consisting of a W with a circle around it, which could've been used as placeholders for Wolfuns)
+It is noteworthy that, in the May 12 prototype, the scrapped section is in the same sector as the outside area; however the level overall contains less sectors compared to the final release, point to the fact that some sections, including the scrapped one, were eventually moved to their own separate sectors (the whole level in the May 12 prototype appears to be one of the levels in the earliest phases of development, with plenty of missing or nonfunctional elements, earlier layouts, no Wolfuns in the whole level apart from Wolfun Frank, so it's possible that the split happened as the level continued to grow larger and more resource intensive) (in fact, the scrapped section in particular appears to be in an extremely early phase of development even compared to the rest of the level, with very primitive and placeholder geometry, no interactive elements at all apart from an Amortos and air cannon, which are the strictly required elements to enter and leave the section, and there are a bunch of weird elements consisting of a W with a circle around it, which I speculate were used as placeholders for Wolfuns).
 
-## LEVEL_9 (Wolfun Frank boss fight)
+## LEVEL_9 (Forgotten Island Wolfun Frank boss fight)
 **Total sectors**: 1  
 **Area sectors**: 1  
 **Always loaded sections**: Vertical tunnel entering the level
 
-|Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
-|-|-|-|-|-|-|
-|1|!{!1}Area|The whole level is contained in a single sector|-|5|
+|Number|Type|Description|Loaded partial sectors|Shell elevator|
+|-|-|-|-|-|
+|1|!{!1}Area|The whole level is contained in a single sector|-|5 (Forgotten Island)|
 
 ## LEVEL_10 (Wolfun City)
 **Total sectors**: 7  
@@ -307,9 +317,9 @@ It is noteworthy that, in the May 12 prototype, the scrapped section is in the s
 **Area sectors**: 1  
 **Always loaded sections**: None
 
-|Number|Type|Description|Loaded partial sectors|Shell elevator|Picture|
-|-|-|-|-|-|-|
-|1|!{!1}Area|The whole level is contained in a single sector|-|4|
+|Number|Type|Description|Loaded partial sectors|Shell elevator|
+|-|-|-|-|-|
+|1|!{!1}Area|The whole level is contained in a single sector|-|4 (The Quarry)|
 
 ## LEVEL_12 (The Fortress)
 **Total sectors**: 3  
@@ -321,7 +331,7 @@ It is noteworthy that, in the May 12 prototype, the scrapped section is in the s
 |-|-|-|-|-|
 |1|!{!1}Area|Outside section|3|1|
 |2|!{!1}Area|Inside the fortress|3|-|
-|3|!{!4}?|Unknown, unused<br>A completely empty sector with an unknown purpose                      <br>The texture and model files archived inside (*SECT3.g2d* and *SECT3.g3d*) don't contain anything apart from the standard data structures present for those file types (but with no actual data being present in any segment), and no collision file (*.col*) is present at all|N/A|N/A|
+|!{+!4}3|!{!3}?|Unknown, unused<br>A completely empty sector with an unknown purpose                      <br>The texture and model files archived inside (*SECT3.g2d* and *SECT3.g3d*) don't contain anything apart from the standard data structures present for those file types (but with no actual data being present in any segment), and no collision file (*.col*) is present at all|N/A|N/A|
 
 ### Known info about sector 3
 Unlike LEVEL_8, by the time the September 29 prototype was compiled, sector 3 had already been stripped of all models, textures and collision data.  
