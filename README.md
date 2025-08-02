@@ -15,6 +15,8 @@ Every !index.md must contain two lines of metadata at the very top
  - **title**, which will be used as the <title> in the HTML, as the title in the header, and will appear in the navigation links at the top of the page
  - **template**, which indicates which file in */templates/_partials* the document will be wrapped in
  
+(These constraints aren't strictly enforced by build.py, but when a violation doesn't cause an exception outright, it will cause unexpected results)
+ 
 When the build script is run, it will output to **/_site** (which is in .gitignore)
  
 ## Important 
