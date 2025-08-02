@@ -44,7 +44,9 @@ Pictures for all sectors are available [here](./sector_pictures).
 **Always loaded sections**: Slide going from upper to lower level, tree going from lower to upper section, minigame starting areas
 
 Not all partial sectors are loaded at the same time in sector 1 and 2, since obviously a shop can't be under construction and open at the same time.  
-Items can't be bought by loading partial shop sectors, as shops can only be interacted with (and items and the Nativ are only loaded in) in sectors 1 and 2.
+Items can't be bought by loading partial shop sectors, as shops can only be interacted with (and items and the Nativ are only loaded in) in sectors 1 and 2.  
+
+[Map showing which sectors correspond to which shop](./sector_pictures/NATIV/shops_map.jpg)
 
 |Number|Type|Description|Loaded partial sectors|Shell elevators|
 |-|-|-|-|-|
@@ -165,6 +167,8 @@ Based on NATIV, but possibly on a slighly earlier version (it's very similar to 
 The whole upper level and all shops on it were removed, as were all minigames (along with the starting areas).   
 Many interactive elements are also broken (slides, Amata's shop, shell elevators).  
 Shop sectors work like in NATIV, but with different items and prices (usually lower or just 1 Nootie), which can be exploited during speedruns using the save warp glitch.
+
+[Map showing which sectors correspond to which shop](./sector_pictures/NATIV/shops_map.jpg)
 
 |Number|Type|Description|Loaded partial sectors|Shell elevator|
 |-|-|-|-|-|
