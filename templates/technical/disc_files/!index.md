@@ -29,11 +29,11 @@ Each level is divided in several *sectors*, each contained in a separate file na
 
 Some sectors contain big sections of a level, while other sectors contain smaller elements (tunnels, small portions of paths or enclosed areas, etc) that are used to connect two bigger sections: in this document, the first category is referred to as *area sectors*, while the second category is referred to as *partial sectors*; this distinction is made to aid in discussing the different sectors, but so far **there's no evidence of such a distinction actually existing in the game code or in the sector files**.  
 
-The sectors of a level can be configured, through an external file located at */CDEURO/LEVEL/INFO/<level name>.BIN* (file structure yet to be completely reversed and documented), to load in additional sectors at the same time; this is almost exclusively done to have area sectors load in partial sectors that lead to another area sector (which is also configured to keep the same partial sector loaded) (for example, in the Quarry, the whole section with the first shell elevator is an area sector, the section with the convoy chase is another sector, and the enclosed path connecting the two is a partial sector, which both area sectors call to also have loaded).  
+The sectors of a level can be configured, through an external file located at */CDEURO/LEVEL/INFO/<level name\>.BIN* (file structure yet to be completely reversed and documented), to load in additional sectors at the same time; this is almost exclusively done to have area sectors load in partial sectors that lead to another area sector (which is also configured to keep the same partial sector loaded) (for example, in the Quarry, the whole section where the first shell elevator is is an area sector, the section with the convoy chase is another sector, and the enclosed path connecting the two is a partial sector, which both area sectors call for to also load in).  
 
 Some levels also contain elements or sections that never ever unload (even when forcing the game to load an empty or non-existing sector): most of these consist of interactive elements (boxes, Wolfuns, doors, buttons, pressure plates, mana orbs, etc), but some are part of the level geometry or sections connecting two area sectors; the latter are listed for each level, while **always loaded interactive elements are not listed**.  
 
-Pictures for all level sectors are available [here](./sector_pictures). 
+Pictures for all sectors are available [here](./sector_pictures). 
 
 
 ## NATIV (Nativ City)
@@ -244,7 +244,7 @@ Shop sectors work like in NATIV, but with different items and prices (usually lo
 |!{+!4}16|!{!2}Partial|Unused<br>Most of the central rock formation of the level, but with somewhat unpolished lighting<br>In the May 12 prototype it's used by some, but not all, area sectors as part of decorative geometry, but this approach was eventually scrapped in favour of every area sector having it's own simplified decorative geometry (with parts that aren't visible completely removed), leaving this sector abandoned|||
 |!{+!4}17|!{!2}Partial|Unused, leftover from prototype builds<br>Sections of the path connecting sectors 2 and 9|||
 |!{+!4}18|!{!3}?|Unused, leftover from prototype builds<br>Original purpose unknown, all that remains in the final build is a single rectangular-ish model with plain black color|||
-|!{+!4}19|!{!3}?|Unused, leftover from prototype builds<br>Original purpose unknown, consists of a path with solid geometry (albeit missing some textures) but it's unknown what it was supposed to connect to or be part of|||
+|!{+!4}19|!{!3}?|Unused, leftover from prototype builds<br>Original purpose unknown, consists of a path (or just part of a path) with solid geometry (albeit missing some textures) but it's unknown what it was supposed to connect to or be part of|||
 
 ### Known info about sectors 7, 18 and 19
 These three sectors appear in a very similar, if not identical, form in the May 12 prototype, suggesting they were scrapped even before that build; it's possible, although unlikely, that sectors 7 and 18 never contained much of anything.
