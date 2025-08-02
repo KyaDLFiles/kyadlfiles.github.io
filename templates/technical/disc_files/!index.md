@@ -301,7 +301,7 @@ It is noteworthy that, in the May 12 prototype, the scrapped section is in the s
 **Total sectors**: 7  
 **Area sectors**: 4  
 **Partial sectors**: 3  
-**Always loaded sections**: Elevator shaft connecting the assembly line and stealth section, and the other side including the bridge and surrounding level geometry
+**Always loaded sections**: Elevator shaft connecting the assembly line to the innermost section, and the other side including the bridge and some surrounding level geometry
 
 |Number|Type|Description|Loaded partial sectors|Shell elevator|
 |-|-|-|-|-|
