@@ -57,5 +57,5 @@ template: _wikipage.html
 Example of a minigame starting area  
 ![0.3](0.3.jpg)   
 # Misc
-Map of the shops showing which sectors correspond to which shop
-![shops_map](shops_map.jpg)
+Map of the shops showing which sectors correspond to which shop  
+![shops_map](shops_map.jpg)  
