@@ -5,7 +5,7 @@ template: _wikipage.html
 List of all the level folders (found in */CDEURO/LEVEL/*)  
 *Name* is the name the level shows in the pause menu/save file menu 
 
-|Folder|Level|Name|No. of SECTx.bin files|Info|
+|Folder|Level|Name|Numer of sectors|Info|
 |-|-|-|-|-|
 |NATIV|Nativ City|NATIV CITY|26|SECT3.bnk doesn't exist|
 |LEVEL_1|The Roots|THE ROOTS|13||
@@ -25,7 +25,7 @@ List of all the level folders (found in */CDEURO/LEVEL/*)
 |!{+!1}CREDITS|End game credits|CREDITS|1||
 
 # Sector files
-Each level is divided in several *sectors*, each contained in a separate file named *SECT_x.bnk*, where *x* is a number and corresponds to the sector ID (the sector IDs don't have to be continuous, and some levels skip some numbers, indicating scrapped sectors that were deleted).  
+Each level is divided in several *sectors*, each contained in a separate file named *SECTx.bnk*, where *x* is a number and corresponds to the sector ID (the sector IDs don't have to be continuous, and some levels skip some numbers, indicating scrapped sectors that were deleted).  
 
 Some sectors contain big sections of a level, while other sectors contain smaller elements (tunnels, small portions of paths or enclosed areas, etc) that are used to connect two bigger sections: in this document, the first category is referred to as *area sectors*, while the second category is referred to as *partial sectors*; this distinction is made to aid in discussing the different sectors, but so far **there's no evidence of such a distinction actually existing in the game code or in the sector files**.  
 
