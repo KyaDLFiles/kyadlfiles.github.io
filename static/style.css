@@ -147,8 +147,25 @@ iframe {
     margin-right: 0.5em;
 }
 
+.table-highlight-0{
+    /*Reset*/
+    background-color: var(--light-background);
+}
+
 .table-highlight-1 {
     background-color: cyan;
+}
+
+.table-highlight-2 {
+    background-color: rgb(0, 212, 155);
+}
+
+.table-highlight-3 {
+    background-color: rgb(255, 155, 155);
+}
+
+.table-highlight-4 {
+    background-color: rgb(255, 231, 136);
 }
 
 .text-unsure {
@@ -274,8 +291,25 @@ a > span.material-symbols-outlined {
         background-color: rgb(134, 130, 77);
     }
 
+    .table-highlight-0{
+        /*Reset*/
+        background-color: var(--dark-background);
+    }
+
     .table-highlight-1 {
         background-color: rgb(0, 99, 99);
+    }
+
+    .table-highlight-2 {
+        background-color: rgb(0, 125, 92);
+    }
+
+    .table-highlight-3 {
+        background-color: rgb(125, 0, 54);
+    }
+
+    .table-highlight-4 {
+        background-color: rgb(131, 118, 70);
     }
 
     .small-img {

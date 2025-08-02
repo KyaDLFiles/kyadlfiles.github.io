@@ -254,28 +254,7 @@ Once the flying cheat is enabled, it can be toggled by pressing @@r2+@@r3
 Another dormant debug menu is documented at ?[tcrf](https://tcrf.net/Kya:_Dark_Lineage#Debug_Menu) 
 
 # Game disc files
-## Level folders
-List of all the level folders (found in /CDEURO/LEVEL/)  
-*Name* is the name the level shows in the pause menu/save file menu 
-
-|Folder|Level|Name|No. of SECTx.bin files|Info|
-|-|-|-|-|-|
-|NATIV|Nativ City|NATIV CITY|26|SECT3.bnk doesn't exist|
-|LEVEL_1|The Roots|THE ROOTS|13||
-|LEVEL_2|Flying Forest|FLYING FOREST|11|SECT11.bnk doesn't exist|
-|LEVEL_3|Hunter's Domain|HUNTER'S DOMAIN|19|SECT9.bnk, SECT19.bnk and SECT20.bnk don't exist|
-|!{+!1}LEVEL_4|"Nativ City" the first time it's entered at the start of the game|NATIV CITY|11|SECTs 2-4, 8-12 don't exist (the whole upper level and minigame areas don't exist)<br>The icons for shops, elevators and other things are not shown in the L1 map<br>The game silently loads in the real NATIV level during the cutscene where Atea tells Kya to follow the signs to the Boomy shop|
-|LEVEL_5|The Quarry|THE QUARRY|14|
-|!{+!1}LEVEL_6|Destroyed Nativ City|NATIV CITY|3|
-|LEVEL_7|The Air Post|THE AIR POST|19|
-|LEVEL_8|Forgotten Island|FORGOTTEN ISLAND|9
-|!{+!1}LEVEL_9|Brazul's laboratory (Frank boss fight)|FORGOTTEN ISLAND|1|Pretends to be LEVEL_8 in the areas preview section of the pause menu
-|LEVEL_10|Wolfun City|WOLFUN CITY|7|
-|!{+!1}LEVEL_11|Brazul miniboss (The Quarry)|THE QUARRY|1|Pretends to be LEVEL_5 in the areas preview section of the pause menu<br>It being so distant from it's parent LEVEL_5 may suggest the decision to separate it was taken late in the development?
-|LEVEL_12|The Fortress|THE FORTRES|3||
-|!{+!2}LEVEL_13|Secret level|LEVEL TEST|5|[More info](/secrlvl)
-|!{+!1}PREINTRO|Main menu|START MENU|1||
-|!{+!1}CREDITS|End game credits|CREDITS|1||
+[Subpage](./disc_files)
 
 # Save files
 
