@@ -277,7 +277,7 @@ Sector 4 used to contain the scrapped section that can be seen in the May 12 pro
 
 The original purpose of sector 4 can be confirmed by the September 29 prototype: in that build, sector 4 has already been stripped of all models and textures, but still contains collision data, and the location of it perfectly matches with the scrapped section; sector 9 also still contains collision data, but since the coordinates of it are unknown (and there are currently no tools to parse or visualize collision data) it's still unknown what it actually contains.
 
-The theory of sector 9 containing a connection between sector 4 and somewhere else is supported by the fact that sector 3 calls for sector 9 to be loaded, this may seem unusual as sector 4 does not call for sector 9 to be loaded, but that could be explained in several ways: 
+The theory of sector 9 containing a connection between sector 4 and somewhere else is supported by the fact that sector 3 calls for sector 9 to be loaded; this may seem unusual as sector 4 does not call for sector 9 to be loaded, but that could be explained in several ways: 
 - the reference was never there in the first place due to a mistake
 - the reference might've been removed at one point (although it would be strange to have only one reference removed and keep all others)
 - there might've been even more sectors after 9 that were completely deleted (but it too would be strange to delete some sectors and keep others)
