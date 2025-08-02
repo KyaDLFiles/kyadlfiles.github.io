@@ -166,7 +166,7 @@ It also has issues with positioning, as moving vertically causes the geometry to
 Based on NATIV, but possibly on a slighly earlier version (it's very similar to it but not identical, and the sector files have a last edit timestamp of 17 days earlier on the game disc).  
 The whole upper level and all shops on it were removed, as were all minigames (along with the starting areas).   
 Many interactive elements are also broken (slides, Amata's shop, shell elevators).  
-Shop sectors work like in NATIV, but with different items and prices (usually lower or just 1 Nootie), which can be exploited during speedruns using the save warp glitch.
+Shop sectors work like in NATIV, but with different items and prices (usually lower or just 1 Nootie), which can be exploited using the save warp glitch.
 
 [Map showing which sectors correspond to which shop](./sector_pictures/NATIV/shops_map.jpg)
 
