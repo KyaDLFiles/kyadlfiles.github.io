@@ -3,7 +3,7 @@ template: _wikipage.html
 
 # Level folders
 List of all the level folders (found in */CDEURO/LEVEL/*)  
-*Name* is the name the level shows in the pause menu/save file menu 
+*Name* is the name the level shows in the pause menu and save file menu 
 
 |Folder|Level|Name|Numer of sectors|Info|
 |-|-|-|-|-|
@@ -16,9 +16,9 @@ List of all the level folders (found in */CDEURO/LEVEL/*)
 |!{+!1}LEVEL_6|Destroyed Nativ City|NATIV CITY|3|
 |LEVEL_7|The Air Post|THE AIR POST|19|
 |LEVEL_8|Forgotten Island|FORGOTTEN ISLAND|9
-|!{+!1}LEVEL_9|Brazul's laboratory (Frank boss fight)|FORGOTTEN ISLAND|1|Pretends to be LEVEL_8 in the pause menu
+|!{+!1}LEVEL_9|Brazul's laboratory (Frank boss fight)|FORGOTTEN ISLAND|1|Pretends to be LEVEL_8 in the menus
 |LEVEL_10|Wolfun City|WOLFUN CITY|7|
-|!{+!1}LEVEL_11|Brazul miniboss (The Quarry)|THE QUARRY|1|Pretends to be LEVEL_5 in the pause menu<br>It being so distant from it's parent LEVEL_5 may suggest the decision to separate it was taken late in the development?
+|!{+!1}LEVEL_11|Brazul miniboss (The Quarry)|THE QUARRY|1|Pretends to be LEVEL_5 in the menus<br>It being so distant from it's parent LEVEL_5 may suggest the decision to separate it was taken late in the development?
 |LEVEL_12|The Fortress|THE FORTRES|3||
 |!{+!1}LEVEL_13|Secret level|LEVEL TEST|5|[More info](/secrlvl)
 |!{+!1}PREINTRO|Main menu|START MENU|1||
