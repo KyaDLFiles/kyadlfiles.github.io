@@ -337,7 +337,7 @@ It is noteworthy that, in the May 12 prototype, the scrapped section is in the s
 ### Known info about sector 3
 Unlike LEVEL_8, by the time the September 29 prototype was compiled, sector 3 had already been stripped of all models, textures and collision data.  
 
-In the May 12 prototype, the level consists of three sectors, with the inside of the fortress being contained in sector 3, while sector 2 contained a slide connecting sectors 1 and 3 (with the slide being very different compared to the final one, and strikingly similar to the one in LEVEL_13); notably in this prototype the level (mostly sector 1) also contains a lot of extra elements seemingly scattered around the level or misaligned with the rest of the level (both interactive elements, many of which appear to have had the surrounding level geometry removed, and level geometry making up small "rooms").
+In the May 12 prototype, the level consists of three sectors, with the inside of the fortress being contains in sector 3, while sector 2 contains a slide connecting sectors 1 and 3 (with the slide being very different compared to the final one, and strikingly similar to the one in LEVEL_13); notably in this prototype the level (mostly sector 1) also contains a lot of extra elements seemingly scattered around the level or misaligned with the rest of the level (both interactive elements, many of which appear to have had the surrounding level geometry removed, and level geometry making up small "rooms").
 
 Ultimately, given the information we currently have access to, and not having access to any builds in between 12 May 2003 and 29 September 2003, no assertion about the original purpose of the now empty sector can be made.
 
