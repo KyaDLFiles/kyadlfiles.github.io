@@ -151,7 +151,7 @@ It also has issues with positioning, as moving vertically causes the geometry to
 |14|!{!2}Partial|Tunnel connecting sectors 1 and 7|||
 |15|!{!2}Partial|Path and tunnel connecting sector 7 to sector 5 or 2|||
 |16|!{!2}Partial|Tunnel connecting sectors 5 and 6|||
-|!{+!4}17|!{!2}Partial|Unused, leftover from prototype builds<br>Tunnel connecting the top of the wind tower to the scrapped section of the Wolfun camp with safes seen in the May 12 prototype (only the low LOD of this last part is still present in sector 3)|||
+|!{+!4}17|!{!2}Partial|Unused, leftover from prototype builds<br>Tunnel connecting the top of the wind tower to the scrapped section of the Wolfun camp with safes seen in the May 12 prototype (if this scrapped section, only the low LOD of it present in sector 3 is still present in the final game)|||
 |18|!{!2}Partial|Enclosed path connecting sectors 6 and 3|||
 |21|!{!1}Area|The Hunter boss fight|22|6|
 |22|!{!2}Partial|Very final section of wind tunnel connecting sectors 4 and 21|N/A|N/A|
@@ -268,10 +268,10 @@ These three sectors appear in a very similar, if not identical, form in the May 
 |2|!{!1}Area|Tunnel section of the slide (excluding very beginning) and freefall section, up until the outside area|6, 7|-|
 |3|!{!1}Area|Whole outside area of the level (excluding the area where the second shell elevator is)<br>Some sections have a relatively short draw distance, while most of the level has no draw distance|7, 8, 9|2, 3, 4||
 |!{+!4}4|!{!3}?|Unused and completely empty <br>The texture and model files archived inside (*SECT4.g2d* and *SECT4.g3d*) don't contain anything apart from the standard data structures present for those file types (but with no actual data being present in any segment), and no collision file (*.col*) is present at all<br>The files inside are identical to those found in sector 9 (apart from the filenames that change accordingly)<br>Even if the sector is competely empty, it's configured to also load sector 8|4|!{!0^6}N/A||
-|!{+!4}5|!{!1}Area|Unused, leftover from prototype builds<br>Brazul's laboratory with Frank boss fight, which was eventually separated in it's own level (LEVEL_9) for unknown reasons<br>After the separation, this sector was likely left in an unfinished state and was no longer mantained, as evident by all textures being severely broken and that change as you move around the area|!{!0^5}N/A||
+|!{+!4}5|!{!1}Area|Unused, leftover from prototype builds<br>Brazul's laboratory where the Wolfun Frank boss fight takes place, which was eventually separated in it's own level (LEVEL_9) for unknown reasons<br>After the separation, this sector was likely left in an unfinished state and was no longer mantained, as evident by all textures being severely broken and that change as you move around the area|!{!0^5}N/A||
 |6|!{!2}Partial|Section of the slide connecting sectors 1 and 2|||
 |7|!{!2}Partial|Last section of freefall and initial part with shell elevator of the outside section (shell elevator is part of sector 3), connecting sectors 2 and 3|||
-|8|!{!2}Partial|Air cannon going to outside of Brazul's laboratory, and the area where you land before it<br>Notably not used to connect two different sectors, as it's used to travel between two different sections of sector 3|||
+|8|!{!2}Partial|Air cannon going to outside of Brazul's laboratory, and the enclosed area where you land before it<br>Notably not used to connect two different sectors, as it's used to travel between two different sections of sector 3|||
 |!{+!4}9|!{!3}?|Unused and completely empty <br>The texture and model files archived inside (*SECT9.g2d* and *SECT9.g3d*) don't contain anything apart from the standard data structures present for those file types (but with no actual data being present in any segment), and no collision file (*.col*) is present at all<br>The files inside are identical to those found in sector 4 (apart from the filenames that change accordingly)
 
 ### Known info and speculation about sectors 4 and 9
@@ -290,9 +290,11 @@ The theory of sector 9 containing a connection between sector 4 and somewhere el
 
 (the "strange" possibilities are more likely than one may think, as I have a strong impression, supported by multiple factors, that the game was rushed at the end of it's development for one reason or another, thus making "mistakes" and "slapdash" decisions more likely; the fact that these two sectors were emptied and not deleted entirely, and that they still contained collision data mere weeks before the final build of the game was compiled, also suggests that the decision to so was taken late in development).  
 
+The fact that sector 4 calls for sector 8 to be loaded suggest that sector 8 also originally connected the scrapped section to somewhere else; this could've been done through the shell elevator and enclosed area that are present in the final build (with an extra passage that was then removed when the section was scrapped), but it's also possible that sector 8 originally contained something completely different and it then was reutilized for it's current purpose and the reference in sector 4 was never removed.
+
 It is noteworthy that, in the May 12 prototype, the scrapped section is in the same sector as the outside area; however the level overall contains less sectors compared to the final release, point to the fact that some sections, including the scrapped one, were eventually moved to their own separate sectors (the whole level in the May 12 prototype appears to be one of the levels in the earliest phases of development, with plenty of missing or nonfunctional elements, earlier layouts, no Wolfuns in the whole level apart from Wolfun Frank, so it's possible that the split happened as the level continued to grow larger and more resource intensive) (in fact, the scrapped section in particular appears to be in an extremely early phase of development even compared to the rest of the level, with very primitive and placeholder geometry, no interactive elements at all apart from an Amortos and air cannon, which are the strictly required elements to enter and leave the section, and there are a bunch of weird elements consisting of a W with a circle around it, which I speculate were used as placeholders for Wolfuns).
 
-## LEVEL_9 (Forgotten Island Wolfun Frank boss fight)
+## LEVEL_9 (Forgotten Island Wolfun Frank boss)
 **Total sectors**: 1  
 **Area sectors**: 1  
 **Always loaded sections**: Vertical tunnel entering the level
