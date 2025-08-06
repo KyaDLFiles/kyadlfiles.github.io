@@ -151,7 +151,7 @@ It also has issues with positioning, as moving vertically causes the geometry to
 |14|!{!2}Partial|Tunnel connecting sectors 1 and 7|||
 |15|!{!2}Partial|Path and tunnel connecting sector 7 to sector 5 or 2|||
 |16|!{!2}Partial|Tunnel connecting sectors 5 and 6|||
-|!{+!4}17|!{!2}Partial|Unused, leftover from prototype builds<br>Tunnel connecting the top of the wind tower to the scrapped section of the Wolfun camp with safes seen in the May 12 prototype (if this scrapped section, only the low LOD of it present in sector 3 is still present in the final game)|||
+|!{+!4}17|!{!2}Partial|Unused, leftover from prototype builds<br>Tunnel connecting the top of the wind tower to the scrapped section of the Wolfun camp with safes seen in the May 12 prototype (of this scrapped section, only the low LOD of it present in sector 3 is still present in the final game)|||
 |18|!{!2}Partial|Enclosed path connecting sectors 6 and 3|||
 |21|!{!1}Area|The Hunter boss fight|22|6|
 |22|!{!2}Partial|Very final section of wind tunnel connecting sectors 4 and 21|N/A|N/A|
