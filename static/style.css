@@ -168,6 +168,10 @@ iframe {
     background-color: rgb(255, 231, 136);
 }
 
+.text-highlight-1 {
+    color: darkcyan;
+}
+
 .text-unsure {
     background-color: khaki;
 }
@@ -310,6 +314,10 @@ a > span.material-symbols-outlined {
 
     .table-highlight-4 {
         background-color: rgb(131, 118, 70);
+    }
+
+    .text-highlight-1 {
+        color: cyan;
     }
 
     .small-img {

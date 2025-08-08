@@ -21,6 +21,7 @@ markdowner = markdown.Markdown(
         extended_tables_extension.ExtendedTableExtension(),
         highlight_extensions.UnsureHighlightExtension(superscript="?", tooltip="This is speculative/unconfirmed"),
         highlight_extensions.WarningHighlightExtension(),
+        highlight_extensions.TextHighlightExtension(),
         header_extensions.SectionsViaHeadersExtension(),
         header_extensions.AddBlanksAroundHeadersExtension(),
         small_image_extension.SmallImageExtension(),

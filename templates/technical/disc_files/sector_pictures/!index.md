@@ -2,7 +2,7 @@ title: Sector pictures
 template: _wikipage.html
 
 # Important
-When not specified, area sectors are shown with all the partial sectors they normally call for being loaded, but pictures with the game hacked to not load in any partial sector are also available. 
+When not specified, area sectors are shown with all the partial sectors they normally call for being loaded, but pictures with the game hacked to not load in any partial sector are also available; always loaded elements remain visible in all picutres as there currently are no ways to have them unload.
 
 Some sectors have a "nodraw" backdrop (which is the "glitchy" effect where a frame is overlaid over the previous one without a background, making things that move around leave a trail behind); while care was taken and tricks were used to avoid this effect where possible, in some cases it was impossible to avoid.
 
