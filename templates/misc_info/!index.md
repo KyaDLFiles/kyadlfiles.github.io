@@ -41,5 +41,5 @@ Buying the silver Boomy after having bought the golden Boomy won't do anything, 
 
 Buying the magic board after having bought the speed board will remove the latter from the invetory.
 
-Replaying the "Welcome to Nativ City!" cutscene will remove all bracelets except the white one from the inventory. 
+Replaying the "Welcome to Nativ City!" cutscene will remove all bracelets except the white one from the inventory (with no possibility of getting them back). 
 
