@@ -6,8 +6,8 @@ template: _home.html
 
 ---
 [Technical information (very much WIP)](./technical)  
+[Information about the secret level](./secrlvl)  
 [Miscellaneous, non-technical information](./misc_info)  
-[Info about the secret level](./secrlvl)  
 [Picture gallery](./pictures)  
 [Cheat codes](./cheats)  
 [Save files collection](./save_collection)
