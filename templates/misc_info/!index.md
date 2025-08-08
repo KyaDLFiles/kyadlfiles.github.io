@@ -40,3 +40,6 @@ When items are bought in one level, they don't disappear from the other level (a
 Buying the silver Boomy after having bought the golden Boomy won't do anything, but buying the basic Boomy will remove the other two from the inventory.
 
 Buying the magic board after having bought the speed board will remove the latter from the invetory.
+
+Replaying the "Welcome to Nativ City!" cutscene will remove all bracelets except the white one from the inventory. 
+
