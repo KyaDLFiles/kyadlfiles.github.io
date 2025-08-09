@@ -13,7 +13,6 @@ SEARCHPATH = "./templates"
 STATICPATH = "./static"
 
 dirs = {}
-
 markdowner = markdown.Markdown(
     output_format = "html",
     extensions = (
@@ -29,6 +28,7 @@ markdowner = markdown.Markdown(
         inline_extensions.LinkBlankInlineExtension(extra_text='<span class="material-symbols-outlined">open_in_new</span>')
     )
 )
+
 
 def dir_dict(name: str, dir: str) -> dict:
     return {"name": name, "dir": dir, "children": []}
